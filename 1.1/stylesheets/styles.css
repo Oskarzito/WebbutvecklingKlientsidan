@@ -1,0 +1,22 @@
+
+body {
+    max-width: 95%;
+    margin-left: 10px;
+    background-color: lightgoldenrodyellow;
+}
+
+p {
+    width: 600px;
+}
+
+.preformat-html-example {
+    text-align: left;
+}
+
+.html-description {
+    width: 75%;
+}
+
+.tag-structure {
+    float: right;
+}
