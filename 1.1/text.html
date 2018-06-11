@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+        <link rel="stylesheet" href="stylesheets/styles.css">
+        <title>Text och hypertext</title>
+    </head>
+    <body>
+        <h1>Text och hypertext i HTML</h1>
+        <p>
+            Här går vi igenom hur text representeras i olika format på skärmen.
+        </p>
+
+        <hr>
+
+        <h3>&lt;blockquote&gt;</h3>
+        <p>
+            Denna tag används när man vill citera något från exempelvis en annan hemsida. Som taggens
+            namn indikerar används denna tag när man vill citera text-stycken. Exempelvis:
+
+            <blockquote cite="https://en.wikipedia.org/wiki/Java_(programming_language)">
+                Java is a general-purpose computer-programming language that is concurrent,
+                class-based, object-oriented, and specifically designed to have as few
+                implementation dependencies as possible. It is intended to let application
+                developers "write once, run anywhere" (WORA), meaning that compiled Java
+                code can run on all platforms that support Java without the need for recompilation.
+            </blockquote>
+
+            Ett blockquote skrivs som följande:
+        </p>
+
+        <pre>
+            <code>
+        &lt;blockquote cite="<i>länk-till-källan-man-citerar-från</i>"&gt;
+            Textstycke som skall citeras skrivs här!
+        &lt;/blockquote&gt;
+            </code>
+        </pre>
+
+        <hr>
+
+        <h3>h-rubriker</h3>
+        <p>
+            Viktigt när man skriver text är att man skiljer på rubriker och vanlig text.
+            En tag som kan användas för att representera rubriker är h-rubriker.
+            h-rubriker skrivs som en helt vanlig tag i HTML; ett <code>h</code> följt av en siffra
+            från 1 till 6, där 1 är största rubriken och 6 är minsta.
+            Exempel på storlekar är följande:
+        </p>
+        <h1> <code>&lt;h1&gt;h1-rubrik&lt;/h1&gt;</code> </h1>
+        <h2> <code>&lt;h2&gt;h2-rubrik&lt;/h2&gt;</code> </h2>
+        <h3> <code>&lt;h3&gt;h3-rubrik&lt;/h3&gt;</code> </h3>
+        <h4> <code>&lt;h4&gt;h4-rubrik&lt;/h4&gt;</code> </h4>
+        <h5> <code>&lt;h5&gt;h5-rubrik&lt;/h5&gt;</code> </h5>
+        <h6> <code>&lt;h6&gt;h6-rubrik&lt;/h6&gt;</code> </h6>
+        <p>
+            Skulle man vilja, kan man med hjälp utav CSS ändra fonten, storleken och färgen hos rubriker.
+        </p>
+        <hr>
+
+        <h3>Paragrafer</h3>
+        <p>
+            Paragrafer i HTML representerar text man vill ha ut på skärmen. Dessa skrivs med
+            ett enkelt <code>p</code>, som följande: <br> <br>
+            <code>&lt;p&gt;text man vill skriva ut&lt;/p&gt;</code>. <br> <br>
+            Skulle man vilja, kan man med hjälp utav CSS ändra fonten, storleken och färgen hos paragrafer.
+        </p>
+
+        <hr>
+
+        <h3>&lt;pre&gt;</h3>
+        <p>
+            Taggen <code>pre</code> står för <i>pre-formatted</i>. Vad denna tag gör är att den
+            presenterar text i det format som det står i källkoden direkt på skärmen. Vanliga &lt;p&gt;-taggar
+            påverkas inte om man i källkoden skriver massvis av tab-tecken innan. Det gör däremot text som
+            står inom &lt;pre&gt;-taggar. Nedan följer två exmepel, där det i källkoden är lika många mellanrum
+            som separerar orden:
+        </p>
+        <p>
+            1.Text          skriven
+                  som     paragraf.
+        </p>
+
+        <pre>
+            2.Text          skriven
+                  som     pre-formatted.
+        </pre>
+
+        <p>
+            &lt;pre&gt;-taggar är väldigt behändiga om man bland annat vill skriva ut källkod korrekt
+            indenterad på skärmen.
+        </p>
+
+        <hr>
+
+        <h3>&lt;span&gt;</h3>
+        <p>
+            <code>span</code> är en tag som lägger sitt innehåll direkt efter föregående element.
+            Det är en så kallad <i>inline-container</i>. Denna tag är behändig när man vill style:a
+            ett ord i en längre mening, eller om man har anledning att gruppera ihop något. Varför man
+            använder <code>span</code> är eftersom element i HTML vanligtvis läggs under varandra, i samma
+            ordning man skapar dessa i sin kod.
+        </p>
+        <pre>
+            <code>&lt;p&gt; Början på en mening &lt;/p&gt; &lt;p class="textnamn"&gt; följt av slutet på en mening. &lt;/p&gt;</code>
+        </pre>
+
+        <p>
+            Resulatet av denna HTML-kod är: <br>
+        </p>
+
+        <p><i>Början på en mening</i></p><p><i>följt av slutet på en mening.</i></p>
+
+        <p>
+            Gör man detta med span istället, kan man inline:a sin nya text:
+        </p>
+
+        <pre>
+            <code>&lt;p&gt; Början på en mening &lt;/p&gt; &lt;span class="textnamn"&gt; följt av slutet på en mening. &lt;/span&gt;</code>
+        </pre>
+
+        <p><i>Början på en mening</i><span><i> följt av slutet på en mening.</i></span></p>
+
+        <p>
+            På detta sätt kan man komma åt och modifiera andra halvan av sin mening via klassnamnet <i>textnamn</i>.
+            Detta är inte endast begränsat till textparagrafer. Man kan applicera <code>span</code> på massvis
+            av HTML-taggar för att få ett inline-beteende.
+        </p>
+
+    </body>
+</html>
