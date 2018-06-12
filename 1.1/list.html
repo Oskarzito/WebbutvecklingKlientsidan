@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Listor i HTML</title>
+    </head>
+    <body>
+
+        <h1>Listor</h1>
+        <p>
+            Listor i HTML är effektiva sätt att gruppera ihop element som har en
+            samhörighet.
+        </p>
+
+        <hr>
+
+        <h3>Ordnad lista</h3>
+        <p>
+            Ordnade listor är listor vars varje ingående element utmärks av ett nummer,
+            en bokstav eller liknande. Dessa skrivs med taggen <code>&lt;ol&gt;</code>.
+        </p>
+
+        <ol>
+            <li>Första elementet</li>
+            <li>Andra elementet</li>
+            <li>Tredje elementet</li>
+        </ol>
+
+        <p>
+            För att skriva ut den ordnade lista ovan i HTML skriven man följande:
+
+            <code> <br>
+            &lt;ol&gt; <br>
+    			&lt;li&gt;Första elementet&lt;/li&gt; <br>
+    			&lt;li&gt;Andra elementet&lt;/li&gt; <br>
+    			&lt;li&gt;Tredje elementet&lt;/li&gt; <br>
+    		&lt;/ol&gt;<br>
+            </code>
+
+            För att lägga till ett nytt element i listan lägger man bara till en ny <code>&lt;li&gt;</code>-tag.
+        </p>
+
+        <hr>
+
+        <h3>Oordnad lista</h3>
+        <p>
+            Oordnade listor är listor vars varje ingående element <b>inte</b> utmärks av ett nummer,
+            en bokstav eller liknande. Dessa skrivs med taggen <code>&lt;ul&gt;</code>.
+        </p>
+
+        <ul>
+            <li>Första elementet</li>
+            <li>Andra elementet</li>
+            <li>Tredje elementet</li>
+        </ul>
+
+        <p>
+            För att skriva ut den oordnade lista ovan i HTML skriven man följande:
+
+            <code> <br>
+            &lt;ul&gt; <br>
+    			&lt;li&gt;Första elementet&lt;/li&gt; <br>
+    			&lt;li&gt;Andra elementet&lt;/li&gt; <br>
+    			&lt;li&gt;Tredje elementet&lt;/li&gt; <br>
+    		&lt;/ul&gt;<br>
+            </code>
+
+            För att lägga till ett nytt element i listan lägger man bara till en ny <code>&lt;li&gt;</code>-tag.
+        </p>
+
+        <hr>
+
+        <h3>Beskriven lista</h3>
+        <p>
+            Beskrivna listor i HTML är listor där varje ingående element har en beskrivning till sig.
+            Dessa skrivs med taggen <code>&lt;dl&gt;</code>. Se nedan:
+        </p>
+
+        <dl>
+            <dt>Mjölk</dt>
+            <dd>- Vitt och kallt.</dd>
+            <dt>Kaffe</dt>
+            <dd>- Svart och varmt.</dd>
+            <dt>Te</dt>
+            <dd>- Ljust och varmt.</dd>
+        </dl>
+
+        <p>
+            För att skriva ut den beskrivna lista ovan i HTML skriver man följande:
+
+            <code> <br>
+            &lt;dl&gt; <br>
+    			&lt;dt&gt;Mjölk&lt;/dt&gt; <br>
+    			&lt;dd&gt;- Vitt och kallt.&lt;/dd&gt; <br>
+    			&lt;dt&gt;Kaffe&lt;/dt&gt; <br>
+                &lt;dd&gt;- Svart och varmt.&lt;/dd&gt; <br>
+    			&lt;dt&gt;Te&lt;/dt&gt; <br>
+    			&lt;dd&gt;- Ljust och varmt.&lt;/dd&gt; <br>
+    		&lt;/ul&gt;<br>
+            </code>
+
+            Varje nytt listelement, till skillnad från en ordnad och oordnad lista, skapas med
+            taggen <code>&lt;dt&gt;</code>. Under denna tag skriven man sedan <code>&lt;dd&gt;</code>,
+            denna innehåller i sin tur beskrivningen av listelementet.
+
+        </p>
+
+    </body>
+</html>

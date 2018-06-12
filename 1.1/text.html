@@ -2,8 +2,6 @@
 <html lang="sv" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-        <link rel="stylesheet" href="stylesheets/styles.css">
         <title>Text och hypertext</title>
     </head>
     <body>
@@ -20,15 +18,17 @@
         <p>
             Denna tag används när man vill citera något från exempelvis en annan hemsida. Som taggens
             namn indikerar används denna tag när man vill citera textstycken. Exempelvis:
+        </p>
 
-            <blockquote cite="https://en.wikipedia.org/wiki/Java_(programming_language)">
-                Java is a general-purpose computer-programming language that is concurrent,
-                class-based, object-oriented, and specifically designed to have as few
-                implementation dependencies as possible. It is intended to let application
-                developers "write once, run anywhere" (WORA), meaning that compiled Java
-                code can run on all platforms that support Java without the need for recompilation.
-            </blockquote>
+        <blockquote cite="https://en.wikipedia.org/wiki/Java_(programming_language)">
+            Java is a general-purpose computer-programming language that is concurrent,
+            class-based, object-oriented, and specifically designed to have as few
+            implementation dependencies as possible. It is intended to let application
+            developers "write once, run anywhere" (WORA), meaning that compiled Java
+            code can run on all platforms that support Java without the need for recompilation.
+        </blockquote>
 
+        <p>
             Ett blockquote-element skrivs som följande:
         </p>
 
@@ -269,6 +269,47 @@
             Det man gör att att skapa ett länk-element med <code>a</code>-taggen. I detta element lägger man
             sedan in bilden. På detta sätt syns bilden, precis som den ska, men den även klickbar och går
             till den destination man specificerar i länkens <code>href</code>.
+        </p>
+
+        <hr>
+
+        <h4>Länk till olika protokoll</h4>
+        <p>
+            I vissa fall kanske man inte är ute efter att länka till andra hemsidor eller till element på
+            den nuvarande sidan. Det kanske till och med är så att man vill länka mot andra protokoll än <b>http</b>.
+            Detta går även att göra via länkar som ovan.
+        </p>
+        <pre>
+            <code>
+            &lt;a target="_blank" href="ftp://ftp.adobe.com/pub/adobe/"&gt;Adobe FTP-server&lt;/a&gt;
+            </code>
+        </pre>
+
+        <p>
+            Vilket ger länken: <span><a target="_blank" href="ftp://ftp.adobe.com/pub/adobe/">Adobe FTP-server</a></span>, som
+            även ser ut som en helt vanlig länk.
+            Länken ovan pekar på en publik FTP-server från Adobe.
+        </p>
+
+        <hr>
+
+        <h4>mailto-länk</h4>
+        <p>
+            Länkar kan även användas om man vill länka till en specifik e-postadress.
+        </p>
+
+        <pre>
+            <code>
+            &lt;a href="mailto:firstname.lastname@domain.com?Subject=Heyho"&gt;Maila och säg hej&lt;/a&gt;
+            </code>
+        </pre>
+
+        <p>
+            För att klicka på länken ovan krävs det en e-postklient på ens dator. Vid klickning öppnas
+            e-postklienten som sedan automatiskt klistrar in mailen <code>firstname.lastname@domain.com</code>
+            i mottagarfältet, samt klistrar in texten "Heyho" i ämnesraden. Testa följande:
+
+            <a href="mailto:firstname.lastname@domain.com?Subject=Heyho">Maila och säg hej</a>
         </p>
 
     </body>
