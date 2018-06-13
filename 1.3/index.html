@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>1.3 Semantiska element för text</title>
+</head>
+
+<body>
+    <header>
+        <h1>1.3 Semantiska element för text</h1>
+        <p>
+            I HTML finns det intressanta semantiska element för text. Här går vi
+            igenom <code>time, datetime, mark</code> samt <code>wbr</code>.
+        </p>
+        <hr>
+    </header>
+
+    <article class="time">
+        <h3>time och datetime</h3>
+        <p>
+            I HTML kan det vara av intresse att visa tider. Detta kan man göra med
+            ett HTML-element som heter <code>time</code>. <code>time</code> är tänkt
+            att vara till för att människor ska läsa det. Exempelvis kan vi skriva:
+            "Vi ses på julafton <time>18:00</time>". Detta blir en prydligt utskriven tid
+            på skärmen. <br> <br>
+        </p>
+
+        <pre>
+            <code>
+                &lt;p&gt;Vi ses på julafton &lt;time&gt;18:00&lt;/time&gt;&lt;/p&gt;
+            </code>
+        </pre>
+
+        <p>
+            Till skillnad från endast <code>time</code> finns ett attribut för HTML-element kallat
+            <code>datetime</code>. <code>datetime</code> är inte till för människor,
+            det är till för att maskiner ska läsa tider. Skriver man i sin källkod:
+        </p>
+
+        <pre>
+            <code>
+                &lt;p&gt;Vi ses på &lt;time datetime="2018-12-24 18:00"&gt;julafton&lt;/time&gt;&lt;/p&gt;
+            </code>
+        </pre>
+
+        <p>
+            blir sedan resultatet på skärmen:
+        </p>
+
+        <p>Vi ses på <time datetime="2018-12-24 18:00">julafton</time></p>
+
+        <p>
+            Här ser vi att tiden <time>18:00</time> inte visas. Detta syns dock om
+            en maskin skulle läsa det. Eftersom vissa specifika format för tider
+            och datum följs kan detta lätt hanteras.
+        </p>
+        <hr>
+    </article>
+
+    <article class="wordbreak">
+        <h3><code>wbr</code></h3>
+        <p>
+            <code>wbr</code> står för <i>word break opportunity</i>. Detta indikerar
+            i koden var det är lämpligt att radbryta ett ord om ordet skulle vara för långt
+            för att visas på skärmen. Lånar ett
+            <a target="_blank" href="https://www.w3schools.com/tags/tag_wbr.asp">exempelord från W3 schools</a>
+            för att visa hur funkar om man minskar/ökar storleken på webbläsarfönstret.
+        </p>
+
+        <p>
+            This is a veryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryvery<wbr>longwordthatwillbreakatspecific<wbr>placeswhenthebrowserwindowisresized.
+        </p>
+
+        <p>
+            Detta ord har mitt i sig, där man föreslår att ordet radbryts, den inline:ade
+            taggen <code>&lt;wbr&gt;</code>. <br>
+            "...veryvery<code>&lt;wbr&gt;</code>longword...specific<code>&lt;wbr&gt;</code>places...".
+            Där taggen definieras kommer ordet radbrytas vid behov.
+        </p>
+        <hr>
+    </article>
+
+    <article class="mark">
+        <h3><code>mark</code></h3>
+        <p>
+            Taggen <code>mark</code> <mark>markerar/highlightar</mark> den text man skriver inom
+            elementets <mark>öppnande</mark> och <mark>stängade</mark> taggar, vilket kan vara
+            behändigt om man vill betona något.
+        </p>
+    </article>
+
+</body>
+
+</html>
