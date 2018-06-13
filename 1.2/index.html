@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Oskar Emilsson">
+    <title>1.2 Semantiska element för struktur</title>
+</head>
+
+<body>
+    <header>
+        <h1>1.2 Semantiska element för struktur</h1>
+        <p>
+            Här går vi igenom semantiska element i HTML5. Ovanför strecket ingår
+            delarna i ett HTML-dokuments sidhuvud. Här places ofta hemsidans rubrik
+            samt en navigeringsmeny (<code>nav</code>). Denna del skapas med taggen <code>header</code>.
+        </p>
+        <nav>
+            <p>Här är en navigeringsmeny. Den skapas med taggen <code>nav</code> --&gt;
+                <span>
+                    <a href="#art1">Artikel 1</a>,
+                    <a href="#art2">Artikel 2</a>,
+                    <a href="#art3">Artikel 3</a>
+                    <a href="#aside1">aside</a>
+                    <a href="#foot1">footer</a>
+                </span>
+            </p>
+        </nav>
+        <hr>
+    </header>
+
+    <article id="art1">
+        <h3>Artikel 1</h3>
+        <section>
+            <h4>Sektion 1</h4>
+            <p>
+                Detta är en sektion (<code>section</code>) i en artikel (<code>article</code>). En
+                artikel är en del som representerar självständigt innehåll i ett dokument. Detta kan
+                vara exempelvis en nyhetsartikel eller en kommentar.
+            </p>
+        </section>
+
+        <section>
+            <h4>Sektion 2</h4>
+            Detta är en annan sektion i en artikel. Tanken med sektioner är att de
+            identifierar sektioner i dokument. En sektion skulle kunna vara rubrik i en artikel.
+            En annan sektion kan i sin tur vara artikeltexten. Tydliga direktiv på om sektioner ska
+            nestas i aritklar eller vice versa finns egentligen inte. Det blir relativt till vad
+            för hemsida man skapar. Enligt W3:s HTML-validering ska man ha en h-rubrik (mellan 2-6) i varje artikel
+            såväl som sektion.
+        </section>
+        <hr>
+    </article>
+
+    <article id="art2">
+        <h3>Artikel 2</h3>
+        <section>
+            <h4>Sektion 1</h4>
+            <p>
+                Denna del beskriver taggarna <code>figure</code> samt <code>figcaption</code>.
+            </p>
+        </section>
+
+        <section>
+            <h4>Sektion 2</h4>
+            <p>
+                Bilden och dess beskrivning ligger båda inom taggarna <code>&lt;figure&gt; &lt;/figure&gt;</code>.
+            </p>
+            <figure>
+                <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="w3 image">
+                <figcaption>Detta är en <code>figcaption</code>, en beskrivning som ska beskriva figuren.</figcaption>
+            </figure>
+            <p>
+                Syftet med dessa taggar är att logiskt gruppera ihop bilder/figurer samt dess beskrivningar.
+            </p>
+        </section>
+        <hr>
+    </article>
+
+    <article id="art3">
+        <h3>Artikel 3</h3>
+        <section>
+            <h4>Sektion 1</h4>
+            <p>
+                Denna del beskriver taggarna <code>details</code> samt <code>summary</code>.
+            </p>
+        </section>
+
+        <section>
+            <h4>Sektion 2</h4>
+            <p>
+                Tanken med taggen <code>details</code> är att man ska kunna visa och dölja information på
+                ett enkelt och tydligt sätt genom ett klick. Skriver man <code>&lt;details open&gt;</code>
+                visas informationen från början.
+            </p>
+            <details open>
+                <summary>&lt;-- Göm mig</summary>
+                <p>Här är informationen som visas. Genom att klicka på svarta pilen kan detta döljas.</p>
+            </details>
+
+            <details>
+                <summary>Klicka här</summary>
+                <p>
+                    Genom att i <code>details</code>-elementet definiera en <code>summary</code> visas en text
+                    bredvid pilen. Här är den texten "<i>Klicka här</i>". Skriver man ingen <code>summary</code>
+                    får <code>details</code> ett default-värde som är <i>Info</i>. Det bör dock, enligt W3:s validering,
+                    finnas en <code>summary</code> till alla <code>details</code>.
+                </p>
+            </details>
+            <details>
+                <summary>Info</summary>
+                <p>
+                    Här är en <code>details</code> med en <code>summary</code> med samma
+                    värde som en <code>details</code> utan definierad <code>summary</code>.
+                </p>
+            </details>
+        </section>
+        <hr>
+    </article>
+
+    <aside id="aside1">
+        <h3>aside</h3>
+        <section>
+            <h4>Sektion 1</h4>
+
+            <p>
+                Denna del beskriver elementet <code>aside</code>.
+            </p>
+        </section>
+
+        <section>
+            <h4>Sektion 2</h4>
+            <p>
+                <code>aside</code> används för att visa något slags innehåll vid sidan om
+                huvudinnehållet på en hemsida. Detta kan exempelvis vara en kalender eller dylikt.
+                vanligt förekommande är att en <code>aside</code> placeras till höger på hemsidan,
+                och att en <code>nav</code> placeras till vänster. I mitten existerar själva huvudinnehållet.
+                För detta krävs lite CSS dock.
+            </p>
+        </section>
+        <hr>
+    </aside>
+
+    <footer id="foot1">
+        <h3>footer</h3>
+        <section>
+            <h4>Sektion 1</h4>
+            <p>
+                Denna del beskriver elementet <code>footer</code>.
+            </p>
+        </section>
+
+        <section>
+            <h4>Sektion 2</h4>
+            <p>
+                <code>footer</code> är ett element som är motsatsen till <code>header</code>.
+                Denna tag placeras längst ned på en hemsida, och innehåller inte sällan kontaktuppgifter,
+                adress, lite allmänt intressanta länkar med mera.
+            </p>
+        </section>
+    </footer>
+
+</body>
+</html>
