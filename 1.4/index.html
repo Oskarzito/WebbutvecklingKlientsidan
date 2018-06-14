@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Oskar Emilsson">
+    <title>1.4 Formulär</title>
+</head>
+
+<body>
+    <header>
+        <h1>1.4 Formulär</h1>
+        <p>
+            I HTML är det ibland intressant att låta en klient mata in information om till exempel sig själv, för att detta sedan ska hanteras på något sätt. Detta kan göras snyggt och smidigt med formulär.
+        </p>
+        <nav>
+            <a href="#f1">Ett formulär</a>,
+            <a href="#f2">Ett till fomulär</a>
+            <a target="_blank" href="test.html">JAJAJAJAJAAJJAJJA</a>
+        </nav>
+        <hr>
+    </header>
+
+    <div id="f1">
+        <h3>Ett formulär</h3>
+        <form method="get" action="https://people.dsv.su.se/~pierre/courses/05_ass/ip2/2/2.2.1/perl/example.cgi">
+            <fieldset>
+                <legend>Första formuläret:</legend>
+                <fieldset>
+                    <legend>Textboxar:</legend>
+                    <label for="user" title="Obligatorisk, endast bokstäver, 2 till 10 tecken">Användarnamn:* </label>
+                    <input type="text" name="usernameInput" placeholder="Ett namn" id="user" pattern="[A-Za-z]{2,10}" required autofocus>
+
+                    <br>
+
+                    <label for="pass" title="Obligatorisk, tillåter bokstäver och siffror, 2 till 15 tecken">Lösenord:* </label>
+                    <input type="password" name="passwordInput" placeholder="abc123" id="pass" pattern="[A-Za-z0-9]{2,15}" required>
+
+                    <br>
+
+                    <label for="country" title="Obligatorisk">Land:* </label>
+                    <input list="countries" name="country" placeholder="Sverige" id="country" pattern="[A-Za-z]{2,30}" required>
+
+                    <datalist id="countries">
+                        <option value="Sverige"></option>
+                        <option value="Ryssland"></option>
+                        <option value="Danmark"></option>
+                        <option value="Frankrike"></option>
+                    </datalist>
+
+                    <br>
+
+                    <label for="extrainfo">Extra information: </label>
+                    <textarea name="areaText" placeholder="Är det något extra du vill skriva till?" id="extrainfo"></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Nytt för HTML5:</legend>
+                    <label for="email">E-post: </label>
+                    <input type="email" id="email" name="email" placeholder="example@example.com">
+
+                    <br>
+
+                    <label for="domain">Har du en domän? --&gt; </label>
+                    <input type="url" name="domain" placeholder="www.example-domain.com" id="domain">
+
+                    <br>
+
+                    <label for="favnum">Ange favorittal i tians multiplikationstabell: </label>
+                    <input type="number" name="favnum" min="0" max="100" step="10" placeholder="10" id="favnum">
+
+                    <br>
+
+                    <label for="range">
+                        På en skala 1 till 10, hur coolt är detta formulär? <br> Vänster=1, höger=10:
+                    </label>
+                    <input type="range" name="range" min="1" max="10" step="1" id="range">
+
+                    <br>
+                    <br>
+
+                    <label for="time">Vad är klockan? </label>
+                    <input type="time" name="time" id="time">
+
+                    <br>
+
+                    <label for="week">Vilken vecka? </label>
+                    <input type="week" name="week" id="week">
+
+                    <br>
+
+                    <label for="month">Vilken månad? </label>
+                    <input type="month" name="month" id="month">
+
+                    <br>
+
+                    <label for="date">Vilket datum? </label>
+                    <input type="date" name="date" id="date">
+
+                    <br>
+
+                    <label for="datetime">Tillsammans utgör ovan angivna tider? </label>
+                    <input type="datetime-local" name="datetime" id="datetime">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Radiknappar:</legend>
+                    <p>Hur gammal är du?</p>
+                    <label for="low">0-18:</label>
+                    <input type="radio" name="age" id="low" checked>
+
+                    <label for="medium">19-50:</label>
+                    <input type="radio" name="age" id="medium">
+
+                    <label for="high">51+:</label>
+                    <input type="radio" name="age" id="high">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Lista:</legend>
+                    <p>Vilken är din favoritserie?*</p>
+                    <select id="favourite-show">
+                        <optgroup label="sitcoms">
+                            <option value="friends">friends</option>
+                            <option value="seinfeld">seinfeld</option>
+                            <option value="bigbang">the big bang theory</option>
+                        </optgroup>
+
+                        <optgroup label="seriösa">
+                            <option value="got">game of thrones</option>
+                            <option value="westworld">westworld</option>
+                            <option value="soa">sons of anarchy</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Checkboxar:</legend>
+                    <label for="acceptance" title="Obligatorisk">Jag accepterar villkoren:* </label>
+                    <input type="checkbox" name="acceptTerms" id="acceptance" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Knappar:</legend>
+                    <input type="submit" name="submit" value="Bekräfta och skicka!">
+
+                    <label for="image-but">Eller skicka via att klicka på bilden: </label>
+                    <input type="image" src="https://www.w3schools.com/images/w3schools_green.jpg" alt="w3 submit image" title="Skicka!" id="image-but">
+
+                    <br>
+
+                    <p>Vill du börja om?</p>
+                    <input type="reset" name="reset" value="Börja om!">
+
+                    <br>
+
+                    <p>En knapp som inte har nån riktig funktion: </p>
+                    <input type="button" name="button" value="Jag gör inget!">
+                </fieldset>
+            </fieldset>
+        </form>
+    </div>
+
+    <hr>
+
+    <div id="f2">
+        <h3>Ett till formulär</h3>
+        <form method="post" enctype="multipart/form-data" action="https://people.dsv.su.se/~pierre/courses/05_ass/ip2/2/2.2.2/perl/example.cgi">
+            <fieldset>
+                <legend>Andra formuläret:</legend>
+
+                <p>
+                    Här kan du ladda upp en fil för att skicka in!
+                </p>
+
+                <label for="upload">Ladda upp en fil: </label>
+                <input type="file" name="file" id="upload">
+                <br> <br>
+                <input type="submit" name="submit" value="Bekräfta och skicka!">
+            </fieldset>
+        </form>
+    </div>
+
+</body>
+
+</html>
