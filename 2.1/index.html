@@ -31,43 +31,289 @@
     </nav>
 
     <main>
-
-        <article class="">
-            <p>
-                1anperjgoaehrgoiaqehroithqeoirhgoiwehrgoihweorghowi
-                ehrgoiwheroghwoierhgoiwehroighweoirghoiwerhgoiwehrgoiwh
-                eroighweoirhgoiwerhgoiwehrgohwerioghweoirghoiwerhg
-            </p>
+        <article class="content-desciption-article">
+            <section class="article-header">
+                <h3>Externt länkad CSS-fil och dess fördelar</h3>
+                <hr>
+            </section>
+            <section>
+                <p>
+                    CSS kan appliceras på HTML-kod på främst två sätt, inline
+                    och externt. Fördelarna med att använda externt länkade
+                    CSS-filer är flertalet. Här är några:
+                </p>
+                <ul>
+                    <li>
+                        Man separerar helt HTML-kod från CSS-kod. Kodseparation
+                        gör det enklare att underhålla sin applikation. Flera
+                        HTML-filer kan exempelvis använda sig av en enda CSS-fil
+                        för stilsättning.
+                    </li>
+                    <li>
+                        Ens CSS-kod finns på ett ställe. Detta gör att när man
+                        uppdaterar stil-attribut kommer allt som använder sig av
+                        den CSS-koden uppdatera sitt utseende.
+                    </li>
+                    <li>
+                        Hemsidor laddar snabbare om de exempelvis cachar en CSS-fil.
+                    </li>
+                    <li>
+                        Extra: rent generellt skulle jag personligen säga att
+                        det är enklare att samla ens CSS-kod i en fil då detta
+                        lättare gör att man kan fokusera på det man gör. Till
+                        exempel, när man skrivet sin HTML fokuserar man <b>endast</b>
+                        på de man vill ha på skärmen. När man sedan skriver sin
+                        CSS fokuserar man <b>endast</b> på utseendet och så vidare.
+                    </li>
+                </ul>
+            </section>
         </article>
 
-        <article class="">
-            <p>
-                2an
-            </p>
+        <article class="content-desciption-article">
+            <section class="article-header">
+                <h3>Arv</h3>
+                <hr>
+            </section>
+            <section>
+                <p>
+                    Arv i CSS har sitt ursprung i HTML:s struktur. Då HTML har
+                    en trädliknande struktur kommer stilsättningen av dess element
+                    påverkas. Stilsätter vi ett HTML-element kommer detta elements
+                    barn att få samma stil-attribut – de ärver stilen. Barn ärver
+                    stilen från sina föräldrar.
+                </p>
+            </section>
         </article>
 
-        <article class="">
-            <p>
-                3an
-            </p>
+        <article class="content-desciption-article">
+            <section class="article-header">
+                <h3>Cascade</h3>
+                <hr>
+            </section>
+            <section>
+                <p>
+                    Cascade handlar, till skillnad från arv, om vad för stil ett
+                    HTML-element ska anta. Om vi skriver:
+                </p>
+                <pre>
+                    <code>
+                    p {
+                        font-size: 50px;
+                    }
+                    </code>
+                </pre>
+
+                <p>
+                    kommer alla paragrafer få font-storleken 50 pixlar. Om vi sedan
+                    skriver:
+                </p>
+
+                <pre>
+                    <code>
+                    p {
+                        font-size: 50px;
+                    }
+
+                    p.enKlass {
+    	                font-size: 100px;
+                    }
+                    </code>
+                </pre>
+
+                <p>
+                    kommer alla paragrafer få font-storleken 50 pixlar, men alla
+                    paragrafer som tillhör klassen “enKlass” får storleken 100 pixlar.
+                    Cascade handlar alltså om vilka stilsättningsregler som får
+                    precedens över andra regler vid eventuella stilsättningskonflikter.
+                </p>
+            </section>
         </article>
 
-        <article class="">
-            <p>
-                4an
-            </p>
+        <article class="content-desciption-article">
+            <section class="article-header">
+                <h3>Selektorer (tagg-, attribut-, klass-, id- och barn-selektorer)</h3>
+                <hr>
+            </section>
+            <section>
+                <p>
+                    Selektorer är det man använder för att välja ut vad man ska
+                    stilsätta.
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            Tagg syftar till en HMTL-tagg. Här kan vi exempelvis
+                            stilsätta alla h2-rubriker genom att säga:
+                        </p>
+                        <pre>
+                            <code>
+                h2 {
+                    /*CSS-kod*/
+                }
+                            </code>
+                        </pre>
+                    </li>
+                    <li>
+                        <p>
+                            Attribut-selektorn väljer ut särskilda HTML-element som
+                            har en viss egenskap (ett attribut). Exempelvis kan vi
+                            stilsätta a-länkar enligt följande:
+                        </p>
+                        <pre>
+                        <code>
+                a { /*Stilsättning via tagg-selektorn*/
+            	    background-color: red;
+                }
+
+                a[target=”_blank”] {
+                    /*Stilsättning via attribut-selektorn*/
+            	    background-color: blue;
+                }
+                            </code>
+                        </pre>
+                        <p>
+                            Här väljer vi ut (selekterar) alla a-taggar i och ger
+                            dessa en röd bakgrund. Det vi sedan gör är att vi
+                            väljer ut alla a-taggar som innehar attributet
+                            target=”_blank”, vilket betyder att man specificerat
+                            att de vid klick ska öppnas i en ny webbläsarflik.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            HTML-taggar kan tillhöra en viss klass via att man
+                            definierar följande: <code>&lt;p class=”myClass”&gt;</code>
+                            eller <code>&lt;h1 class=”myClass”&gt;</code> och så vidare. Självklart
+                            kan man välja att stilsätta element som tillhör
+                            samma klass via:
+                        </p>
+                        <pre>
+                            <code>
+                .myClass {
+                	text-align: center;
+                }
+                            </code>
+                        </pre>
+                        <p>
+                            vilket gör att att alla HTML-element som tillhör
+                            klassen myClass kommer centreras i mitten. Klasser
+                            väljs ut genom att skriva en punkt följt av klassnamnet.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Likt klass-selektorn kan man även välja ut element
+                            med ett visst id. Om vi har <code>&lt;p id=”myPara”&gt;</code> kan vi
+                            välja ut detta element via:
+                        </p>
+                        <pre>
+                            <code>
+                #myPara {
+                	font-size: 15px;
+                }
+                            </code>
+                        </pre>
+                        <p>
+                            Genom att skriva ett #-tecken följt av id-namnet
+                            selekterar vi efter id.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Barn-selektorer väljer ut HTML-element som är barn
+                            till andra HTML-element.
+                        </p>
+                        <pre>
+                            <code>
+                div &gt; p {
+                	font-size: 15px;
+                }
+                            </code>
+                        </pre>
+                        <p>
+                            Detta väljer ut alla p-element vars förälder är ett div-element.
+                        </p>
+                    </li>
+                </ul>
+            </section>
         </article>
 
-        <article class="">
-            <p>
-                5an
-            </p>
+        <article class="content-desciption-article">
+            <section class="article-header">
+                <h3>Enheter (absoluta: in, cm, mm, pt, pc, px och relativa: em, ex, %)</h3>
+                <hr>
+            </section>
+            <section>
+                <p>
+                    Absoluta enheter är syftar till exakta mått/storlekar. Man
+                    anger här explicit vilken storlek man vill att något ska vara.
+                    Samma angivelse av absoluta enheter på två element kommer göra
+                    dessa lika stora.
+                </p>
+                <ul>
+                    <li>in: inches (2.54 cm).</li>
+                    <li>cm: centimeter.</li>
+                    <li>mm: millimeter.</li>
+                    <li>pt: points (1/72-dels inch).</li>
+                    <li>pc: picas (12 points).</li>
+                    <li>px: pixels.</li>
+                </ul>
+                <p>
+                    Relativa enheter är beroende av storleken på något annat.
+                    Det vill säga, att ange två likadana relativa storlekar på
+                    två olika element gör inte nödvändigtvis dessa till lika
+                    stora.
+                </p>
+                <ul>
+                    <li>
+                        em: relativ till nuvarande font. Antal em är antal
+                        gånger större än nuvarande font.
+                    </li>
+                    <li>
+                        ex: relativ till x-höjden av exempelvis nuvarande font.
+                    </li>
+                    <li>
+                        %: en viss procent av förälder-elementets storlek.
+                    </li>
+                </ul>
+            </section>
         </article>
 
-        <article class="">
-            <p>
-                6an
-            </p>
+        <article class="content-desciption-article">
+            <section class="article-header">
+                <h3>Hur ett CSS-dokument är uppbyggt</h3>
+                <hr>
+            </section>
+            <section>
+                <p>
+                    Ett CSS-dokument består av stilsättningsregler. Reglerna ser
+                    ut som enligt följande:
+                </p>
+                <pre>
+                    <code>
+                selektor {
+                    attribut: värde;
+                }
+                    </code>
+                </pre>
+                <p>
+                    Selektorn ovan omfattar allt som har med att välja ut vad
+                    man vill stilsätta. Det kan vara taggar, klasser, id eller
+                    relationer mellan element. När man valt ut något skrivs sedan
+                    två måsparanteser. Detta är stilsättningens scope för vald
+                    selektor. Det är mellan dessa paranteser man definierar vad
+                    som ska stilsättas och hur. Genom att skriva attributet, följt
+                    av ett kolon, följt av ett värde, följt av ett semikolon radar
+                    man upp stil efter stil. Det får mer än gärna finnas flera
+                    stilsättningar i samma scope. Man anger bara igen, på ny rad,
+                    vilket attribut som ska stilsättas och sedan hur. <br> <br>
+
+                    Känner man för att välja ut något annat att stilsätta kan man
+                    fortsätta på ny rad efter den stängade måsparantesen på samma
+                    sätt som ovan. Man radar helt enkelt upp stilregel efter stilregel
+                    för att formge sin hemsida.
+                </p>
+            </section>
         </article>
     </main>
 
