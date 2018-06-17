@@ -61,6 +61,6 @@ article {
     overflow-y: auto;
 }
 
-section > p, h3 {
+div > p, h3 {
     margin-left: 3%;
 }

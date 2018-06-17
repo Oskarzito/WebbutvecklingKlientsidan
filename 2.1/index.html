@@ -96,12 +96,15 @@
         </nav>
 
         <main>
+            <!--Valde div istället för section. Läste detta om section:
+            'Don't use it unless there is naturally a heading at the start of the section.'
+            Ansåg, för konsekvens och läsbarhet, att div var bättre i artiklarna :)-->
             <article class="content-desciption-article">
-                <section class="article-header">
+                <div class="article-header">
                     <h3>Externt länkad CSS-fil och dess fördelar</h3>
                     <hr>
-                </section>
-                <section>
+                </div>
+                <div>
                     <p>
                         CSS kan appliceras på HTML-kod på främst två sätt, inline
                         och externt. Fördelarna med att använda externt länkade
@@ -131,15 +134,15 @@
                             CSS fokuserar man <b>endast</b> på utseendet och så vidare.
                         </li>
                     </ul>
-                </section>
+                </div>
             </article>
 
             <article class="content-desciption-article">
-                <section class="article-header">
+                <div class="article-header">
                     <h3>Arv</h3>
                     <hr>
-                </section>
-                <section>
+                </div>
+                <div>
                     <p>
                         Arv i CSS har sitt ursprung i HTML:s struktur. Då HTML har
                         en trädliknande struktur kommer stilsättningen av dess element
@@ -147,15 +150,15 @@
                         barn att få samma stil-attribut – de ärver stilen. Barn ärver
                         stilen från sina föräldrar.
                     </p>
-                </section>
+                </div>
             </article>
 
             <article class="content-desciption-article">
-                <section class="article-header">
+                <div class="article-header">
                     <h3>Cascade</h3>
                     <hr>
-                </section>
-                <section>
+                </div>
+                <div>
                     <p>
                         Cascade handlar, till skillnad från arv, om vad för stil ett
                         HTML-element ska anta. Om vi skriver:
@@ -191,15 +194,15 @@
                         Cascade handlar alltså om vilka stilsättningsregler som får
                         precedens över andra regler vid eventuella stilsättningskonflikter.
                     </p>
-                </section>
+                </div>
             </article>
 
             <article class="content-desciption-article">
-                <section class="article-header">
+                <div class="article-header">
                     <h3>Selektorer (tagg-, attribut-, klass-, id- och barn-selektorer)</h3>
                     <hr>
-                </section>
-                <section>
+                </div>
+                <div>
                     <p>
                         Selektorer är det man använder för att välja ut vad man ska
                         stilsätta.
@@ -300,15 +303,15 @@
                             </p>
                         </li>
                     </ul>
-                </section>
+                </div>
             </article>
 
             <article class="content-desciption-article">
-                <section class="article-header">
+                <div class="article-header">
                     <h3>Enheter (absoluta: in, cm, mm, pt, pc, px och relativa: em, ex, %)</h3>
                     <hr>
-                </section>
-                <section>
+                </div>
+                <div>
                     <p>
                         Absoluta enheter är syftar till exakta mått/storlekar. Man
                         anger här explicit vilken storlek man vill att något ska vara.
@@ -341,15 +344,15 @@
                             %: en viss procent av förälder-elementets storlek.
                         </li>
                     </ul>
-                </section>
+                </div>
             </article>
 
             <article class="content-desciption-article">
-                <section class="article-header">
+                <div class="article-header">
                     <h3>Hur ett CSS-dokument är uppbyggt</h3>
                     <hr>
-                </section>
-                <section>
+                </div>
+                <div>
                     <p>
                         Ett CSS-dokument består av stilsättningsregler. Reglerna ser
                         ut som enligt följande:
@@ -371,14 +374,17 @@
                         av ett kolon, följt av ett värde, följt av ett semikolon radar
                         man upp stil efter stil. Det får mer än gärna finnas flera
                         stilsättningar i samma scope. Man anger bara igen, på ny rad,
-                        vilket attribut som ska stilsättas och sedan hur. <br> <br>
-
+                        vilket attribut som ska stilsättas och sedan hur. Ett attribut
+                        kan även ta flera värden. Exempelvis tar attributet <i>flex:</i>
+                        tre värden – öka, minska samt hur man ska beräkna ny storlek.
+                        <br>
+                        <br>
                         Känner man för att välja ut något annat att stilsätta kan man
                         fortsätta på ny rad efter den stängade måsparantesen på samma
                         sätt som ovan. Man radar helt enkelt upp stilregel efter stilregel
                         för att formge sin hemsida.
                     </p>
-                </section>
+                </div>
             </article>
         </main>
 
