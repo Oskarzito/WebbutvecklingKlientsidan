@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="stylesheets/styles.css">
+        <title>2.5 Navigering</title>
+    </head>
+    <body>
+        <header>
+            <h1>2.1 Navigering</h1>
+            <hr>
+        </header>
+        <div class="main-content">
+            <div class="list-description-content">
+                <h3>Länktillstånd och <code>a:link, a:active, a:visited, a:hover</code></h3>
+                <p>
+                    Länkar kan befinna sig i olika tillstånd. Tillstånden beror på
+                    om länken använts eller ej och så vidare. Dessa tillstånd är:
+                </p>
+                <dl class="link-list">
+                    <dt>Link</dt>
+                    <dd>- En helt vanlig, ej klickad (ej besökt), länk.</dd>
+
+                    <dt>Visited</dt>
+                    <dd>- En länk som klickats på (besökts).</dd>
+
+                    <dt>Hover</dt>
+                    <dd>- Länkens tillstånd när man håller muspekaren ovanför den.</dd>
+
+                    <dt>Active</dt>
+                    <dd>- Tillståndet precis när man klickar på länken.</dd>
+                </dl>
+
+                <p>
+                    Om vi vill ändra default-stilen hos länkars tillstånd kan vi i
+                    CSS göra använda oss av följande selektorer: <code>a:link, a:visited,
+                    a:hover, a:active</code> Dessa skall även definieras i denna
+                    inbördes ordning i CSS-filen!
+                </p>
+
+                <h3>Cursor</h3>
+                <p class="cursor-text">
+                    Cursor representerar muspekaren. Man kan välja att ändra den
+                    muspekare som visas om man till exempel håller pekaren ovanför
+                    ett HTML-element. Testa hoovra med muspekaren övanför denna text.
+                </p>
+            </div>
+
+            <div class="link-button-content">
+                <h3>Länkknappar</h3>
+                <a target="_blank" class="link-button" href="about:blank">Länkknapp 1 Yahoo</a>
+                <a target="_blank" class="link-button" href="https://youtube.com">Länkknapp 2 YouTube</a>
+                <a target="_blank" class="link-button" href="https://bing.se">Länkknapp 3 Bing</a>
+                <br>
+                <br>
+                <p>
+                    <span id="link-text">Röd länk.</span> <br>
+                    <span id="visited-text">Lila när länken är besökt.</span> <br>
+                    <span id="hover-text">Grön när man hoovrar över länken.</span> <br>
+                    <span id="active-text">Blå när länken precis klickas (aktiv)</span>
+                </p>
+                <hr>
+                <h3>Bildlänk</h3>
+                <a class="link-image" href="#">
+                    <img
+                    src="http://icons.iconarchive.com/icons/wikipedia/flags/512/SE-Sweden-Flag-icon.png"
+                    alt="svensk flagga">
+                </a>
+            </div>
+
+        </div>
+    </body>
+</html>

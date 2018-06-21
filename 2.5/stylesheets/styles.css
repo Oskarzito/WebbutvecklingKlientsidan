@@ -1,0 +1,96 @@
+
+body {
+    background-color: lightgoldenrodyellow;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.link-list dt {
+    font-size: 25px;
+}
+
+.list-description-content {
+    border-style: dashed;
+    padding-left: 10px;
+    width: 50%;
+}
+
+.cursor-text {
+    cursor: help;
+}
+
+.link-button-content {
+    border-style: double;
+    overflow-x: auto;
+    padding-left: 10px;
+    width: 50%;
+}
+
+.link-button {
+    color: black;
+    font-size: 20px;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.link-button:link {
+    background-color: red;
+}
+
+.link-button:visited {
+    background-color: purple;
+}
+
+.link-button:hover {
+    background-color: green;
+}
+
+.link-button:active {
+    background-color: blue;
+}
+
+#link-text {
+    color: red;
+}
+
+#visited-text {
+    color: purple;
+}
+
+#hover-text {
+    color: green;
+}
+
+#active-text {
+    color: blue;
+}
+
+.link-image {
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    display: inline-block;
+    background-color: red;
+}
+
+.link-image:link {
+    border-style: dashed;
+    opacity: 0.2;
+}
+
+.link-image:visited {
+    background-color: purple;
+    border-style: dotted;
+    opacity: 1.0;
+}
+
+.link-image:hover {
+    background-color: green;
+    opacity: 0.6;
+}
+
+.link-image:active {
+    background-color: blue;
+    opacity: 1.0;
+}
