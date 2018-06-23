@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
     <title>2.2 Text och listor</title>
 </head>
 
@@ -10,10 +12,143 @@
     <header>
         <h1>2.2 Text och listor</h1>
         <p>
-            Inledande text.
+            Här går vi igenom lite fonter, enheter och listor.
         </p>
         <hr>
     </header>
+
+    <article class="font-family-article">
+        <h3>Fontfamilj</h3>
+        <p>
+            Fontfamilj syftar till fonter som baseras på samma grund, det vill
+            säga, de har likartade tecken. Dessa fonter har stora drag gemensamt,
+            men har även skillnader. I HTML kan man definiera egna fontfamiljer
+            via attributet font-family. I font-family definierar man en font ett
+            HTML-element ska anta, men utöver det definierar man så kallade
+            “fallback-fonter” (reserv-fonter) som elementet antar om den font man
+            först definierar inte stöds av webbläsaren.
+        </p>
+
+        <dl class="big-text-size">
+            <dt><span class="serif">Text skriven i Serif</span> &lt;--OCH--&gt;
+                <span class="sans-serif">Text skriven i Sans-serif</span> </dt>
+            <dd>- Skillnaden är att Sans-serif saknar detaljerade ändarna på tecknen.</dd>
+            <dt>
+                <p class="monospace">Text skriven i monospace</p>
+            </dt>
+            <dd>- Alla tecken har samma bredd.</dd>
+        </dl>
+    </article>
+
+    <article class="units-article">
+        <h3>Enheter</h3>
+        <section class="keywords">
+            <h4>nyckelord</h4>
+            <p>
+                När man vill sätta storleken hos fonter kan man använda sig utav
+                diverse måttenheter. Dessa beskrivs i uppgift 2.1. Det finns däremot
+                även nyckelord som kan definiera storlek hos fonter. Dessa är följande,
+                i deras respektive storlekar:
+            </p>
+            <ul>
+                <li id="xx-small">xx-small</li>
+                <li id="x-small">x-small</li>
+                <li id="small">small</li>
+                <li id="medium">medium</li>
+                <li id="large">large</li>
+                <li id="x-large">x-large</li>
+                <li id="xx-large">xx-large</li>
+            </ul>
+        </section>
+
+        <section class="percentage">
+            <h4>%</h4>
+            <p>
+                Denna enhet sätter ett elements fontstorlek till en viss procent
+                av HTML-elementets förälderelements fontstorlek. Till exempel
+                motsvarar <code>font-size: 50%;</code> halva storleken av förälderns
+                storlek (oavsett vad man sätter förälderns storlek till).
+            </p>
+        </section>
+
+        <section class="em">
+            <h4><code>em</code></h4>
+            <p>
+                <code>em</code> är en storlek som också är relativ. Om man inte
+                har definierat en annan font-storlek någonstans kommer <code>1em</code>
+                vara default-storleken. Om man däremot skulle sätta fontstorleken
+                på exempelvis <code>body</code>-elementet till 30px, då kommer
+                <code>1em</code> att motsvara 30px.
+            </p>
+        </section>
+    </article>
+
+    <article class="color-article">
+        <h3>Färger</h3>
+        <p>
+            Färger kan man definiera på flertalet sätt; via att ange en specifik
+            färgs namn, via att ange det hexadecimala värdet för en färg, eller
+            via att ange red-green-blue-värdet (rgb) för en färg.
+        </p>
+        <ul>
+            <li id="color-name">
+                Denna färg skapades via att ange färgens namn.
+                Via att skriva: <code>color: blue;</code>
+            </li>
+            <li id="color-hex">
+                Denna färg skapades via att ange färgens hexadecimalvärde. Via: <code>color: #00ff00;</code>
+            </li>
+            <li id="color-rgb">
+                Denna färg skapades via att ange färgens rgb-värde. Via: <code>color: rgb(204, 0, 0);</code>
+            </li>
+        </ul>
+    </article>
+
+    <article class="font-article">
+        <h3>Teckensnitt</h3>
+        <p>
+            En <b>font</b> är en uppsättning tecken i en viss gemensam storlek
+            och stil. Man kan ha tecken i fonten <code class="monospace">monospace</code>. Och man
+            kan ha tecken i fonten <code class="serif">serif</code>.
+        </p>
+    </article>
+
+    <article class="list-article">
+        <h3>Listor</h3>
+        <p>
+            <code>list-style</code> är ett “kortkommando” för följande 3 list-attribut:
+        </p>
+
+        <ul class="styled-list">
+            <li><code>list-style-type</code></li>
+            <li><code>list-style-position</code></li>
+            <li><code>list-style-image</code></li>
+        </ul>
+
+        <p>
+            Istället för att skriva respektive CSS-kommando för sig, kan man bara
+            skriva: <br>
+            <code>
+                list-style: square inside url("http://icons.iconarchive.com/icons/hopstarter/button/24/Button-Next-icon.png");
+            </code>
+        </p>
+
+        <ul class="styled-list">
+            <li>
+                <code>square</code> definierar att en (oordnad) listas bullet-points
+                ska vara fyrkantiga (nu råkar bilden vara rund dock).
+            </li>
+            <li>
+                <code>inside</code> säger att en listas (exempelvis) text inte har
+                något indrag för varje ny rad man skriver, förutom den första,
+                som är på samma rad som bullet-point:en.
+            </li>
+            <li>
+                <code>url</code> tar här som argument en url till en bild. Denna
+                bild kommer vara ikonen för samtliga bullet-points i listan.
+            </li>
+        </ul>
+    </article>
 
 </body>
 
