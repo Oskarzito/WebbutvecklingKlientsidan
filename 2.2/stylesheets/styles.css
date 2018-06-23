@@ -7,7 +7,7 @@ body {
 }
 
 article {
-    border-color: blue;
+    border-color: lightgreen;
     border-style: dashed;
     max-width: 50%;
     padding-left: 5px;
