@@ -65,7 +65,7 @@
             <h4>%</h4>
             <p>
                 Denna enhet sätter ett elements fontstorlek till en viss procent
-                av HTML-elementets förälderelements fontstorlek. Till exempel
+                av HTML-elementets förälderelements storlek. Till exempel
                 motsvarar <code>font-size: 50%;</code> halva storleken av förälderns
                 storlek (oavsett vad man sätter förälderns storlek till).
             </p>
@@ -78,13 +78,13 @@
                 har definierat en annan font-storlek någonstans kommer <code>1em</code>
                 vara default-storleken. Om man däremot skulle sätta fontstorleken
                 på exempelvis <code>body</code>-elementet till 30px, då kommer
-                <code>1em</code> att motsvara 30px.
+                <code>1em</code> att motsvara 30px – och <code>2em</code> 60px.
             </p>
         </section>
     </article>
 
     <article class="color-article">
-        <h3>Färger</h3>
+        <h3>Färger / <code>color</code></h3>
         <p>
             Färger kan man definiera på flertalet sätt; via att ange en specifik
             färgs namn, via att ange det hexadecimala värdet för en färg, eller
@@ -105,11 +105,16 @@
     </article>
 
     <article class="font-article">
-        <h3>Teckensnitt</h3>
+        <h3>Teckensnitt / <code>font</code></h3>
         <p>
             En <b>font</b> är en uppsättning tecken i en viss gemensam storlek
             och stil. Man kan ha tecken i fonten <code class="monospace">monospace</code>. Och man
-            kan ha tecken i fonten <code class="serif">serif</code>.
+            kan ha tecken i fonten <code class="serif">serif</code>. <br> <br>
+
+            För att definiera en font i <code>Times New Roman</code> kan man i CSS
+            exempelvis skriva: <br>
+            <code id="font-example">font: italic 30px "Times New Roman", Serif; </code>
+            (Där <code>Serif</code> agerar reserv).
         </p>
     </article>
 

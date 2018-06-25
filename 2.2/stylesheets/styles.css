@@ -74,6 +74,10 @@ article + article {
     color: rgb(204, 0, 0);
 }
 
+#font-example {
+    font: italic 30px "Times New Roman", Serif;
+}
+
 .styled-list {
     list-style: square inside url("http://icons.iconarchive.com/icons/hopstarter/button/24/Button-Next-icon.png");
 }
