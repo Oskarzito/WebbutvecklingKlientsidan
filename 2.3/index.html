@@ -1,32 +1,195 @@
 <!DOCTYPE html>
 <html lang="sv" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-        <link rel="stylesheet" href="stylesheets/styles.css">
-        <title>2.3 Marginaler, kantlinjer och paddning</title>
-    </head>
-    <body>
-        <header>
-            <h1>2.3 Marginaler, kantlinjer och paddning</h1>
-            <p>Användning av marginaler, kantlinjer och paddning.</p>
-            <hr>
-        </header>
 
-        <article class="box-model-article">
-            <h3>Boxmodell</h3>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <title>2.3 Marginaler, kantlinjer och paddning</title>
+</head>
+
+<body>
+    <header>
+        <h1>2.3 Marginaler, kantlinjer och paddning</h1>
+        <p>Användning av marginaler, kantlinjer och paddning.</p>
+        <hr>
+    </header>
+
+    <h2>Exempel-boxmodeller</h2>
+
+    <div class="box-div-1">
+        HTML Content!
+    </div>
+
+    <div class="box-div-2">
+        Another HTML Content element with more text!
+    </div>
+
+
+    <article class="box-model-article">
+        <h3>Boxmodell</h3>
+        <p>
+            En boxmodell kan ses som boxar som omsluter ett HTML-element. På engelska kallas dessa boxar för:
+        </p>
+        <ul>
+            <li>Content (innehåll): representerar själva HTML-elementet (texten ovan).</li>
+            <li>Padding: ett transparent område runt elementet som man kan öka/minska (blå).</li>
+            <li>Border (kantlinje): en omslutande ram runt innehållet samt paddingen (gul).</li>
+            <li>Margin (marginal): rätt lik paddingen. Den transparenta marginalen omsluter tidigare ovan nämnda områden. Marginalen definierar avståndet till bredvidliggande HTML-element åt olika håll (röd).</li>
+        </ul>
+    </article>
+
+    <article class="margin-article">
+        <h3>Marginaler: <code>margin</code></h3>
+        <p>
+            Marginalen definierar avstånden mellan HTML-element, utanför eventuella kantlinjer. Denna kan man definiera åt samtliga håll runt ett element (top, left, bottom, right). <br> <br> Som vi ser i de två boxarna högst upp kan marginalen vara olika
+            beroende på vad man vill ha (nu är det lite avstånd mellan de röda områdena, men det är bara för tydlighet. Egentligen skulle de två områdena ligga intill varandra).
+        </p>
+
+    </article>
+
+    <article class="border-article">
+        <h3>Kantlinjer</h3>
+
+        <div class="border-paragraph">
+            <h4><code>border</code></h4>
             <p>
-                En boxmodell kan ses som boxar som omsluter ett HTML-element.
-                På engelska kallas dessa boxar:
+                Border representerar en kantlinje runt elementet på skärmen, se rutan runt denna text. På kantlinjerna finns det olika attribut man kan sätta. Se följande.
             </p>
-            <ul>
-                <li>Content (innehåll): representerar själva HTML-elementet.</li>
-                <li>Padding: ett transparent område runt elementet.</li>
-                <li>Border (kantlinje): en omslutande ram runt innehållet samt paddingen.</li>
-                <li>Margin (marginal): rätt lik paddingen. Den transparenta marginalen
-                    omsluter tidigare ovan nämnda områden. Marginalen definierar avståndet
-                    till bredvidliggande HTML-element åt olika håll.</li>
-            </ul>
-        </article>
-    </body>
+        </div>
+
+        <p>
+            Color: Kantlinjen kan vara i olika färger. <span class="yellow-border-text">Här är den gul.</span>
+            <span class="red-border-text">Här är den röd.</span>
+        </p>
+
+        <div class="dashed-border">
+            <p>
+                Style: Man kan även ha olika stil på sin kantlinje. Här är den <code>dashed</code>. Den gula kantlinjen ovan är dotted. Den röda är solid.
+                <span class="mixed-border">Det går även att mixa kantlinjernas stil runt ett element.</span>
+            </p>
+        </div>
+
+        <p class="border-width-text">
+            Width: Man kan definiera en (eller fler) bredd på sin kantlinje. Här är den 20px bred på toppen. Till höger är 40px bred. Nedtill 60px bred. Till vänster 80px bred.
+        </p>
+    </article>
+
+    <article class="padding-article">
+        <h3>Padding</h3>
+        <p class="padding-text">
+            Med padding kan man bestämma ett avstånd från sitt HTML-element till sin border (kantlinje). Det går att definiera padding åt samtliga håll. Här har vi padding 50px på sidorna, medan vi har 10px ovan och under texten.
+        </p>
+    </article>
+
+    <article class="outline-article">
+        <h3>Outline</h3>
+        <p class="outline-text">
+            Outline ritar ut något runt ett element (ungefär som en border). Detta sker dock utanför kantlinjerna, där marginalen tar vid. Däremot är outline och marginal två olika saker. Outline ritar bara ut, men gör ingen marginal; så ritar man för stort kan det
+            överlappa med andra element och se fult ut. Marginalen däremot ser till att man får ett avstånd mellan element, men ritar inte ut något. Här är kantlinjen röd och outlinen blå och <code>dotted</code> (och för stor med 40px bredd).
+        </p>
+    </article>
+
+    <article class="visibility-article">
+        <h3>Synlighet</h3>
+        <h4>Visibility</h4>
+        <p>
+            Visibility definierar om man vill att ett element ska vara synligt på skärmen eller ej. Genom att skriva: <code>visibility: hidden;</code> göms elementet och blir osynligt. Ändra <code>hidden</code> till
+            <code>visible</code> och elementet blir synligt igen. Här är lite gömd text som syns i källkoden --&gt;
+            <span class="hidden-text">Här är lite gömd text.</span>
+        </p>
+
+        <h4>Clip-path</h4>
+        <p>
+            Man kan välja vilken del av ett element som ska vara synligt med
+            <code>clip-path</code>. Här ser vi en (egentligen rektangulär) sverigeflagga som en polygon via CSS-kommandot <code>clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);</code>:
+
+            <img src="http://icons.iconarchive.com/icons/wikipedia/flags/512/SE-Sweden-Flag-icon.png" class="clip-image" alt="">
+        </p>
+
+        <h4>Display</h4>
+        <p>
+            Med <code>display</code> kan man styra hur element visas på skärmen. Två paragraf-element läggs vanligtvis på varsin rad (block).
+        </p>
+        <p class="non-inline-paragraph">
+            Ett block.
+        </p>
+        <p class="inline-paragraph">
+            Ett till block.
+        </p>
+        <br> <br>
+        <p>
+            Väljer vi däremot att lägga dessa som inline läggs paragraferna efter varandra (utan en radbrytning):
+        </p>
+        <p class="inline-paragraph">
+            Ett block.
+        </p>
+        <p class="inline-paragraph">
+            Ett till block.
+        </p>
+        <br> <br>
+        <p>
+            Man kan alltså med <code>display</code> styra hur element ska placeras ut av webbläsaren.
+        </p>
+
+        <h4>Overflow</h4>
+        <p>
+            Men hjälp av <code>overflow</code> kan man styra upp hur element ska uppträda när de börjar bli för stora för sin egen container.
+        </p>
+        <br> <br>
+
+        <p class="overflow-hidden-paragraph">
+            Denna paragraf gömmer sitt overflow.
+        </p>
+        <p class="overflow-automatic-paragraph">
+            Denna paragraf hanterar sitt overflow med hjälp av en scollbar.
+        </p>
+
+    </article>
+
+    <article class="transparency-article">
+        <h3>Transparens</h3>
+        <p class="rgba">
+            Vill man få till en viss transparens kan man använda rgba eller opacity. Rgba definierar, utöver färger, även ett alfavärde som motsvarar hur genomskinligt något är. Detta värde sätts på ett specifikt attribut, såsom bakgrundsfärg eller dylikt. Denna
+            bakgrund har en röd färg med alfavärde 0.3, vilket gör den mer transparent. Egentligen skulle bakgrunden utan lägre alfavärdersdefinition vara lika röd som <span class="red-text">denna text.</span>
+        </p>
+        <p class="opacity">
+            Opacity definierar endast transparent som påverkar hela HTML-elementet. Här påverkas allt innehåll i ett element såväl som dess barn i DOM-trädet. Det är alltså inte endast bakgrunden som blir transparent, utan allt inom elementet blir det.
+        </p>
+    </article>
+
+    <article class="border-radius-article">
+        <h3>Border-radius</h3>
+        <p class="round-corners">
+            Med hjälp av <code>border-radius</code> kan man skapa runda hörn på ett element. Detta går smidigt genom att ange olika kombinationer av måttenheter. Detta elements kanter är rundade med: <code>border-radius: 15px 50px 30px 5px;</code> Där
+            första värdet appliceras på hörnet högst upp till vänster. Andra värdet högst upp till höger. Tredje längst ner till höger. Och fjärde längst ner till vänster.
+        </p>
+    </article>
+
+    <article class="multiple-bgs-article">
+        <h3>Multippla bakgrundsbilder</h3>
+        <p>
+            Genom att ange en <code>background-image</code> följt av en eller flera kommaseparerade url:er till bilder kan vi få till multipla bakgrunder av bilder.
+        </p>
+    </article>
+
+    <article class="box-shadow-article">
+        <h3 class="shadow-h">Skuggor</h3>
+        <p>
+            <code>box-shadow</code> lägger till en fin bakgrundsskugga till det element man vill ha det på. Skuggan till denna rubrik är till exempel gjord via:
+            <code>box-shadow: 15px 10px;</code> <br> <br> Första värdet anger högerindenteringen (horisontell). Andra avgör hur långt nedanför skuggan ska hamna (vertikal). Se rubriken i denna artikel.
+        </p>
+    </article>
+
+    <article class="gradients-article">
+        <h3>Gradienter</h3>
+        <p>
+            Gradienter kan användas för att göra snygga övergångar av färger. Se exempelvis denna bakgrund. Den går från röd till blå till grön via linjär gradient:
+            <code>background: linear-gradient(red, blue, green);</code>
+            <br> <br> Linjära gradienter går i en linjär riktning (upp, ner, höger, vänster, diagonalt). Radiala gradienter gör liknande övergångar, fast börjar i centrum på elementet, och jobbar sedan utåt.
+        </p>
+    </article>
+
+</body>
+
 </html>

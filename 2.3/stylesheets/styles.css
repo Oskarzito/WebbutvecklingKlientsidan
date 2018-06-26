@@ -4,3 +4,147 @@ body {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+.box-div-1 {
+    background-color: blue;
+    border-style: solid;
+    border-width: 25px;
+    border-color: yellow;
+    padding: 10px;
+    padding-top: 40px;
+    max-width: 100px;
+    margin: 30px;
+    outline-width: 20px;
+    outline-color: red;
+    outline-style: solid;
+    text-align: center;
+    display: inline-block;
+}
+
+.box-div-2 {
+    background-color: blue;
+    border-style: solid;
+    border-width: 10px;
+    border-color: yellow;
+    padding: 25px;
+    max-width: 100px;
+    margin: 70px;
+    outline-width: 70px;
+    outline-color: red;
+    outline-style: solid;
+    text-align: center;
+    display: inline-block;
+}
+
+article {
+    border-style: groove;
+}
+
+.border-paragraph {
+    border-style: solid;
+    margin-bottom: 10px;
+}
+
+.yellow-border-text {
+    border-style: dotted;
+    border-color: yellow;
+}
+
+.red-border-text {
+    border-style: solid;
+    border-color: red;
+}
+
+.dashed-border {
+    border-style: dashed;
+}
+
+.mixed-border {
+    border-style: dashed dotted solid groove;
+}
+
+.border-width-text {
+    margin-top: 20px;
+    border-style: solid;
+    border-width: 20px 40px 60px 80px;
+}
+
+.padding-text {
+    border-style: solid;
+    padding: 10px 50px 10px 50px;
+}
+
+.outline-text {
+    border-color: red;
+    border-style: solid;
+    outline-color: blue;
+    outline-style: dotted;
+    outline-width: 40px;
+}
+
+.hidden-text {
+    visibility: hidden;
+}
+
+.clip-image {
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+.non-inline-paragraph {
+    border-style: solid;
+}
+
+.inline-paragraph {
+    border-style: solid;
+    display: inline-block;
+}
+
+.overflow-hidden-paragraph {
+    border-style: solid;
+    max-width: 50px;
+    overflow: hidden;
+}
+
+.overflow-automatic-paragraph {
+    border-style: solid;
+    max-width: 50px;
+    overflow: auto;
+}
+
+.rgba {
+    border-style: solid;
+    background-color: rgba(205, 0, 0, 0.3);
+}
+
+.red-text {
+    color: rgb(205, 0, 0);
+}
+
+.opacity {
+    border-style: solid;
+    background-color: rgb(205, 0, 0);
+    opacity: 0.5;
+}
+
+.round-corners {
+    border-width: 15px;
+    border-style: solid;
+    border-radius: 15px 50px 30px 5px;
+}
+
+.multiple-bgs-article {
+    background: url(http://icons.iconarchive.com/icons/hopstarter/button/24/Button-Next-icon.png) right bottom no-repeat, url(http://icons.iconarchive.com/icons/atti12/tv-series-folder/64/Arrow-icon.png) left top no-repeat,
+     url(http://icons.iconarchive.com/icons/wikipedia/flags/512/SE-Sweden-Flag-icon.png) center no-repeat;
+    color: red;
+    text-align: center;
+}
+
+.shadow-h {
+    border-style: solid;
+    max-width: 200px;
+    box-shadow: 15px 10px;
+}
+
+.gradients-article {
+    background: linear-gradient(red, blue, green);
+}
