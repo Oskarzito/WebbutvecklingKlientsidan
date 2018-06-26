@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+        <link rel="stylesheet" href="stylesheets/styles.css">
+        <title>2.4 Bilder och bakgrunder</title>
+    </head>
+    <body>
+        <header>
+            <h1>2.4 Bilder och bakgrunder</h1>
+            <p>
+                För <code>h1</code>-rubriken användes denna bild fast förstorad så den
+                täcker hela rubriken --&gt;
+                <img src="http://icons.iconarchive.com/icons/hopstarter/button/24/Button-Next-icon.png" class="image-arrow" alt="arrow">
+            </p>
+
+            <hr>
+        </header>
+
+        <article>
+            <h3>Bakgrunder</h3>
+            <p>
+                En bakgrund är precis vad det heter, en bakgrund. Här kan man använda
+                färger eller bilder att lägga bakom sina HMTL-element för att ge dem en
+                snygg bakgrund. Genom att selektera element i CSS kan man lägga till
+                bakgrunder via <code>background-color, background-image</code> eller
+                bara <code>background</code>. Genom att lägga en bakgrund på en specifik
+                tagg kommer all använding av taggen få den bakgrunden. <br> <br>
+
+                I detta dokument har <code>body</code> fått en bakgrund; den som syns stort bakom allt.
+                <code>h1</code> har en bakgrund, och <code>li</code> en batmanfigur som bakgrund. <br> <br>
+
+                Med hjälp av <code>background</code> definierar man bilden/bilderna samt var den/de ska placeras i containern.
+            </p>
+
+            <h2>Här är en <code>h2</code>-rubrik med samma bakgrund som <code>h1</code>!</h2>
+
+            <div class="color-background">
+	            Här är en färgbakgrund.
+            </div>
+
+            <div class="image-background">
+	            Här är en bildbakgrund.
+            </div>
+
+            <ol>
+                <li>Ett element i listan med Batmanbakgrund</li>
+                <li>Ett till element i listan med Batmanbakgrund</li>
+                <li>Och sen ett till</li>
+            </ol>
+
+        </article>
+
+        <article>
+            <h3>img-taggen och CSS</h3>
+            <p>
+                img-taggen kan stilsättas som vanliga taggar i CSS. Vi kan öka/minska
+                storlekar, sätta overflow-hantering, med mera.
+                Om man tillämpar attributet <code>float</code> på en bild kommer text,
+                med mera, runtom att flyta bredvid bilden (till höger i exemplet nedan, där
+                bilder flyter till vänster).
+            </p>
+
+            <h4>En rubrik</h4>
+            <img src="http://icons.iconarchive.com/icons/diversity-avatars/avatars/64/batman-icon.png" alt="batman">
+            <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum."
+            </p>
+            <hr>
+            <p>
+                Attributet <code>clear</code> "tar bort" flytande text. Genom detta attribut
+                förbjuder man text och dylikt att flyta vid en bild (eller andra element som
+                tillåts flyta). Till exempel, om vi skriver samma
+                text och bild som ovan, men clearar sidorna kring rubriken hamnar hela texten
+                under bilden istället för att flyta bredvid den.
+            </p>
+
+            <h4>En rubrik</h4>
+            <img src="http://icons.iconarchive.com/icons/diversity-avatars/avatars/64/batman-icon.png" alt="batman">
+            <h4 class="no-float">Clearad rubrik som gör att allt hamnar under bilden istället för till höger</h4>
+            <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum."
+            </p>
+        </article>
+
+    </body>
+</html>

@@ -1,0 +1,56 @@
+body {
+    background: url(http://icons.iconarchive.com/icons/papirus-team/papirus-apps/512/preferences-desktop-color-icon.png) top no-repeat;
+    background-size: 100%;
+    background-color: lightgoldenrodyellow;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.image-arrow {
+    float: none;
+    height: 24px;
+    width: 24px;
+}
+
+p {
+    width: 50%;
+}
+
+h1 {
+    background: url(http://icons.iconarchive.com/icons/hopstarter/button/24/Button-Next-icon.png) center no-repeat;
+    background-size: 100%;
+    max-width: 50%;
+}
+
+h2 {
+    background: url(http://icons.iconarchive.com/icons/hopstarter/button/24/Button-Next-icon.png) center no-repeat;
+    background-size: 100%;
+    max-width: 50%;
+}
+
+.color-background {
+    background-color: rgb(250, 0, 0);
+    max-width: 40%;
+}
+
+.image-background {
+    background: url(http://icons.iconarchive.com/icons/icons-land/vista-flags/96/Solid-Color-White-Flag-1-icon.png) center no-repeat;
+    background-size: 100%;
+    max-width: 40%;
+}
+
+li {
+    background: url(http://icons.iconarchive.com/icons/diversity-avatars/avatars/48/batman-icon.png) right no-repeat;
+    height: 50px;
+    width: 200px;
+}
+
+img {
+    float: left;
+    height: 100px;
+    border-style: dashed;
+}
+
+.no-float {
+    clear: both;
+}
