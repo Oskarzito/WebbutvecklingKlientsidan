@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <title>2.6 Tabeller och formulär</title>
+</head>
+
+<body>
+    <header>
+        <h1>2.6 Tabeller och formulär</h1>
+        <hr>
+    </header>
+
+    <article class="table-article">
+        <h2>Tabeller</h2>
+        <p>
+            Tabellers storleksattribut <code>table-layout</code> kan man sätta med olika värden, exempelvis <code>auto</code> eller <code>fixed</code>. Det är detta attribut (algoritm) som bestämmer hur en tabells storlek ska räknas ut.
+        </p>
+
+        <h3><code>auto</code></h3>
+        <p>
+            Tabellens innehåll bestämmer dess storlek (tabellen skalas efter det längsta obrytbara innehållet, till exempel ett långt ord). Skriver vi i CSS:
+        </p>
+        <pre>
+                <code>
+        table-layout: auto;
+        width: 200px;
+                </code>
+            </pre>
+
+        <p>
+            kommer tabellen se ut som följande:
+        </p>
+
+        <table class="auto-table">
+            <tr>
+                <th>Kolumn 1</th>
+                <th>Kolumn 2</th>
+            </tr>
+            <tr>
+                <td>abcdefghijklmnopqrstuvxyz1234567890</td>
+                <td>abc</td>
+            </tr>
+        </table>
+
+        <h3><code>fixed</code></h3>
+        <p>
+            För <code>fixed</code> bestämmer tabellens definierade storlek, dess faktiska storlek. Om vi återanvände CSS-koden ovan, men skriver istället <code>table-layout: fixed;</code> kommer tabellen vara exakt 200px bred. Tabellen skalas INTE efter
+            inenhållet, se följande tabell:
+        </p>
+
+        <table class="fixed-table">
+            <tr>
+                <th>Kolumn 1</th>
+                <th>Kolumn 2</th>
+            </tr>
+            <tr>
+                <td>abcdefghijklmnopqrstuvxyz1234567890</td>
+                <td>abc</td>
+            </tr>
+        </table>
+
+        <p>
+            Detta ser ju fult ut. Så givetvis kan vi hantera detta med att varje cell hanterar ett overflow med scrollbars:
+        </p>
+        <table class="fixed-table overflow-handled-table">
+            <tr>
+                <th>Kolumn 1</th>
+                <th>Kolumn 2</th>
+            </tr>
+            <tr>
+                <td>abcdefghijklmnopqrstuvxyz1234567890</td>
+                <td>abc</td>
+            </tr>
+        </table>
+    </article>
+
+    <hr>
+
+    <article class="forms-article">
+        <h2>Formulär med CSS</h2>
+        <p>
+            Formulär i HTML är uppbyggda av flertalet olika HTML-element, och likt andra element, kan dessa formulär stilsättas för att snygga till dem. Nedan ser vi exempel på 2 exakt likadana formulär (deras HTML-kod är lika), men det andra formuläret har stilatts
+            med CSS.
+        </p>
+
+        <form method="get" action="https://people.dsv.su.se/~pierre/courses/05_ass/ip2/2/2.2.1/perl/example.cgi">
+            <fieldset>
+                <legend>Ett ej stilsatt formulär</legend>
+                <label for="user1" title="Obligatorisk, endast bokstäver, 2 till 10 tecken">Användarnamn:* </label>
+                <input type="text" name="usernameInput" placeholder="Ett namn" id="user1">
+
+                <label for="email1">E-post: </label>
+                <input type="email" id="email1" name="email" placeholder="example@example.com">
+
+                <label for="pass1" title="Obligatorisk, tillåter bokstäver och siffror, 2 till 15 tecken">Lösenord:* </label>
+                <input type="password" name="passwordInput" placeholder="abc123" id="pass1">
+
+                <input type="submit" name="submit" value="Skicka!">
+            </fieldset>
+        </form>
+
+        <hr>
+
+        <div class="styled-form">
+            <form method="get" action="https://people.dsv.su.se/~pierre/courses/05_ass/ip2/2/2.2.1/perl/example.cgi">
+                <fieldset>
+                    <legend>Ett stilsatt formulär</legend>
+                    <label for="user" title="Obligatorisk, endast bokstäver, 2 till 10 tecken">Användarnamn:* </label>
+                    <input type="text" name="usernameInput" placeholder="Ett namn" id="user" class="styled">
+
+                    <label for="email">E-post: </label>
+                    <input type="email" id="email" class="styled" name="email" placeholder="example@example.com">
+
+                    <label for="pass" title="Obligatorisk, tillåter bokstäver och siffror, 2 till 15 tecken">Lösenord:* </label>
+                    <input type="password" name="passwordInput" placeholder="abc123" id="pass" class="styled">
+
+                    <input type="submit" name="submit" value="Skicka!" class="styled">
+
+                </fieldset>
+            </form>
+        </div>
+    </article>
+
+</body>
+
+</html>

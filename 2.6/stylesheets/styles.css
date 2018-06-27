@@ -1,0 +1,54 @@
+
+body {
+    background-color: lightgoldenrodyellow;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+table, th, td {
+    border: 2px solid black;
+}
+
+p {
+    max-width: 50%;
+}
+
+.auto-table {
+    table-layout: auto;
+    width: 200px;
+}
+
+.fixed-table {
+    table-layout: fixed;
+    width: 200px;
+}
+
+.overflow-handled-table td {
+    overflow-x: auto;
+}
+
+.styled-form {
+    background-color: lightblue;
+    flex-direction: column;
+    width: 50%;
+}
+
+input.styled {
+    display: flex;
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+input[type=submit].styled {
+    width: 85%;
+    background-color: #00cc00;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type=submit].styled:hover {
+    background-color: #339933;
+}
