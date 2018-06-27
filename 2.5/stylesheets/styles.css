@@ -26,7 +26,8 @@ body {
     border-style: double;
     overflow-x: auto;
     padding-left: 10px;
-    width: 50%;
+    min-width: 50%;
+    max-width: 50%;
 }
 
 .link-button {
@@ -69,20 +70,19 @@ body {
 }
 
 .link-image {
-    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
     display: inline-block;
     background-color: red;
 }
 
 .link-image:link {
-    border-style: dashed;
+    border-style: solid;
+    border-color: blue;
     opacity: 0.2;
 }
 
 .link-image:visited {
     background-color: purple;
-    border-style: dotted;
-    opacity: 1.0;
+    border-color: white;
 }
 
 .link-image:hover {
