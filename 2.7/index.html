@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <title>2.7 Sidlayout</title>
+</head>
+
+<body>
+    <header>
+        <h1>2.7 Sidlayout</h1>
+        <hr>
+    </header>
+
+    <article class="website-layout-article">
+        <h3>
+                Webbsideslayout (fixerad, flytande och elastisk) (fixed, fluid,
+                and elastic)
+            </h3>
+
+        <dl class="layout-list">
+            <dt><a href="fixed.html">Fixed</a></dt>
+            <dd>
+                - Storlekar har bestämda mått, vanligtvis angivna i pixlar (
+                <code>px</code>). Dessa hemsidor ser oftast bara bra ut på en skärmstorlek.
+            </dd>
+
+            <dt>Fluid</dt>
+            <dd>
+                - Storlekar anges i procent. När skärmstorleken förändras justeras
+                hemsidans innehåll skalenligt. Detta kan dock se rätt dåligt ut exempelvis
+                på mindre skärmar. 10% på en stor skärm kan vara rimligt. På en liten
+                telefon blir detta innehåll väldigt litet.
+            </dd>
+
+            <dt>Elastic</dt>
+            <dd>
+                - Storlekar anges i <code>em</code>. Bra eftersom mått på hemsidans
+                element skalas efter fontstorleken. Men om man ändrar fontstorleken
+                kan hemsidans utseende ändras drastiskt.
+            </dd>
+        </dl>
+    </article>
+
+    <article class="css-table-article">
+        <h3>Varför CSS istället för tabeller</h3>
+        <p>
+            Man bör använda CSS istället för tabeller när man skapar sina layouter.
+            Detta eftersom det främst är semantiskt rörigt om man använder tabeller
+            för att styra sin layout istället för att presentera data. Vidare är det
+            mer flexibelt att använda CSS när man kan använda <code>flexbox</code> med mera.
+        </p>
+
+    </article>
+
+</body>
+
+</html>

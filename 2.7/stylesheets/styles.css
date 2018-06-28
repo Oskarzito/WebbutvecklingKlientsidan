@@ -1,0 +1,20 @@
+
+body {
+    background-color: lightgoldenrodyellow;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+article + article {
+    margin-top: 10px;
+}
+
+article {
+    border-style: solid;
+    max-width: 75%;
+    padding: 5px;
+}
+
+.layout-list dt {
+    font-size: x-large;
+}
