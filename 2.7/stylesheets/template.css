@@ -11,6 +11,8 @@ body {
 .header {
     background-color: lightyellow;
     text-align: center;
+    position: sticky;
+    top: 0;
 }
 
 .page-container {
@@ -18,14 +20,19 @@ body {
 }
 
 .main-page-container {
-    display: flex;
-    flex-direction: row;
+    /*display: flex;
+    flex-direction: row;*/
+    position: relative;
+}
+
+.left, .center, .right {
+    float: left;
 }
 
 .left {
     background-color: lightgreen;
     width: 15%;
-    display: flex;
+    /*display: flex;*/
 }
 
 .center {
@@ -35,14 +42,78 @@ body {
     margin-right: 2%;
     display: flex;
     flex-direction: column;
+    overflow: auto;
 }
 
 .right {
     background-color: lightblue;
     width: 15%;
-    display: flex;
+    min-height: 200px;
+    max-height: 500px;
+    /*display: flex;*/
 }
 
 .footer {
     background-color: lightyellow;
+    clear: both;
+    position: relative;
+}
+
+.relative {
+    position: relative;
+    left: 140px;
+}
+
+.fixed-bottom-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border-style: dashed;
+    border-color: red;
+}
+
+.absolute {
+    position: absolute;
+    bottom: -50px;
+    left: 14px;
+    border: solid blue;
+    padding-bottom: 25px;
+    background-color: lightgreen;
+}
+
+.z-indexed {
+    bottom: -100px;
+    left: 30px;
+    background-color: lightblue;
+    padding-bottom: 0px;
+    border-color: green;
+    z-index: 1;
+    max-width: 50%;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.aligned-paragraphs {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: solid blue;
+}
+
+.top-align {
+    vertical-align: top;
+    text-align: right;
+}
+
+.middle-align {
+    vertical-align: middle;
+}
+
+.bottom-align {
+    vertical-align: bottom;
+    text-align: left;
 }
