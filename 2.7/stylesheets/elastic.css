@@ -1,8 +1,8 @@
 
-/*Fixed with px*/
+/*Elastic with em*/
 
 .page-container {
-    width: 980px;
+    width: 80em;
 }
 
 .footer {

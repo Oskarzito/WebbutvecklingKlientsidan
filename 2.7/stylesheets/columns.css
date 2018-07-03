@@ -1,0 +1,29 @@
+
+body {
+    background-color: lightgoldenrodyellow;
+}
+
+header {
+    text-align: center;
+}
+
+article + article {
+    margin-top: 15px;
+}
+
+article {
+    padding: 20px;
+    background-color: white;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    box-shadow: 7px 7px 5px grey;
+}
+
+.ccount {
+    column-count: 3;
+}
+
+.cwidth {
+    column-width: 120px;
+}
