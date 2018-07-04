@@ -1,0 +1,32 @@
+/*CSS för stationära enheter*/
+
+@media only screen and (min-width: 840px) {
+
+    .content {
+        position: relative;
+    }
+
+    .navbar {
+        background-color: blue;
+        width: 12%;
+        max-width: 108px;
+        overflow: auto;
+        position: absolute;
+        height: 100%;
+        top: 100;
+        left: 5;
+    }
+
+    .nav-list {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .main-content {
+        background-color: lightgrey;
+        width: 85%;
+        overflow: auto;
+        position: static;
+        margin-left: 110px;
+    }
+}

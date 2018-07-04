@@ -1,0 +1,26 @@
+/*CSS för mobila enheter*/
+
+@media only screen and (max-width: 839px) {
+    .navbar {
+        width: 100%;
+        background-color: lightblue;
+    }
+
+    .nav-list-item {
+        display: inline-block;
+        width: 40%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    .nav-list-item:hover {
+        background-color: lightpink;
+    }
+
+    .main-content {
+        background-color: lightgrey;
+        width: 100%;
+        overflow: auto;
+    }
+}

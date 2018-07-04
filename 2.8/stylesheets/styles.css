@@ -1,0 +1,27 @@
+
+* {
+    /*Vi återställer box-layouten så allt
+    funkar som vi vill*/
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgoldenrodyellow;
+}
+
+.nav-list {
+    list-style-type: none;
+}
+
+.nav-list-item {
+    padding-bottom: 10px;
+}
+
+.nav-list-item:hover {
+    background-color: lightyellow;
+}
+
+article {
+    border-style: solid;
+    margin-bottom: 5px;
+}
