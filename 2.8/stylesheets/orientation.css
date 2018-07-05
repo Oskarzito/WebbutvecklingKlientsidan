@@ -1,0 +1,37 @@
+
+/*
+    CSS där elementet får olika bakgrundsfärg och border
+    beroende på skärmstorlek samt skärmorientering
+*/
+
+@media screen and (orientation: portrait) and (max-width: 400px) {
+    .element {
+        background-color: lightblue;
+        border-style: solid;
+        border-color: green;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 400px) {
+    .element {
+        background-color: lightgreen;
+        border-style: solid;
+        border-color: blue;
+    }
+}
+
+@media screen and (orientation: portrait) and (min-width: 401px) {
+    .element {
+        background-color: yellow;
+        border-style: dashed;
+        border-color: red;
+    }
+}
+
+@media screen and (orientation: landscape) and (min-width: 401px) {
+    .element {
+        background-color: red;
+        border-style: solid;
+        border-color: yellow;
+    }
+}

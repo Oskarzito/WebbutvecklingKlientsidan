@@ -1,4 +1,6 @@
 
+/*Vi ha några saker gemensamt för alla enheter*/
+
 * {
     /*Vi återställer box-layouten så allt
     funkar som vi vill*/
