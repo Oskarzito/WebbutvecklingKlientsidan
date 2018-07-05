@@ -1,0 +1,28 @@
+
+@font-face {
+    font-family: myFont;
+    src: url("../fonts/1942-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: lightgoldenrodyellow;
+}
+
+div {
+    width: 75%;
+    margin: auto;
+    background-color: white;
+    box-shadow: 10px 10px 15px;
+}
+
+.squirrel-font {
+    font-family: myFont;
+    font-size: large;
+}
+
+.google-font {
+    font-family: 'Indie Flower', cursive;
+    font-size: large;
+}
