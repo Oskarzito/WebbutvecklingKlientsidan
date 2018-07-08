@@ -18,8 +18,10 @@
             grunderna. Resterande kapitel behandlar:
         </p>
         <dl>
-            <!--Länkarna verkar inte helt länka rätt.
-            Man kommer till inloggning, men ej till uppgiftens sida.-->
+            <!--Länkarna verkar inte helt länka optimalt.
+            Man kommer till inloggning på people.dsv, men ej till uppgiftens sida.
+            Länkar till de uppgifter jag gjort finns nedan och de länkar till lokala
+            HTML-filer-->
             <dt>2.2 Text och listor</dt>
             <dd>
                 - Introduktion till stilsättning av text och listor.
@@ -80,7 +82,7 @@
 
     <div class="page-content">
         <nav class="navigation">
-            <h4>Länkar till andra uppgifter:</h4>
+            <h4>Länkar till andra genomförda uppgifter:</h4>
             <ul>
                 <li class="nav-list-item">
                     <a target="_blank" href="../2.2/index.html">2.2 Text och listor</a>
@@ -124,7 +126,7 @@
                 </div>
                 <div>
                     <p>
-                        CSS kan appliceras på HTML-kod på främst två sätt, inline
+                        CSS kan appliceras på HTML-kod på olika sätt, inline, internt
                         och externt. Fördelarna med att använda externt länkade
                         CSS-filer är flertalet. Här är några:
                     </p>
@@ -262,7 +264,8 @@
                                 dessa en röd bakgrund. Det vi sedan gör är att vi
                                 väljer ut alla a-taggar som innehar attributet
                                 target=”_blank”, vilket betyder att man specificerat
-                                att de vid klick ska öppnas i en ny webbläsarflik.
+                                att de vid klick ska öppnas i en ny webbläsarflik, och
+                                stilsätter dessa med blå bakgrund.
                             </p>
                         </li>
                         <li>
@@ -282,7 +285,7 @@
                             </pre>
                             <p>
                                 vilket gör att att alla HTML-element som tillhör
-                                klassen myClass kommer centreras i mitten. Klasser
+                                klassen myClass kommer få sin text centrerad i mitten. Klasser
                                 väljs ut genom att skriva en punkt följt av klassnamnet.
                             </p>
                         </li>
@@ -318,6 +321,8 @@
                             </pre>
                             <p>
                                 Detta väljer ut alla p-element vars förälder är ett div-element.
+                                Att ha med <code>&gt;</code> eller ej kommer få olika betydelse,
+                                men det som väljs ut är fortfarande ett barn.
                             </p>
                         </li>
                     </ul>

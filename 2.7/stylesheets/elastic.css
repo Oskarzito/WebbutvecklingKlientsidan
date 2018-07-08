@@ -1,8 +1,24 @@
 
 /*Elastic with em*/
 
+body {
+    font-size: 14px;
+}
+
 .page-container {
     width: 80em;
+}
+
+.left {
+    width: 16em;
+}
+
+.center {
+    width: 40em;
+}
+
+.right {
+    width: 16em;
 }
 
 .footer {

@@ -43,7 +43,7 @@
                     <code>fixed</code>: elementet är positionerat relativt till dess viewport. Och kommer stanna där även om man exempelvis scrollar. Se längst ner till höger på denna sida.
                 </li>
                 <li>
-                    <code>absolute</code>: elementet är positionerat relativt till dess närmast positionerade förälderelement. Om inget såndant element finns placeras absolut positionerade element enligt dokumentets <code>body</code>. Dessa tre kolumner
+                    <code>absolute</code>: elementet är positionerat relativt till dess närmast positionerade förälderelement. Om inget såndant element finns placeras absolut positionerade element enligt dokumentets <code>body</code>. Footern
                     ligger i en container som är relativt positionerad vilket gör att texten längst ned till vänster (blå border) kan placeras ut precis där man vill ha den.
                 </li>
                 <li>
@@ -58,23 +58,18 @@
 
             <h3>Float och clear</h3>
             <p>
-                Om man tillämpar attributet <code>float</code> på ett elemet kommer andra element, med mera, runtom att flyta bredvid elementet.
-                De tre kolumnerna på denna sida har alla attributet <code>float: left;</code> vilket gör att dessa hamnar på rad.
-                Med attributet <code>clear</code> kan man förbjuda element att flyta bredvid varandra. Footern på denna sida har attributet
+                Om man tillämpar attributet <code>float</code> på ett elemet kommer andra element, med mera, runtom att flyta bredvid elementet. De tre kolumnerna på denna sida har alla attributet <code>float: left;</code> vilket gör att dessa hamnar
+                på rad. Med attributet <code>clear</code> kan man förbjuda element att flyta bredvid varandra. Footern på denna sida har attributet
                 <code>clear: both;</code> vilket gör att den hamnar helt själv längst ned på sidan utan något bredvid.
             </p>
 
             <h3>width och height</h3>
             <p>
-                <code>width</code> och <code>height</code> är vad som avgöra bredd och höjd
-                på HTML-element. För dessa attribut finns även specifikare regler som kan definieras:
+                <code>width</code> och <code>height</code> är vad som avgöra bredd och höjd på HTML-element. För dessa attribut finns även specifikare regler som kan definieras:
                 <code>min-width, min-height, max-width</code> samt <code>max-height</code>. <br> <br>
 
-                <code>min-height</code> definierar den minsta höjden ett element ska vara. Det kommer inte
-                att bli mindre än denna höjd när man zoomar in och ut. <code>max-height</code> definierar den
-                största höjden ett element kan vara. Elementet kommer inte bli större än maxhöjden.
-                Samma regler gäller för <code>min-width</code> och <code>max-width</code> fast för bredden.
-                För exempel på min- och maxhöjd, testa dra i textaren i högra kolumnen.
+                <code>min-height</code> definierar den minsta höjden ett element ska vara. Det kommer inte att bli mindre än denna höjd när man zoomar in och ut. <code>max-height</code> definierar den största höjden ett element kan vara. Elementet kommer
+                inte bli större än maxhöjden. Samma regler gäller för <code>min-width</code> och <code>max-width</code> fast för bredden. För exempel på min- och maxhöjd, testa dra i textaren i högra kolumnen.
             </p>
 
         </main>
@@ -91,9 +86,7 @@
 
         <footer class="footer">
             <p>
-                Footer! <br>
-                Här kan vi se att text kan alignas åt olika håll. Med <code>vertical-align</code> kan
-                man definiera var på den vertikala axeln text (eller annat) ska alignas.
+                Footer! <br> Här kan vi se att text kan alignas åt olika håll. Med <code>vertical-align</code> kan man definiera var på den vertikala axeln text (eller annat) ska alignas.
             </p>
             <div class="aligned-paragraphs">
                 <p class="top-align">
@@ -107,7 +100,7 @@
                 </p>
             </div>
             <p class="absolute z-indexed">
-                Denna paragraf är z-indexerad. Element som får en <code>position</code> kan z-indexeras. Detta definierar i vilken ordning det ska målas ut på skärmen. Elementet definieras före det underliggande elementet i koden, men med ett <code>z-index: 1;</code> ritas det trotsallt ut ovanför (efteråt).
+                Denna paragraf är z-indexerad. Element som får en <code>position</code> kan z-indexeras. Detta definierar i vilken ordning det ska målas ut på skärmen. Elementet definieras före det underliggande elementet i koden, men med ett <code>z-index: 1;</code>                ritas det trotsallt ut ovanför (efteråt).
             </p>
 
             <p class="absolute">
