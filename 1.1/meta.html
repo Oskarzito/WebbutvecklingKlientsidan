@@ -1,125 +1,115 @@
 <!DOCTYPE html>
 <html lang="sv" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>HTML Meta</title>
-    </head>
-    <body>
-        <h1>Metainformation i HTML</h1>
 
-        <p>
-            Meta-taggar i HTML definieras i ett dokuments <a href="structure.html#head">huvud</a>
-            och innehåller information om data (så kallad metadata). Vad detta betyder är att taggarna ej
-            visar innehåll på skärmen för klienten, utan snarare exempelvis hjälper en sökmotor att hitta
-            till ens hemisda och dylikt. Här beskrivs meta-taggar med <a href="#meta-name-attribute"><code>name</code>-attribut</a>
-            samt <a href="#meta-http-equiv"> <code>http-equiv</code>-taggar</a>.
-        </p>
+<head>
+    <meta charset="utf-8">
+    <title>HTML Meta</title>
+</head>
 
-        <hr>
+<body>
+    <h1>Metainformation i HTML</h1>
 
-        <h2 id="meta-name-attribute">Meta-taggar med <code>name</code>-attribut:</h2>
+    <p>
+        Meta-taggar i HTML definieras i ett dokuments <a href="structure.html#head">huvud</a> och innehåller information om data (så kallad metadata). Vad detta betyder är att taggarna ej visar innehåll på skärmen för klienten, utan snarare exempelvis
+        hjälper en sökmotor att hitta till ens hemisda och dylikt. Här beskrivs meta-taggar med <a href="#meta-name-attribute"><code>name</code>-attribut</a> samt <a href="#meta-http-equiv"> <code>http-equiv</code>-taggar</a>.
+    </p>
 
-        <h3>description</h3>
-        <p>
-            En sträng som används för att beskriva ens hemsida. Denna information
-            används av sökmotorer när man söker efter information. Beskriver man
-            vad som finns på sin hemsida kan man möjligtvis få fler besökare.
-        </p>
-        <pre>
-            <code>
+    <hr>
+
+    <h2 id="meta-name-attribute">Meta-taggar med <code>name</code>-attribut:</h2>
+
+    <h3>description</h3>
+    <p>
+        En sträng som används för att beskriva ens hemsida. Denna information används av sökmotorer när man söker efter information. Beskriver man vad som finns på sin hemsida kan man möjligtvis få fler besökare.
+    </p>
+    <pre>
+        <code>
         &lt;meta name="description" content="Webbutveckling Klientsidan"&gt;
-            </code>
-        </pre>
+        </code>
+    </pre>
 
-        <hr>
+    <hr>
 
-        <h3>keywords</h3>
-        <p>
-            Här skriver man kommaseparerade nyckelord som representerar hemsidans innehåll.
-        </p>
-        <pre>
-            <code>
+    <h3>keywords</h3>
+    <p>
+        Här skriver man kommaseparerade nyckelord som representerar hemsidans innehåll.
+    </p>
+    <pre>
+        <code>
         &lt;meta name="keywords" content="meta,taggar,HTML"&gt;
-            </code>
-        </pre>
+        </code>
+    </pre>
 
-        <hr>
+    <hr>
 
-        <h3>author</h3>
-        <p>
-            Här skriver man namnet på författaren som skapat hemsidan.
-        </p>
-        <pre>
-            <code>
+    <h3>author</h3>
+    <p>
+        Här skriver man namnet på författaren som skapat hemsidan.
+    </p>
+    <pre>
+        <code>
         &lt;meta name="author" content="Oskar Emilsson"&gt;
-            </code>
-        </pre>
+        </code>
+    </pre>
 
-        <hr>
+    <hr>
 
-        <h3>generator</h3>
-        <p>
-            En sträng-representation som representerar information den eventuella programvara
-            som man använt för att generera ett HTML-dokument. Denna meta-taggen används inte
-            om man exempelvis skapat sitt dokument i en texteditor.
-        </p>
-        <pre>
-            <code>
+    <h3>generator</h3>
+    <p>
+        En sträng-representation som representerar information den eventuella programvara som man använt för att generera ett HTML-dokument. Denna meta-taggen används inte om man exempelvis skapat sitt dokument i en texteditor.
+    </p>
+    <pre>
+        <code>
         &lt;meta name="generator" content="Frontweaver 8.2"&gt;
-            </code>
-        </pre>
-        <p>
-            Exempel-generator-tag hämtad från
-            <a target="_blank" href="https://www.w3.org/TR/html5/document-metadata.html#standard-metadata-names">W3 Document metadata</a>
-            <!--https://www.w3.org/TR/html5/document-metadata.html#standard-metadata-names-->
-        </p>
+        </code>
+    </pre>
+    <p>
+        Exempel-generator-tag hämtad från
+        <a target="_blank" href="https://www.w3.org/TR/html5/document-metadata.html#standard-metadata-names">W3 Document metadata</a>
+        <!--https://www.w3.org/TR/html5/document-metadata.html#standard-metadata-names-->
+    </p>
 
-        <hr>
+    <hr>
 
-        <h3>robots</h3>
-        <p>
-            Denna tag tillåter programmeraren att modifiera lite hur ens hemsida blir indexerad
-            i (de flesta) sökmotorer. Exempelvis kan man definiera följande:
-        </p>
-        <pre>
-            <code>
+    <h3>robots</h3>
+    <p>
+        Denna tag tillåter programmeraren att modifiera lite hur ens hemsida blir indexerad i (de flesta) sökmotorer. Exempelvis kan man definiera följande:
+    </p>
+    <pre>
+        <code>
         &lt;meta name="robots" content="noindex"&gt;
-            </code>
-        </pre>
-        <p>
-            Detta säger åt en sökmotor att man inte vill att ens hemsida ska visas i sökresultaten.
-            “<i>robots</i>"  syftar till alla sökmotorer. Vill man konkretisera sig på att man inte vill
-            att ens sida ska visas på just Google, men i andra sökmotorer, kan man istället skriva:
-        </p>
-        <pre>
-            <code>
+        </code>
+    </pre>
+    <p>
+        Detta säger åt en sökmotor att man inte vill att ens hemsida ska visas i sökresultaten. “
+        <i>robots</i>" syftar till alla sökmotorer. Vill man konkretisera sig på att man inte vill att ens sida ska visas på just Google, men i andra sökmotorer, kan man istället skriva:
+    </p>
+    <pre>
+        <code>
         &lt;meta name="googlebot" content="noindex"&gt;
-            </code>
-        </pre>
+        </code>
+    </pre>
 
-        <hr>
+    <hr>
 
-        <h2 id="meta-http-equiv">http-equiv-taggar</h2>
-        <!--Källa: http://www.htmldog.com/guides/html/intermediate/metatags/-->
-        <p>
-            Dessa taggar skiljer sig en aning från meta-taggarna med <code>name</code>-attribut. Man
-            kan använda sig av <code>http-equiv</code> om man vill skicka information till servern i form
-            av en HTTP-header. Exempelvis kan man defininera att ens sida ska refreshas i ett visst
-            tidsintervall via:
-        </p>
-        <pre>
-            <code>
+    <h2 id="meta-http-equiv">http-equiv-taggar</h2>
+    <!--Källa: http://www.htmldog.com/guides/html/intermediate/metatags/-->
+    <p>
+        Dessa taggar skiljer sig en aning från meta-taggarna med <code>name</code>-attribut. Man kan använda sig av <code>http-equiv</code> om man vill skicka information till servern i form av en HTTP-header. Exempelvis kan man defininera att ens sida
+        ska refreshas i ett visst tidsintervall via:
+    </p>
+    <pre>
+        <code>
         &lt;meta http-equiv="refresh" content="30"&gt; //Motsvarar omladdning var 30e sekund
-            </code>
-        </pre>
-        <p>
-            Kort sagt så är <code>name</code>-taggar egentligen endast information, medan <code>http-equiv</code>-taggarna
-            även kan innehålla instruktioner till webbläsaren som ovan visat. Dessa taggar bör användas med försiktighet
-            då man, via bland annat automatisk omladdning av hemsidan, tar ifrån klienten kontrollen av hur man använder
-            hemsidan.
-        </p>
+        </code>
+    </pre>
+    <p>
+        Kort sagt så är <code>name</code>-taggar egentligen endast information, medan <code>http-equiv</code>-taggarna även kan innehålla instruktioner till webbläsaren som ovan visat. Dessa taggar bör användas med försiktighet då man, via bland annat
+        automatisk omladdning av hemsidan, tar ifrån klienten kontrollen av hur man använder hemsidan.
+    </p>
 
+    <hr>
+    
+</body>
 
-        <hr>
-    </body>
 </html>

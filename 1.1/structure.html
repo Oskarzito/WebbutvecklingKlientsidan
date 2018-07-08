@@ -1,56 +1,44 @@
 <!DOCTYPE html>
 <html lang="sv" dir="ltr">
-    <head>
-        <!--VALIDATED-->
-        <meta charset="utf-8">
-        <title>HTML5 Struktur</title>
-    </head>
-    <body>
-        <h1>Struktur i HTML5</h1>
-        <p>Fyra huvudsakliga taggar HTML:</p>
-        <ul>
-            <li> <a href="#title">&lt;title&gt;</a> </li>
-            <li> <a href="#html">&lt;html&gt;</a> </li>
-            <li> <a href="#head">&lt;head&gt;</a> </li>
-            <li> <a href="#body">&lt;body&gt;</a> </li>
-        </ul>
 
-        <hr>
-        <h2 id="title"> <code>&lt;title&gt;</code> </h2>
-        <p>
-            Taggen definierar titeln för ens dokument, och den skrivs i ett dokuments <a href="#head">huvud</a>. Med detta menas inte
-            titeln som står som rubrik. Exempelvis för denna sida är <b>rubriken</b>
-            "<i>Struktur i HTML5</i>". Titeln å andra sidan är den text som visas högst
-            upp i webbläsarens flikar, vilket för denna sida är "<i>HTML5 Struktur</i>".
-            Titeln används även bland annat av sökmotorer när ens hemsida visas som
-            resultat i en sökning på exempelvis Google.<br> <br>
+<head>
+    <!--VALIDATED-->
+    <meta charset="utf-8">
+    <title>HTML5 Struktur</title>
+</head>
 
-            Om man skulle ta byta ut den nuvarande titel-taggen mot <code>&lt;title&gt;Ny titel&lt;/title&gt;</code>
-            skulle den text som visas i fliken för denna sida i webbläsaren bytas ut mot: "<i>Ny titel</i>".
-        </p>
+<body>
+    <h1>Struktur i HTML5</h1>
+    <p>Fyra huvudsakliga taggar HTML:</p>
+    <ul>
+        <li> <a href="#title">&lt;title&gt;</a> </li>
+        <li> <a href="#html">&lt;html&gt;</a> </li>
+        <li> <a href="#head">&lt;head&gt;</a> </li>
+        <li> <a href="#body">&lt;body&gt;</a> </li>
+    </ul>
 
-        <hr>
-        <h2 id="html"> <code>&lt;html&gt;</code> </h2>
-        <p>Denna tag är den som omsluter, och är därav roten till, hela ens HTML-dokument.
-            För att läsa om strukturen för ett HTML-dokument, såväl som se exempel på hur taggen används,
-            <a href="index.html#structure-header">klicka här!</a> <br> <br>
+    <hr>
+    <h2 id="title"> <code>&lt;title&gt;</code> </h2>
+    <p>
+        Taggen definierar titeln för ens dokument, och den skrivs i ett dokuments <a href="#head">huvud</a>. Med detta menas inte titeln som står som rubrik. Exempelvis för denna sida är <b>rubriken</b> "
+        <i>Struktur i HTML5</i>". Titeln å andra sidan är den text som visas högst upp i webbläsarens flikar, vilket för denna sida är "<i>HTML5 Struktur</i>". Titeln används även bland annat av sökmotorer när ens hemsida visas som resultat i en sökning
+        på exempelvis Google.<br> <br> Om man skulle ta byta ut den nuvarande titel-taggen mot <code>&lt;title&gt;Ny titel&lt;/title&gt;</code> skulle den text som visas i fliken för denna sida i webbläsaren bytas ut mot: "<i>Ny titel</i>".
+    </p>
 
-            Taggen säger till webbläsaren att “<i>jag är ett HTML-dokument</i>”. Inom den
-            öppnande och stängande html-taggen skrivs allt innehåll för ens HTML-dokument,
-            förutom taggen <a href="index.html#doctype-header"> <code> &lt;!DOCTYPE&gt; </code></a>.
+    <hr>
+    <h2 id="html"> <code>&lt;html&gt;</code> </h2>
+    <p>Denna tag är den som omsluter, och är därav roten till, hela ens HTML-dokument. För att läsa om strukturen för ett HTML-dokument, såväl som se exempel på hur taggen används,
+    <a href="index.html#structure-header">klicka här!</a> <br> <br> Taggen säger till webbläsaren att “<i>jag är ett HTML-dokument</i>”. Inom den öppnande och stängande html-taggen skrivs allt innehåll för ens HTML-dokument, förutom taggen <a href="index.html#doctype-header"> <code> &lt;!DOCTYPE&gt; </code></a>.
 
-        </p>
+    </p>
 
-        <hr>
-        <h2 id="head"> <code>&lt;head&gt;</code> </h2>
-        <p>
-            Denna tag representerar huvudet i ett HTML-dokument, vilket innehåller information
-            gällande själva dokumentet. Däribland exempelvis teckenkodningen, hur webbläsaren
-            ska hantera dokumentet, vilka CSS- samt JavaScript-filer som ska länkas in (via link-taggar)
-            och så vidare. Det är även här man definierar titeln för ens dokument. Nedan följer exempel på hur
-            man länkar in en CSS-fil samt hur man definierar en titel för ens HTML-dokument: <br> <br>
-        </p>
-            <pre>
+    <hr>
+    <h2 id="head"> <code>&lt;head&gt;</code> </h2>
+    <p>
+        Denna tag representerar huvudet i ett HTML-dokument, vilket innehåller information gällande själva dokumentet. Däribland exempelvis teckenkodningen, hur webbläsaren ska hantera dokumentet, vilka CSS- samt JavaScript-filer som ska länkas in (via link-taggar)
+        och så vidare. Det är även här man definierar titeln för ens dokument. Nedan följer exempel på hur man länkar in en CSS-fil samt hur man definierar en titel för ens HTML-dokument: <br> <br>
+    </p>
+    <pre>
     &lt;html&gt;
         &lt;head&gt;
             &lt;link rel="stylesheet" href="stylesheets/styles.css"&gt;
@@ -60,22 +48,19 @@
         ...
         &lt;/body&gt;
     &lt;/head&gt;
-            </pre>
-        <p>
-            I huvudet definierar man även eventuella meta-taggar. Dessa beskrivs <a href="meta.html">här!</a>
-        </p>
+    </pre>
+    <p>
+        I huvudet definierar man även eventuella meta-taggar. Dessa beskrivs <a href="meta.html">här!</a>
+    </p>
 
-        <hr>
-        <h2 id="body"> <code>&lt;body&gt;</code> </h2>
-        <p>
-            Kroppen i ett HTML-dokument består av det innehåll som man ser i sin webbläsare. Detta kan vara
-            bland annat knappar, bilder, länkar text och så vidare. Man kan se kroppen som en
-            behållare av HTML-element. Mellan kroppens öppnande och stängande taggar definierar
-            man de HTML-element man vill ska visas på skärmen. Dessa element kan sedan style:as och
-            modifieras som man vill med hjälp av CSS-kommandon.
-        </p>
+    <hr>
+    <h2 id="body"> <code>&lt;body&gt;</code> </h2>
+    <p>
+        Kroppen i ett HTML-dokument består av det innehåll som man ser i sin webbläsare. Detta kan vara bland annat knappar, bilder, länkar text och så vidare. Man kan se kroppen som en behållare av HTML-element. Mellan kroppens öppnande och stängande taggar
+        definierar man de HTML-element man vill ska visas på skärmen. Dessa element kan sedan style:as och modifieras som man vill med hjälp av CSS-kommandon.
+    </p>
 
-            <pre>
+    <pre>
     &lt;html&gt;
         &lt;head&gt;
         ...
@@ -87,43 +72,42 @@
             &lt;p&gt;Lite text&lt;/p&gt;
         &lt;/body&gt;
     &lt;/html&gt;
-            </pre>
+    </pre>
 
-        <p>
-            Om man inte definierar något annat i en eventuell CSS-fil kommer de element man
-            skriver i ett HTML-dokuments kropp hamna i den ordning man definierar dem. Detta
-            är även känt som <i>source order</i>. Till exempel, i koden ovan kommer hemsidan
-            se ut som följande:
-        </p>
-            <hr>
-            <div>
-                <h1> <a href="#">Rubrik</a> </h1>
-                <p>Lite text</p>
-            </div>
-            <hr>
-        <p>
-            Vill man ha texten i den andra ordningen får man byta ordning på elementen, såhär:
-        </p>
+    <p>
+        Om man inte definierar något annat i en eventuell CSS-fil kommer de element man skriver i ett HTML-dokuments kropp hamna i den ordning man definierar dem. Detta är även känt som <i>source order</i>. Till exempel, i koden ovan kommer hemsidan se
+        ut som följande:
+    </p>
+    <hr>
+    <div>
+        <h1> <a href="#">Rubrik</a> </h1>
+        <p>Lite text</p>
+    </div>
+    <hr>
+    <p>
+        Vill man ha texten i den andra ordningen får man byta ordning på elementen, såhär:
+    </p>
 
-        <pre>
+    <pre>
         &lt;body&gt;
             &lt;p&gt;Lite text&lt;/p&gt;
             &lt;h1&gt;
                 &lt;a href=”#”&gt; Rubrik &lt;/a&gt;
             &lt;/h1&gt;
         &lt;/body&gt;
-        </pre>
+    </pre>
 
-        <p>
-            Vilet resulterar i:
-        </p>
-        <hr>
-        <div>
-            <p>Lite text</p>
-            <h1> <a href="#">Rubrik</a> </h1>
-        </div>
-        <hr>
+    <p>
+        Vilet resulterar i:
+    </p>
+    <hr>
+    <div>
+        <p>Lite text</p>
+        <h1> <a href="#">Rubrik</a> </h1>
+    </div>
+    <hr>
 
 
-    </body>
+</body>
+
 </html>

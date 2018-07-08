@@ -1,316 +1,278 @@
 <!DOCTYPE html>
 <html lang="sv" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Text och hypertext</title>
-    </head>
-    <body>
-        <h1> <a href="#text">Text</a> och <a href="#hypertext">hypertext</a> i HTML</h1>
-        <p>
-            Här går vi igenom hur text representeras i olika format på skärmen.
-        </p>
 
-        <hr>
+<head>
+    <meta charset="utf-8">
+    <title>Text och hypertext</title>
+</head>
 
-        <h2 id="text">Text</h2>
+<body>
+    <h1> <a href="#text">Text</a> och <a href="#hypertext">hypertext</a> i HTML</h1>
+    <p>
+        Här går vi igenom hur text representeras i olika format på skärmen.
+    </p>
 
-        <h3>&lt;blockquote&gt;</h3>
-        <p>
-            Denna tag används när man vill citera något från exempelvis en annan hemsida. Som taggens
-            namn indikerar används denna tag när man vill citera textstycken. Exempelvis:
-        </p>
+    <hr>
 
-        <blockquote cite="https://en.wikipedia.org/wiki/Java_(programming_language)">
-            Java is a general-purpose computer-programming language that is concurrent,
-            class-based, object-oriented, and specifically designed to have as few
-            implementation dependencies as possible. It is intended to let application
-            developers "write once, run anywhere" (WORA), meaning that compiled Java
-            code can run on all platforms that support Java without the need for recompilation.
-        </blockquote>
+    <h2 id="text">Text</h2>
 
-        <p>
-            Ett blockquote-element skrivs som följande:
-        </p>
+    <h3>&lt;blockquote&gt;</h3>
+    <p>
+        Denna tag används när man vill citera något från exempelvis en annan hemsida. Som taggens namn indikerar används denna tag när man vill citera textstycken. Exempelvis:
+    </p>
 
-        <pre>
-            <code>
+    <blockquote cite="https://en.wikipedia.org/wiki/Java_(programming_language)">
+        Java is a general-purpose computer-programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible. It is intended to let application developers "write once, run anywhere"
+        (WORA), meaning that compiled Java code can run on all platforms that support Java without the need for recompilation.
+    </blockquote>
+
+    <p>
+        Ett blockquote-element skrivs som följande:
+    </p>
+
+    <pre>
+        <code>
         &lt;blockquote cite="<i>https://en.wikipedia.org/wiki/Java_(programming_language)</i>"&gt;
             Textstycke som skall citeras skrivs här!
         &lt;/blockquote&gt;
-            </code>
-        </pre>
+        </code>
+    </pre>
 
-        <p>
-            Attributet <code>cite</code> representerar den länk man hämtade sitt citat ifrån.
-            Text skriven inom blockquote-taggar blir automatiskt indenterad av webbläsaren.
-        </p>
+    <p>
+        Attributet <code>cite</code> representerar den länk man hämtade sitt citat ifrån. Text skriven inom blockquote-taggar blir automatiskt indenterad av webbläsaren.
+    </p>
 
-        <hr>
+    <hr>
 
-        <h3>h-rubriker</h3>
-        <p>
-            Viktigt när man skriver text är att man skiljer på rubriker och vanlig text.
-            En tag som kan användas för att representera rubriker är h-rubriker.
-            h-rubriker skrivs som en helt vanlig tag i HTML; ett <code>h</code> följt av en siffra
-            från 1 till 6, där 1 motsvarar största rubriken och 6 den minsta.
-            Exempel på storlekar är följande:
-        </p>
-        <h1> <code>&lt;h1&gt;h1-rubrik&lt;/h1&gt;</code> </h1>
-        <h2> <code>&lt;h2&gt;h2-rubrik&lt;/h2&gt;</code> </h2>
-        <h3> <code>&lt;h3&gt;h3-rubrik&lt;/h3&gt;</code> </h3>
-        <h4> <code>&lt;h4&gt;h4-rubrik&lt;/h4&gt;</code> </h4>
-        <h5> <code>&lt;h5&gt;h5-rubrik&lt;/h5&gt;</code> </h5>
-        <h6> <code>&lt;h6&gt;h6-rubrik&lt;/h6&gt;</code> </h6>
-        <p>
-            Skulle man vilja, kan man med hjälp av CSS ändra fonten, storleken och färgen hos rubriker.
-            För oss som läser text på skärmen är det egentligen ingen skillnad om man skriver en h1-rubrik
-            och förstorar texten, eller skriver en h6-rubrik. Det handlar främst om semantiken.
-        </p>
-        <hr>
+    <h3>h-rubriker</h3>
+    <p>
+        Viktigt när man skriver text är att man skiljer på rubriker och vanlig text. En tag som kan användas för att representera rubriker är h-rubriker. h-rubriker skrivs som en helt vanlig tag i HTML; ett <code>h</code> följt av en siffra från 1 till
+        6, där 1 motsvarar största rubriken och 6 den minsta. Exempel på storlekar är följande:
+    </p>
+    <h1> <code>&lt;h1&gt;h1-rubrik&lt;/h1&gt;</code> </h1>
+    <h2> <code>&lt;h2&gt;h2-rubrik&lt;/h2&gt;</code> </h2>
+    <h3> <code>&lt;h3&gt;h3-rubrik&lt;/h3&gt;</code> </h3>
+    <h4> <code>&lt;h4&gt;h4-rubrik&lt;/h4&gt;</code> </h4>
+    <h5> <code>&lt;h5&gt;h5-rubrik&lt;/h5&gt;</code> </h5>
+    <h6> <code>&lt;h6&gt;h6-rubrik&lt;/h6&gt;</code> </h6>
+    <p>
+        Skulle man vilja, kan man med hjälp av CSS ändra fonten, storleken och färgen hos rubriker. För oss som läser text på skärmen är det egentligen ingen skillnad om man skriver en h1-rubrik och förstorar texten, eller skriver en h6-rubrik. Det handlar främst
+        om semantiken.
+    </p>
+    <hr>
 
-        <h3>Paragrafer</h3>
-        <p>
-            Paragrafer i HTML representerar text man vill ha ut på skärmen. Dessa skrivs med
-            ett enkelt <code>p</code>, som följande: <br> <br>
+    <h3>Paragrafer</h3>
+    <p>
+        Paragrafer i HTML representerar text man vill ha ut på skärmen. Dessa skrivs med ett enkelt <code>p</code>, som följande: <br> <br>
 
-            <code>&lt;p&gt;text man vill skriva ut&lt;/p&gt;</code>. <br> <br>
+        <code>&lt;p&gt;text man vill skriva ut&lt;/p&gt;</code>. <br> <br> Skulle man vilja, kan man med hjälp av CSS ändra fonten, storleken och färgen hos paragrafer.
+    </p>
 
-            Skulle man vilja, kan man med hjälp av CSS ändra fonten, storleken och färgen hos paragrafer.
-        </p>
+    <hr>
 
-        <hr>
+    <h3>&lt;pre&gt;</h3>
+    <p>
+        Taggen <code>pre</code> står för <i>pre-formatted</i>. Vad denna tag gör är att den presenterar text i det format som det står i källkoden direkt på skärmen. Vanliga &lt;p&gt;-taggar påverkas inte om man i källkoden exempelvis skriver massvis
+        av tab-tecken innan, och mellan, orden. Det gör däremot text som står inom &lt;pre&gt;-taggar. Nedan följer två exmepel, där det i källkoden är lika många mellanrum som separerar orden i både paragrafen samt pre-formatted-elementet:
+    </p>
+    <p>
+        1.Text skriven som paragraf.
+    </p>
 
-        <h3>&lt;pre&gt;</h3>
-        <p>
-            Taggen <code>pre</code> står för <i>pre-formatted</i>. Vad denna tag gör är att den
-            presenterar text i det format som det står i källkoden direkt på skärmen. Vanliga &lt;p&gt;-taggar
-            påverkas inte om man i källkoden exempelvis skriver massvis av tab-tecken innan, och mellan, orden. Det gör däremot text som
-            står inom &lt;pre&gt;-taggar. Nedan följer två exmepel, där det i källkoden är lika många mellanrum
-            som separerar orden i både paragrafen samt pre-formatted-elementet:
-        </p>
-        <p>
-            1.Text          skriven
-                  som     paragraf.
-        </p>
-
-        <pre>
+    <pre>
             2.Text          skriven
                   som     pre-formatted.
-        </pre>
+    </pre>
 
-        <p>
-            &lt;pre&gt;-taggar är väldigt behändiga om man bland annat vill skriva ut källkod korrekt
-            indenterad på skärmen. Det är helt enkelt programmerarens formatering som används, inte
-            webbläsarens.
-        </p>
+    <p>
+        &lt;pre&gt;-taggar är väldigt behändiga om man bland annat vill skriva ut källkod korrekt indenterad på skärmen. Det är helt enkelt programmerarens formatering som används, inte webbläsarens.
+    </p>
 
-        <hr>
+    <hr>
 
-        <h3>&lt;span&gt;</h3>
-        <p>
-            <code>span</code> är en tag som inline:ar sitt innehåll med föregående element.
-            Det är en så kallad <i>inline-container</i>. Denna tag är behändig om man exempelvis vill style:a
-            ett enda ord i en längre mening, eller om man har anledning att gruppera ihop något inom ett HTML-element. Varför man
-            använder <code>span</code> är eftersom element i HTML vanligtvis läggs under varandra, i samma
-            ordning man skapar dessa i sin kod. Låt oss exemplifiera med en vanlig HTML-paragraf:
-        </p>
-        <pre>
-            <code>&lt;p&gt; Början på en mening &lt;/p&gt; &lt;p class="textnamn"&gt; följt av slutet på en mening. &lt;/p&gt;</code>
-        </pre>
+    <h3>&lt;span&gt;</h3>
+    <p>
+        <code>span</code> är en tag som inline:ar sitt innehåll med föregående element. Det är en så kallad <i>inline-container</i>. Denna tag är behändig om man exempelvis vill style:a ett enda ord i en längre mening, eller om man har anledning att gruppera
+        ihop något inom ett HTML-element. Varför man använder <code>span</code> är eftersom element i HTML vanligtvis läggs under varandra, i samma ordning man skapar dessa i sin kod. Låt oss exemplifiera med en vanlig HTML-paragraf:
+    </p>
+    <pre>
+        <code>
+                &lt;p&gt; Början på en mening &lt;/p&gt; &lt;p class="textnamn"&gt; följt av slutet på en mening. &lt;/p&gt;
+        </code>
+    </pre>
 
-        <p>
-            Resulatet av denna HTML-kod är: <br>
-        </p>
+    <p>
+        Resulatet av denna HTML-kod är: <br>
+    </p>
 
-        <p><i>Början på en mening</i></p><p><i>följt av slutet på en mening.</i></p>
+    <p><i>Början på en mening</i></p>
+    <p><i>följt av slutet på en mening.</i></p>
 
-        <p>
-            Gör man detta med <code>span</code> istället, kan man inline:a sin nya text:
-        </p>
+    <p>
+        Gör man detta med <code>span</code> istället, kan man inline:a sin nya text:
+    </p>
 
-        <pre>
-            <code>&lt;p&gt; Början på en mening &lt;span class="textnamn"&gt; följt av slutet på en mening. &lt;/span&gt;&lt;/p&gt;</code>
-        </pre>
+    <pre>
+        <code>
+                &lt;p&gt; Början på en mening &lt;span class="textnamn"&gt; följt av slutet på en mening. &lt;/span&gt;&lt;/p&gt;
+        </code>
+    </pre>
 
-        <p><i>Början på en mening</i><span><i> följt av slutet på en mening.</i></span></p>
+    <p><i>Början på en mening</i><span><i> följt av slutet på en mening.</i></span></p>
 
-        <p>
-            På detta sätt kan man komma åt och modifiera andra halvan av sin mening via klassnamnet <i>textnamn</i>.
-            Detta är inte endast begränsat till textparagrafer. Man kan applicera <code>span</code> på massvis
-            av HTML-taggar för att få ett inline-beteende. Observera att <code>span</code> inte gör text till
-            kursiv. Detta gjordes endast för att förtydliga.
-        </p>
+    <p>
+        På detta sätt kan man komma åt och modifiera andra halvan av sin mening via klassnamnet <i>textnamn</i>. Detta är inte endast begränsat till textparagrafer. Man kan applicera <code>span</code> på massvis av HTML-taggar för att få ett inline-beteende.
+        Observera att <code>span</code> inte gör text till kursiv. Detta gjordes endast för att förtydliga.
+    </p>
 
-        <hr>
+    <hr>
 
-        <h2 id="hypertext">Hypertext</h2>
+    <h2 id="hypertext">Hypertext</h2>
 
-        <h3> <code>a</code> </h3>
-        <p>
-            För webbsidor är det både nödvändigt och viktigt att man inte presenterar <b>allt</b> innehåll på en gång
-            för klienten som surfar in på hemsidan. För att göra hemsidor mer användarvänliga använder man
-            sig utav länkar. <br> <br>
+    <h3> <code>a</code> </h3>
+    <p>
+        För webbsidor är det både nödvändigt och viktigt att man inte presenterar <b>allt</b> innehåll på en gång för klienten som surfar in på hemsidan. För att göra hemsidor mer användarvänliga använder man sig utav länkar. <br> <br> Länkar i HTML gör
+        man via taggen <code>&lt;a&gt;</code>.
+    </p>
 
-            Länkar i HTML gör man via taggen <code>&lt;a&gt;</code>.
-        </p>
+    <pre>
+        <code>
+                &lt;a target="_blank" href="här-specificerar-man-vart-man-vill-länka"&gt;
+                Element som blir till en klickbar länk&lt;/a&gt;
+        </code>
+    </pre>
 
-        <pre>
-            <code>&lt;a target="_blank" href="här-specificerar-man-vart-man-vill-länka"&gt;
-                Element som blir till en klickbar länk&lt;/a&gt;</code>
-        </pre>
+    <p>
+        Taggen <code>&lt;a&gt;</code> ovan har två attribut, <code>href</code> och <code>target</code>.
+        <code>href</code> <i>pekar</i> på den destination man vill att klienten ska hamna när denna klickar på länken. <code>target</code> i sin tur säger var länken ska öppnas. Detta attribut kan ha flera värden, <code>_blank</code> säger att när man
+        klickar på länken ska den nya sidan (destinationen) öppnas i en ny flik.<br> <br>
+    </p>
 
-        <p>
-            Taggen <code>&lt;a&gt;</code> ovan har två attribut, <code>href</code> och <code>target</code>.
-            <code>href</code> <i>pekar</i> på den destination man vill att klienten ska hamna när denna klickar
-            på länken. <code>target</code> i sin tur säger var länken ska öppnas. Detta attribut kan ha
-            flera värden, <code>_blank</code> säger att när man klickar på länken ska den nya sidan (destinationen) öppnas
-            i en ny flik.<br> <br>
-        </p>
+    <hr>
 
-        <hr>
+    <h4 id="absrel-path">Absoluta och relativa sökvägar</h4>
+    <p>
+        Vill man till exemepel länka till en HTML-sida kan man göra det på två sätt: genom att definiera en absolut sökväg till destinationen, eller en relativ sökväg. Om vi vill länka till startsidan på denna hemsida kan vi definiera detta enklast med en relativ
+        sökväg enligt följande:
+    </p>
 
-        <h4 id="absrel-path">Absoluta och relativa sökvägar</h4>
-        <p>
-            Vill man till exemepel länka till en HTML-sida kan man göra det på två sätt: genom
-            att definiera en absolut sökväg till destinationen, eller en relativ sökväg. Om vi vill
-            länka till startsidan på denna hemsida kan vi definiera detta enklast med en relativ sökväg
-            enligt följande:
-        </p>
+    <pre>
+        <code>
+                &lt;a target="_blank" href="index.html"&gt;Klicka här för startsidan.&lt;/a&gt;
+        </code>
+    </pre>
 
-        <pre>
-            <code>&lt;a target="_blank" href="index.html"&gt;Klicka här för startsidan.&lt;/a&gt;</code>
-        </pre>
+    <p>
+        Vilket blir till länken: <span><a target="_blank" href="index.html">Klicka här för startsidan.</a></span> <br>
+        <code>index.html</code> är en relativ sökväg. Relativa sökvägar börjar söka från den position där länken läggs in, för att sedan därifrån definiera vägen till destinationen. I detta fall ligger denna HTML-sida i samma projektmapp som <code>index.html</code>,
+        därför behöver man endast skriva namnet på filen som <code>href</code>-destination. Hade denna sida legat i en undermapp än vad destinationen gjorde så hade vi varit tvunga att specificera vägen med <code>../index.html</code>, som säger "
+        <i>hoppa upp ett steg i projektstrukturen, välj sedan <code>index.html</code></i>". <br> <br> Till skilland från en relativ sökväg finns absoluta sökvägar. Absoluta sökvägar innehåller hela sökvägen från en hemsidedomäns rot (inklusive domännamnet)
+        till destinationen.
+    </p>
 
+    <pre>
+        <code>
+                &lt;a target="_blank" href="https://stackoverflow.com/questions/tagged/html"&gt;
+                Klicka här för StackOverflow.&lt;/a&gt;
+        </code>
+    </pre>
 
+    <p>
+        Vilket ger länken: <span><a target="_blank" href="https://stackoverflow.com/questions/tagged/html">
+                Klicka här för StackOverflow.</a></span> <br> Som vi ser pekar denna sökväg på domänen StackOverflow. Sedan pekar den på underkatalogen <code>questions</code>, följt av underkatalogen <code>tagged</code>, följt av underkatalogen <code>html</code>.
+        Detta är en länk med en absolut sökväg. Dessa sökvägar är alltid lika, oavsätt varifrån man länkar, till skillnad från de relativa sökvägarna.
+    </p>
 
-        <p>
-            Vilket blir till länken: <span><a target="_blank" href="index.html">Klicka här för startsidan.</a></span> <br>
-            <code>index.html</code> är en relativ sökväg. Relativa sökvägar börjar söka från den position där
-            länken läggs in, för att sedan därifrån definiera vägen till destinationen. I detta fall ligger
-            denna HTML-sida i samma projektmapp som <code>index.html</code>, därför behöver man endast skriva
-            namnet på filen som <code>href</code>-destination. Hade denna sida legat i en undermapp än vad destinationen
-            gjorde så hade vi varit tvunga att specificera vägen med <code>../index.html</code>, som säger
-            "<i>hoppa upp ett steg i projektstrukturen, välj sedan <code>index.html</code></i>". <br> <br>
+    <hr>
 
-            Till skilland från en relativ sökväg finns absoluta sökvägar. Absoluta sökvägar innehåller hela
-            sökvägen från en hemsidedomäns rot (inklusive domännamnet) till destinationen.
-        </p>
+    <h4>Länk till ankare</h4>
+    <p>
+        Ibland vill man inte bara länka till andra hemsidor, ibland vill man även kanske tillåta klienter att hoppa till olika delar på samma sida genom att exempelvis klicka på en rubrik eller dylikt. Detta kan göras med länkar till ankare. <br> <br>        Säg att vi råkat hamna här nere på hemsidan av misstag, och har ingen aning om vad länkar är för något. Detta kan vi lätt hjälpa till att reda ut genom att skriva:
+    </p>
 
-        <pre>
-            <code>&lt;a target="_blank" href="https://stackoverflow.com/questions/tagged/html"&gt;
-                Klicka här för StackOverflow.&lt;/a&gt;</code>
-        </pre>
+    <pre>
+        <code>
+                &lt;a href="#hypertext"&gt;Klicka här för att läsa om länkar.&lt;/a&gt;
+        </code>
+    </pre>
 
-        <p>
-            Vilket ger länken: <span><a target="_blank" href="https://stackoverflow.com/questions/tagged/html">
-                Klicka här för StackOverflow.</a></span> <br>
-            Som vi ser pekar denna sökväg på domänen StackOverflow. Sedan pekar den på underkatalogen <code>questions</code>,
-            följt av underkatalogen <code>tagged</code>, följt av underkatalogen <code>html</code>. Detta är en länk med en
-            absolut sökväg. Dessa sökvägar är alltid lika, oavsätt varifrån man länkar, till skillnad från de relativa sökvägarna.
-        </p>
+    <p>
+        Detta ger oss länken: <span> <a href="#hypertext">Klicka här för att läsa om länkar.</a></span> <br> Genom att i <code>href</code> peka mot ett HTML-elements <code>id</code> kan vi instruera webbläsaren att hoppa till platsen det elementet befinner
+        sig på en hemsida. Destinationen denna länk pekar på är rubriken <i>Hypertext</i>. Den är definierad enligt följande:
+    </p>
 
-        <hr>
+    <pre>
+        <code>
+                &lt;h2 id="hypertext"&gt;Hypertext&lt;/h2&gt;
+        </code>
+    </pre>
 
-        <h4>Länk till ankare</h4>
-        <p>
-            Ibland vill man inte bara länka till andra hemsidor, ibland vill man även kanske tillåta
-            klienter att hoppa till olika delar på samma sida genom att exempelvis klicka på en rubrik
-            eller dylikt. Detta kan göras med länkar till ankare. <br> <br>
+    <p>
+        Genom att definiera ett <code>id</code> för HTML-element kan vi i våra <code>href</code>-definitioner skriva ett <code>#</code>-tecken följt av destinationelementets <code>id</code>. Detta ger oss en länk till ett ankare.
+    </p>
 
-            Säg att vi råkat hamna här nere på hemsidan av misstag, och har ingen aning om vad länkar
-            är för något. Detta kan vi lätt hjälpa till att reda ut genom att skriva:
-        </p>
+    <hr>
 
-        <pre>
-            <code>&lt;a href="#hypertext"&gt;Klicka här för att läsa om länkar.&lt;/a&gt;</code>
-        </pre>
+    <h4>Bild-länkar</h4>
+    <p>
+        Länkar är inte något som är exklusivt för text. Andra HTML-element kan även göras klickbara. Bilder kan vara av intresse att ibland kunna klicka på. En bild-länk skapas enkelt genom:
+    </p>
 
-        <p>
-            Detta ger oss länken: <span> <a href="#hypertext">Klicka här för att läsa om länkar.</a></span> <br>
-            Genom att i <code>href</code> peka mot ett HTML-elements <code>id</code> kan vi instruera
-            webbläsaren att hoppa till platsen det elementet befinner sig på en hemsida. Destinationen
-            denna länk pekar på är rubriken <i>Hypertext</i>. Den är definierad enligt följande:
-        </p>
-
-        <pre>
-            <code>&lt;h2 id="hypertext"&gt;Hypertext&lt;/h2&gt;</code>
-        </pre>
-
-        <p>
-            Genom att definiera ett <code>id</code> för HTML-element kan vi i våra <code>href</code>-definitioner
-            skriva ett <code>#</code>-tecken följt av destinationelementets <code>id</code>. Detta ger oss en
-            länk till ett ankare.
-        </p>
-
-        <hr>
-
-        <h4>Bild-länkar</h4>
-        <p>
-            Länkar är inte något som är exklusivt för text. Andra HTML-element kan även göras klickbara.
-            Bilder kan vara av intresse att ibland kunna klicka på. En bild-länk skapas enkelt genom:
-        </p>
-
-        <pre>
-            <code>
+    <pre>
+        <code>
                 &lt;a href="index.html#structure-header"&gt;
                     &lt;img src="img/taggarHTML.jpg" alt="Taggar i HTML"&gt;
                 &lt;/a&gt;
-            </code>
-        </pre>
+        </code>
+    </pre>
 
-        <p>
-            Vilket ger:
-            <span>
-                <a href="index.html#structure-header">
-                    <img src="img/taggarHTML.jpg" alt="Taggar i HTML">
-                </a>
-            </span> <br> <br>
+    <p>
+        Vilket ger:
+        <span>
+            <a href="index.html#structure-header">
+                <img src="img/taggarHTML.jpg" alt="Taggar i HTML">
+            </a>
+        </span>
+        <br> <br> Det man gör att att skapa ett länk-element med <code>a</code>-taggen. I detta element lägger man sedan in bilden. På detta sätt syns bilden, precis som den ska, men den även klickbar och går till den destination man
+        specificerar i länkens <code>href</code>.
+    </p>
 
-            Det man gör att att skapa ett länk-element med <code>a</code>-taggen. I detta element lägger man
-            sedan in bilden. På detta sätt syns bilden, precis som den ska, men den även klickbar och går
-            till den destination man specificerar i länkens <code>href</code>.
-        </p>
+    <hr>
 
-        <hr>
-
-        <h4>Länk till olika protokoll</h4>
-        <p>
-            I vissa fall kanske man inte är ute efter att länka till andra hemsidor eller till element på
-            den nuvarande sidan. Det kanske till och med är så att man vill länka mot andra protokoll än <b>http</b>.
-            Detta går även att göra via länkar som ovan.
-        </p>
-        <pre>
-            <code>
+    <h4>Länk till olika protokoll</h4>
+    <p>
+        I vissa fall kanske man inte är ute efter att länka till andra hemsidor eller till element på den nuvarande sidan. Det kanske till och med är så att man vill länka mot andra protokoll än <b>http</b>. Detta går även att göra via länkar som ovan.
+    </p>
+    <pre>
+        <code>
             &lt;a target="_blank" href="ftp://ftp.adobe.com/pub/adobe/"&gt;Adobe FTP-server&lt;/a&gt;
-            </code>
-        </pre>
+        </code>
+    </pre>
 
-        <p>
-            Vilket ger länken: <span><a target="_blank" href="ftp://ftp.adobe.com/pub/adobe/">Adobe FTP-server</a></span>, som
-            även ser ut som en helt vanlig länk.
-            Länken ovan pekar på en publik FTP-server från Adobe.
-        </p>
+    <p>
+        Vilket ger länken: <span><a target="_blank" href="ftp://ftp.adobe.com/pub/adobe/">Adobe FTP-server</a></span>, som även ser ut som en helt vanlig länk. Länken ovan pekar på en publik FTP-server från Adobe.
+    </p>
 
-        <hr>
+    <hr>
 
-        <h4>mailto-länk</h4>
-        <p>
-            Länkar kan även användas om man vill länka till en specifik e-postadress.
-        </p>
+    <h4>mailto-länk</h4>
+    <p>
+        Länkar kan även användas om man vill länka till en specifik e-postadress.
+    </p>
 
-        <pre>
-            <code>
+    <pre>
+        <code>
             &lt;a href="mailto:firstname.lastname@domain.com?Subject=Heyho"&gt;Maila och säg hej&lt;/a&gt;
-            </code>
-        </pre>
+        </code>
+    </pre>
 
-        <p>
-            För att klicka på länken ovan krävs det en e-postklient på ens dator. Vid klickning öppnas
-            e-postklienten som sedan automatiskt klistrar in mailen <code>firstname.lastname@domain.com</code>
-            i mottagarfältet, samt klistrar in texten "Heyho" i ämnesraden. Testa följande:
+    <p>
+        För att klicka på länken ovan krävs det en e-postklient på ens dator. Vid klickning öppnas e-postklienten som sedan automatiskt klistrar in mailen <code>firstname.lastname@domain.com</code> i mottagarfältet, samt klistrar in texten "Heyho" i ämnesraden.
+        Testa följande:
 
-            <a href="mailto:firstname.lastname@domain.com?Subject=Heyho">Maila och säg hej</a>
-        </p>
+        <a href="mailto:firstname.lastname@domain.com?Subject=Heyho">Maila och säg hej</a>
+    </p>
 
-    </body>
+</body>
+
 </html>

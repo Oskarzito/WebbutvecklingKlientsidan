@@ -1,115 +1,82 @@
 <!DOCTYPE html>
 <html lang="sv" dir="ltr">
-    <head>
-        <!--VALIDATED-->
-        <meta charset="utf-8">
-        <title>Grunderna i HTML5</title>
-    </head>
-    <body>
-        <h1>1.1 Grunderna i HTML5</h1>
-        <p><b>Nedan följer beskrivning av begrepp. <br> För att se en guide för användning av taggar kan du <a href="tags.html">klicka här</a>!</b></p>
-        <ul>
-            <li><a href="#doctype-header">Doctype</a></li>
-            <li><a href="#teckenkod-header">Teckenkod</a></li>
-            <li><a href="#sprak-header">Språk</a></li>
-            <li><a href="#validation-header">Validering</a></li>
-            <li><a href="#structure-header">Hur ett HTML-dokument är uppbyggt</a></li>
-        </ul>
 
-        <hr>
+<head>
+    <!--VALIDATED-->
+    <meta charset="utf-8">
+    <title>Grunderna i HTML5</title>
+</head>
 
-        <h2 id="doctype-header">Doctype</h2>
-        <p>&lt;!DOCTYPE html&gt; definierar doctype för dokumentet.
-            Detta berättar för browsern (webbläsaren) vilken version av HTML dokumentet är skrivet i.
-            Beroende på doctype:en så kan webbläsaren rita/rendera hemsidan på olika sätt.
-            <br><br>Förut hade HTML väldigt långa (och svåra att komma ihåg) doctype-deklarationer.
-            Exempelvis var man tvungen att skriva:
-        </p>
-        <code>&lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional-dtd”&gt;</code>
+<body>
+    <h1>1.1 Grunderna i HTML5</h1>
+    <p><b>Nedan följer beskrivning av begrepp. <br> För att se en guide för användning av taggar kan du <a href="tags.html">klicka här</a>!</b></p>
+    <ul>
+        <li><a href="#doctype-header">Doctype</a></li>
+        <li><a href="#teckenkod-header">Teckenkod</a></li>
+        <li><a href="#sprak-header">Språk</a></li>
+        <li><a href="#validation-header">Validering</a></li>
+        <li><a href="#structure-header">Hur ett HTML-dokument är uppbyggt</a></li>
+    </ul>
 
-        <hr>
+    <hr>
 
-        <h2 id="teckenkod-header">Teckenkod</h2>
-        <p>Teckenkodningen för ett dokument talar om vilka tecken dokumentet är skrivet i.
-            Exempelvis så används vanligtvis en teckenkodning som kallas för UTF-8, en teckenkodning
-            som omfattar och representerar en uppsättning av alla Unicode-tecken. <br> <br>
+    <h2 id="doctype-header">Doctype</h2>
+    <p>&lt;!DOCTYPE html&gt; definierar doctype för dokumentet. Detta berättar för browsern (webbläsaren) vilken version av HTML dokumentet är skrivet i. Beroende på doctype:en så kan webbläsaren rita/rendera hemsidan på olika sätt.
+        <br><br>Förut hade HTML väldigt långa (och svåra att komma ihåg) doctype-deklarationer. Exempelvis var man tvungen att skriva:
+    </p>
+    <code>&lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional-dtd”&gt;</code>
 
-            Genom att deklarera teckenkodningen för ett dokument kan webbläsare tolka dokumentet på
-            rätt sätt. Detta är väldigt bra om man förväntar sig internationell trafik på ens hemsida.
-            Vidare, om det råkar vara så att man är ute efter att använda en uppsättning tecken som
-            inte är så vanliga (till skillnad från UTF-8) är det extra viktigt att man definierar detta,
-            annars måste webbläsaren reda ut det själv, vilket kan sakta ned tiden det tar för en sida att ladda.
+    <hr>
 
-        </p>
+    <h2 id="teckenkod-header">Teckenkod</h2>
+    <p>Teckenkodningen för ett dokument talar om vilka tecken dokumentet är skrivet i. Exempelvis så används vanligtvis en teckenkodning som kallas för UTF-8, en teckenkodning som omfattar och representerar en uppsättning av alla Unicode-tecken. <br> <br>        Genom att deklarera teckenkodningen för ett dokument kan webbläsare tolka dokumentet på rätt sätt. Detta är väldigt bra om man förväntar sig internationell trafik på ens hemsida. Vidare, om det råkar vara så att man är ute efter att använda en
+        uppsättning tecken som inte är så vanliga (till skillnad från UTF-8) är det extra viktigt att man definierar detta, annars måste webbläsaren reda ut det själv, vilket kan sakta ned tiden det tar för en sida att ladda.
 
-        <hr>
+    </p>
 
-        <h2 id="sprak-header">Språk <i>*(Antar att detta syftar främst till programmeringsspråk)*</i></h2>
-        <p>
-            Ett språk kan simplast beskrivas som en uppsättning maskininstruktioner
-            som producerar någon form av resultat/utdata (output). <br> <br>
+    <hr>
 
-            Det finns olika språk som vardera kan vara bra på olika saker. Låt oss avgränsa
-            detta lite till kursens tre främsta språk: HTML, CSS samt JavaScript. Dessa tre
-            samarbetar ofta för att ge en klient den bästa upplevelsen av en hemsida. En liten
-            analogi skulle vara om vi föreställer oss en varelse. Då hade HTML varit varelsens
-            skelett (underliggande strukturen), CSS hade varit varelsens hud/päls (dess yttre utseende),
-            och JavaScript hade utgjort varelsens personlighet (hur den beter sig). <br> <br>
+    <h2 id="sprak-header">Språk</h2>
+    <p>
+        Ett språk kan simplast beskrivas som en uppsättning maskininstruktioner som producerar någon form av resultat/utdata (output). <br> <br> Det finns olika språk som vardera kan vara bra på olika saker. Låt oss avgränsa detta lite till kursens tre
+        främsta språk: HTML, CSS samt JavaScript. Dessa tre samarbetar ofta för att ge en klient den bästa upplevelsen av en hemsida. En liten analogi skulle vara om vi föreställer oss en varelse. Då hade HTML varit varelsens skelett (underliggande strukturen),
+        CSS hade varit varelsens hud/päls (dess yttre utseende), och JavaScript hade utgjort varelsens personlighet (hur den beter sig). <br> <br> I HTML kan man även indikera ens hemsidas "<i>naturliga språk</i>". Genom att definiera detta vet webbläsaren
+        att språket på hemsidan är exempelvis svenska som denna sida. Detta är bra för att exempelvis en sökmotor ska generera resultat som är på rätt språk.
+    </p>
 
-            I HTML kan man även indikera ens hemsidas "<i>naturliga språk</i>". Genom att definiera detta
-            vet webbläsaren att språket på hemsidan är exempelvis svenska som denna sida.
-        </p>
+    <hr>
 
-        <hr>
+    <h2 id="validation-header">Validering</h2>
+    <p>Validering handlar lite om att “korrekturläsa” något. Vi kan exempelvis validera kod, såsom HTML- och CSS-kod. I valideringsprocessen kontrolleras koden för bland annat syntax- samt strukturfel. En bra validator ger tips/meddelanden om vad som är
+        fel och varför (och kanske till och med tips på hur man istället bör göra). Genom validering kan man kvalitetssäkra sina hemsidor. <br> <br> För att validera HTML-kod kan man använda sig utav: <a target="_blank" href="http://validator.w3.org/">W3 HTML Validator</a>.
+        <br> Och för att validera CSS-kod kan man testa: <a target="_blank" href="http://jigsaw.w3.org/css-validator/">W3 CSS Validator</a>.
+    </p>
 
-        <h2 id="validation-header">Validering</h2>
-        <p>Validering handlar lite om att “korrekturläsa” något. Vi kan exempelvis validera kod,
-            såsom HTML- och CSS-kod. I valideringsprocessen kontrolleras koden för bland annat
-            syntax- samt strukturfel. En bra validator ger tips/meddelanden om vad som är fel och
-            varför (och kanske till och med tips på hur man istället bör göra). Genom validering
-            kan man kvalitetssäkra sina hemsidor. <br> <br>
+    <hr>
 
-            För att validera HTML-kod kan man använda sig utav: <a target="_blank" href="http://validator.w3.org/">W3 HTML Validator</a>. <br>
-            Och för att validera CSS-kod kan man testa: <a target="_blank" href="http://jigsaw.w3.org/css-validator/">W3 CSS Validator</a>.
-        </p>
-
-        <hr>
-
-        <h2 id="structure-header">Hur ett HTML-dokument är uppbyggt</h2>
-        <div class="html-description">
+    <h2 id="structure-header">Hur ett HTML-dokument är uppbyggt</h2>
+    <div class="html-description">
         <img class="tag-structure" src="img/taggarHTML.jpg" alt="Struktur av HTML-taggar">
 
-        <p>Ett HTML-dokument är uppbyggt i en trädliknande struktur. Till att börja med deklarerar
-            man <i>doctype</i> för dokumentet som kan säga till webbläsaren att “<i>jag är ett HTML5-dokument</i>”.
-            Direkt efteråt så följer en öppnande och en stängande HTML-tagg som ser ut som följande: <br> <br>
+        <p>Ett HTML-dokument är uppbyggt i en trädliknande struktur. Till att börja med deklarerar man <i>doctype</i> för dokumentet som kan säga till webbläsaren att “<i>jag är ett HTML5-dokument</i>”. Direkt efteråt så följer en öppnande och en stängande
+            HTML-tagg som ser ut som följande: <br> <br>
 
             <code>&lt;html&gt; <i>[massvis av HTML-kod]</i> &lt;/html&gt;</code> <br> <br>
         </p>
 
-        </div>
+    </div>
 
-        <p>
-            Det är mellan dessa två taggar man skriver resten av sitt dokument. Detta utgör därav roten
-            till trädet, vilken även kommer kallas för ancestor till resterande taggar. <br> <br>
-
-            Vidare så följer två HTML-taggar som kallas för head (huvud) och body (kropp). Huvudet utgörs
-            också av öppnande och stängande taggar. Likaså kroppen. Eftersom dessa båda ligger efter varandra
-            (i koden), och båda är barn till samma ancestor, kallas dessa för syskon. <br> <br>
-
-            Huvudet i ett HTML-dokument innehåller information gällande själva dokumentet. Däribland exempelvis
-            teckenkodningen, hur webbläsaren ska hantera dokumentet, vilka CSS- samt JavaScript-filer som ska
-            länkas in (via link-taggar) och så vidare. Som exempel kan man i nedanstående HTML-dokument se att
-            titeln definieras i dokumenthuvudet. <br> <br>
-
-            Kroppen i sin tur består däremot av det innehåll som klienterna ser i sin webbläsare. Detta kan vara bland
-            annat knappar, bilder, länkar text och så vidare. Det lilla HTML-dokumentet nedan visar exempelvis en
-            länkad rubrik följt av lite text. Det är sedan taggarna i kroppen som man modifierar och style:ar i sina
-            CSS-filer samt ger ett beteende i sina JavaScript-filer. <br> <br>
-        </p>
-            <!-- Följande rader som illustrerar HTML-kod är fult indenterade av anledning att pre-taggen
+    <p>
+        Det är mellan dessa två taggar man skriver resten av sitt dokument. Detta utgör därav roten till trädet, vilken även kommer kallas för ancestor till resterande taggar. <br> <br> Vidare så följer två HTML-taggar som kallas för head (huvud) och
+        body (kropp). Huvudet utgörs också av öppnande och stängande taggar. Likaså kroppen. Eftersom dessa båda ligger efter varandra (i koden), och båda är barn till samma ancestor, kallas dessa för syskon. <br> <br> Huvudet i ett HTML-dokument innehåller
+        information gällande själva dokumentet. Däribland exempelvis teckenkodningen, hur webbläsaren ska hantera dokumentet, vilka CSS- samt JavaScript-filer som ska länkas in (via link-taggar) och så vidare. Som exempel kan man i nedanstående HTML-dokument
+        se att titeln definieras i dokumenthuvudet. <br> <br> Kroppen i sin tur består däremot av det innehåll som klienterna ser i sin webbläsare. Detta kan vara bland annat knappar, bilder, länkar text och så vidare. Det lilla HTML-dokumentet nedan
+        visar exempelvis en länkad rubrik följt av lite text. Det är sedan taggarna i kroppen som man modifierar och style:ar i sina CSS-filer samt ger ett beteende i sina JavaScript-filer. <br> <br>
+    </p>
+    <!-- Följande rader som illustrerar HTML-kod är fult indenterade av anledning att pre-taggen
                  användes för att formatera HTML-kodexemplet. Detta var den bästa lösningen jag
                  hittade dessvärre. -->
-            <pre>
+    <pre>
                 <code>
         &lt;!DOCTYPE html&gt;
         &lt;html&gt;
@@ -127,12 +94,13 @@
                 </code>
             </pre>
 
-        <p>
-            HTML har hundratals taggar att välja bland för att lyckas skapa den struktur programmeraren vill få till.
-            <a target="_blank" href="https://www.w3schools.com/tags/default.asp">Några exempel!</a>
-        </p>
+    <p>
+        HTML har hundratals taggar att välja bland för att lyckas skapa den struktur programmeraren vill få till.
+        <a target="_blank" href="https://www.w3schools.com/tags/default.asp">Några exempel!</a>
+    </p>
 
-        <hr>
+    <hr>
 
-    </body>
+</body>
+
 </html>

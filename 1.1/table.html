@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="sv" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Tabell, bild, area</title>
-    </head>
-    <body>
-        <h1>Tabeller, bilder och areor i HTML</h1>
 
-        <hr>
+<head>
+    <meta charset="utf-8">
+    <title>Tabell, bild, area</title>
+</head>
 
-        <h3>Tabeller</h3>
+<body>
+    <h1>Tabeller, bilder och areor i HTML</h1>
 
-        <p>
-            Tabeller är ett bra sätt att strukturera och visualisera data på.
-        </p>
+    <hr>
 
-        <br> <br>
+    <h3>Tabeller</h3>
 
-        <table>
-            <caption>Ett tabellexempel</caption>
-            <tr>
-                <th>Rad1</th>
-                <th>Kolumn1</th>
-                <th>Kolumn2</th>
-            </tr>
-            <tr>
-                <td>Rad2</td>
-                <td>En cell</td>
-                <td>En till cell</td>
-            </tr>
-        </table>
-        <br><br>
-        <p>
-            Denna tabell är skapad med följande kod:
-        </p>
+    <p>
+        Tabeller är ett bra sätt att strukturera och visualisera data på.
+    </p>
 
-        <pre>
-            <code>
+    <br> <br>
+
+    <table>
+        <caption>Ett tabellexempel</caption>
+        <tr>
+            <th>Rad1</th>
+            <th>Kolumn1</th>
+            <th>Kolumn2</th>
+        </tr>
+        <tr>
+            <td>Rad2</td>
+            <td>En cell</td>
+            <td>En till cell</td>
+        </tr>
+    </table>
+    <br><br>
+    <p>
+        Denna tabell är skapad med följande kod:
+    </p>
+
+    <pre>
+        <code>
                 &lt;table&gt;
 			&lt;caption&gt;Ett tabellexempel&lt;/caption&gt;
 			&lt;tr&gt;
@@ -50,61 +52,60 @@
 			    &lt;td&gt;En till cell&lt;/td&gt;
 			&lt;/tr&gt;
 		&lt;/table&gt;
-            </code>
-        </pre>
+        </code>
+    </pre>
 
-        <p>
-            <code>table</code> representerar själva tabellen. <br>
-            <code>caption</code> står för tabellens rubrik/beskrivning. <br>
-            <code>tr</code> står för table-row, vilket motsvarar en ny rad i tabellen. <br>
-            <code>th</code> står för table-head, vilket motsvarar en kolumns rubrik. <br>
-            <code>td</code> står för tabellens celler, och innehållet i dessa. <br> <br>
-        </p>
+    <p>
+        <code>table</code> representerar själva tabellen. <br>
+        <code>caption</code> står för tabellens rubrik/beskrivning. <br>
+        <code>tr</code> står för table-row, vilket motsvarar en ny rad i tabellen. <br>
+        <code>th</code> står för table-head, vilket motsvarar en kolumns rubrik. <br>
+        <code>td</code> står för tabellens celler, och innehållet i dessa. <br> <br>
+    </p>
 
-        <hr>
+    <hr>
 
-        <h3>Bilder</h3>
-        <p>
-            Bilder i HTML är vanligt taggar som heter <code>&lt;img&gt;</code>. För att representera
-            en bild på skärmen krävs det en bildkälla, <code>src</code>. Denna sökväg hämtar bilden från dess plats i projektet
-            (eller från annan källa) och ritar sedan ut den på skärmen. <code>img</code>-taggen skrivs enligt följande:
-        </p>
+    <h3>Bilder</h3>
+    <p>
+        Bilder i HTML är vanligt taggar som heter <code>&lt;img&gt;</code>. För att representera en bild på skärmen krävs det en bildkälla, <code>src</code>. Denna sökväg hämtar bilden från dess plats i projektet (eller från annan källa) och ritar sedan
+        ut den på skärmen. <code>img</code>-taggen skrivs enligt följande:
+    </p>
 
-        <pre>
-            <code>&lt;img src="img/taggarHTML.jpg" alt="bild på HTML-tag" usemap="image-html"&gt;</code>
-        </pre>
+    <pre>
+        <code>
+                &lt;img src="img/taggarHTML.jpg" alt="bild på HTML-tag" usemap="image-html"&gt;
+        </code>
+    </pre>
 
-        <p>
-            Attributet <code>alt</code> är en text som skrivs ut om bilden ej skulle
-            kunna visas. <code>usemap</code> återkommer vi till snart. Resultatet av detta blir sedan följande:
-        </p>
+    <p>
+        Attributet <code>alt</code> är en text som skrivs ut om bilden ej skulle kunna visas. <code>usemap</code> återkommer vi till snart. Resultatet av detta blir sedan följande:
+    </p>
 
-        <img src="img/taggarHTML.jpg" alt="bild på HTML-tag" usemap="#image-html">
-		<map name="image-html">
-			<area alt="open" coords="40,80,150,150" href="index.html#structure-header" shape="rect" target="_blank" title="Opening HTML tag">
-		</map>
+    <img src="img/taggarHTML.jpg" alt="bild på HTML-tag" usemap="#image-html">
+    <map name="image-html">
+		<area alt="open" coords="40,80,150,150" href="index.html#structure-header" shape="rect" target="_blank" title="Opening HTML tag">
+	</map>
 
-        <p>
-            Så vad innebär <code>usemap="image-html"</code>? Jo, det man kan göra med bilder är att man kan
-            göra vissa områden på bilden klickbara, istället för hela bilden. Om man håller muspekaren ovanför
-            start-taggen på bilden står det "Opening HTML tag". Detta är eftersom bilden använder sig av följande map-element:
-        </p>
+    <p>
+        Så vad innebär <code>usemap="image-html"</code>? Jo, det man kan göra med bilder är att man kan göra vissa områden på bilden klickbara, istället för hela bilden. Om man håller muspekaren ovanför start-taggen på bilden står det "Opening HTML tag".
+        Detta är eftersom bilden använder sig av följande map-element:
+    </p>
 
-        <pre>
-            <code>
+    <pre>
+        <code>
         &lt;map name="image-html"&gt;
     	    &lt;area alt="open" coords="40,80,150,150" href="index.html#structure-header" shape="rect" target="_blank" title="Opening HTML tag"&gt;
         &lt;/map&gt;
-            </code>
-        </pre>
+        </code>
+    </pre>
 
-        <p>
-            En <code>map</code> är en tag som har bland annat ett namn. Det är detta namn en bild senare refererar till i <code>usemap</code>.
-            I <code>map</code>-elementet skapar man en <code>area</code>. Arean motsvarar en geometrisk figur, <code>shape</code>, vars storlek och koordinater
-            specificeras via <code>coords</code>-attributet. <code>href</code> är destinationen klienten skickas till vid klick på arean.
-            <code>target</code> säger att länken ska öppnas i en ny flik.
-        </p>
+    <p>
+        En <code>map</code> är en tag som har bland annat ett namn. Det är detta namn en bild senare refererar till i <code>usemap</code>. I <code>map</code>-elementet skapar man en <code>area</code>. Arean motsvarar en geometrisk figur, <code>shape</code>,
+        vars storlek och koordinater specificeras via <code>coords</code>-attributet. <code>href</code> är destinationen klienten skickas till vid klick på arean.
+        <code>target</code> säger att länken ska öppnas i en ny flik.
+    </p>
 
 
-    </body>
+</body>
+
 </html>
