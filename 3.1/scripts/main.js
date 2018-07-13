@@ -7,11 +7,11 @@
     i respektive uppgift, och endast mixa om det krävs.
 */
 
-
 var ADD_BUTTON = '[data-btn-role="addButton"]';
 var CALCULATE_BUTTON = '[data-btn-role="calcButton"]';
+var RANDOM_BUTTON = '[data-btn-role="randomButton"]';
 var OUTPUT_DIV = '[data-div-role="output"]';
-var INPUT_TEXTBOX = '[data-input-role="input"]';
+var INPUT_NUMBER_TEXTBOX = '[data-input-role="input-number"]';
 var SHOW_ERROR = 'wrong-input';
 var inputArray = [];
 
@@ -21,9 +21,12 @@ function addButtonListener() {
     button.addEventListener('click', function(event) {
         event.preventDefault();
         console.log('Add was clicked');
-        var input = document.querySelector(INPUT_TEXTBOX).value;
+        var input = document.querySelector(INPUT_NUMBER_TEXTBOX).value;
 
-        if(isNaN(input) || input === ""){
+        /* Could have been written without Boolean() function, but written with
+        because the assignmen said I should use the JS Boolean object.
+        Better safe than sorry :) */
+        if(Boolean(isNaN(input) || input === "")){
             document.body.classList.add(SHOW_ERROR);
         } else {
             document.body.classList.remove(SHOW_ERROR);
@@ -37,21 +40,35 @@ function addButtonListener() {
 
             inputArray.push(inputAsNumber);
             writeToScreen(input, 'p');
-
         }
-
-
     });
 }
 
+/*
+    Checks if a string is an integer.
+*/
 function isInt(number) {
     'use strict';
-    return parseInt(number) === number;
+    return parseInt(number) == number;
 }
 
+/*
+    Checks if a string is a float.
+*/
 function isFloat(number) {
     'use strict';
-    return parseFloat(number) === number;
+    /*I don't use === because number will always be a string.
+    This way, I parse it to a float and check if it's the same WITH
+    type conversion.*/
+    return parseFloat(number) == number;
+}
+
+function getCurrentSum() {
+    var sum = 0;
+    for(var i = 0; i < inputArray.length; i++) {
+        sum += inputArray[i];
+    }
+    return sum;
 }
 
 function addCalculateButtonListener() {
@@ -60,12 +77,22 @@ function addCalculateButtonListener() {
     button.addEventListener('click', function(event) {
         event.preventDefault();
         console.log('Calculate was Clicked!!');
-        var sum = 0;
-        for(var i = 0; i < inputArray.length; i++) {
-            sum += inputArray[i];
-        }
+        var sum = getCurrentSum();
         var outputString = "Summan av alla talen som matades in är: " + sum;
         writeToScreen(outputString, 'p');
+    });
+}
+
+function addRandomButtonListener() {
+    'use strict';
+    var button = document.querySelector(RANDOM_BUTTON);
+    button.addEventListener('click', function(event) {
+        event.preventDefault();
+        console.log('Random clicked!!');
+        var sum = getCurrentSum();
+        var rndNum = Math.floor(Math.random() * sum);
+        inputArray.push(rndNum);
+        writeToScreen(rndNum, 'p');
     });
 }
 
@@ -77,13 +104,17 @@ function writeToScreen (whatToWrite, element) {
 
     var htmlElement = document.createElement(element);
     htmlElement.innerHTML = whatToWrite;
+    htmlElement.classList.add('output-value-paragraph');
 
-    output.appendChild(htmlElement);
+    //output.appendChild(htmlElement);
+
+    output.insertBefore(htmlElement, output.firstChild);
 }
 
 function init() {
     addButtonListener();
     addCalculateButtonListener();
+    addRandomButtonListener();
 }
 
 init();

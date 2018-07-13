@@ -13,15 +13,24 @@
         <hr>
     </header>
 
-    <div class="main-content">
-        <p>Mata in ett tal och tryck sedan addera</p>
-        <input type="text" name="aNumber" data-input-role="input">
+    <div class="input-content">
+        <p>Mata in ett tal och tryck sedan på en knapp</p>
+        <input type="text" name="aNumber" data-input-role="input-number">
         <a class="add-button" data-btn-role="addButton" href="#">Addera!</a>
         <a class="calc-button" data-btn-role="calcButton" href="#">Beräkna allt!</a>
+        <a class="random-button" data-btn-role="randomButton" href="#">Slumpmässigt tal!</a>
         <p class="error-message">INTE VALID INPUT!</p>
     </div>
 
     <div class="output" data-div-role="output"></div>
+
+
+    <div class="input-content">
+        <p>Mata in ditt namn</p>
+        <input type="text" name="name" data-input-role="input-name">
+
+        <p class="error-message">INTE VALID INPUT!</p>
+    </div>
 
     <script src="scripts/main.js" charset="utf-8"></script>
 </body>

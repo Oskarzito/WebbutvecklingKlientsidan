@@ -1,4 +1,18 @@
 
+body {
+    background-color: lightgoldenrodyellow;
+}
+
+.input-content {
+    margin: auto;
+    background-color: rgb(50,150,150);
+    width: 80%;
+    box-shadow: 10px 10px 15px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
 .error-message {
     visibility: hidden;
 }
@@ -6,4 +20,33 @@
 .wrong-input .error-message {
     visibility: visible;
     color: red;
+}
+
+.output {
+    border-style: solid;
+    max-height: 150px;
+    min-height: 15px;
+    width: 75%;
+    overflow: auto;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.output-value-paragraph {
+    font-size: 15px;
+    border-style: solid;
+    border-radius: 10px;
+    padding-left: 15px;
+    background-color: lightblue;
+    margin: 10px;
+}
+
+a {
+    padding: 5px;
+    background-color: yellow;
+    border-radius: 10px;
+}
+
+a:hover {
+    background-color: lightyellow;
 }
