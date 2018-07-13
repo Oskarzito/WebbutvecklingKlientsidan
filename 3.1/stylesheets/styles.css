@@ -1,0 +1,9 @@
+
+.error-message {
+    visibility: hidden;
+}
+
+.wrong-input .error-message {
+    visibility: visible;
+    color: red;
+}
