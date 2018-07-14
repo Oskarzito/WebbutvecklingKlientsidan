@@ -50,3 +50,11 @@ a {
 a:hover {
     background-color: lightyellow;
 }
+
+.output-table {
+    table-layout: auto;
+}
+
+.output-table, .output-table th, .output-table td{
+    border: 1px solid black;
+}

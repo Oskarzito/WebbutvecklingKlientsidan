@@ -10,12 +10,18 @@
 <body>
     <header>
         <h1>3.1 Grunderna i JavaScript</h1>
+        <p>
+            Programmet är rätt meningslöst. Tanken är att man matar in ett tal i
+            rutan och klickar på addera (kan upprepas). 'Beräkna allt' beräknar och visar
+            totalsumman av samtilga inmatade tal. 'Slumpmässigt tal' adderar ett slumpmässigt
+            tal mellan 0 och totalsumman till själva totalsumman.
+        </p>
         <hr>
     </header>
 
     <div class="input-content">
         <p>Mata in ett tal och tryck sedan på en knapp</p>
-        <input type="text" name="aNumber" data-input-role="input-number">
+        <input type="text" name="aNumber" data-input-role="inputNumber">
         <a class="add-button" data-btn-role="addButton" href="#">Addera!</a>
         <a class="calc-button" data-btn-role="calcButton" href="#">Beräkna allt!</a>
         <a class="random-button" data-btn-role="randomButton" href="#">Slumpmässigt tal!</a>
@@ -24,13 +30,19 @@
 
     <div class="output" data-div-role="output"></div>
 
-
     <div class="input-content">
         <p>Mata in ditt namn</p>
-        <input type="text" name="name" data-input-role="input-name">
-
+        <input type="text" name="name" data-input-role="inputName">
+        <a class="name-button" data-btn-role="nameButton" href="#">Bekräfta namn</a>
         <p class="error-message">INTE VALID INPUT!</p>
     </div>
+
+    <table class="output-table" data-table-role="outputTable">
+        <tr>
+            <th>Namn</th>
+            <th>Totalsumma</th>
+        </tr>
+    </table>
 
     <script src="scripts/main.js" charset="utf-8"></script>
 </body>

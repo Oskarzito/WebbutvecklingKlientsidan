@@ -11,7 +11,10 @@ var ADD_BUTTON = '[data-btn-role="addButton"]';
 var CALCULATE_BUTTON = '[data-btn-role="calcButton"]';
 var RANDOM_BUTTON = '[data-btn-role="randomButton"]';
 var OUTPUT_DIV = '[data-div-role="output"]';
-var INPUT_NUMBER_TEXTBOX = '[data-input-role="input-number"]';
+var INPUT_NUMBER_TEXTBOX = '[data-input-role="inputNumber"]';
+var INPUT_NAME_TEXTBOX = '[data-input-role="inputName"]';
+var CONFIRM_NAME_BUTTON = '[data-btn-role="nameButton"]';
+var OUTPUT_TABLE = '[data-table-role="outputTable"]';
 var SHOW_ERROR = 'wrong-input';
 var inputArray = [];
 
@@ -64,6 +67,7 @@ function isFloat(number) {
 }
 
 function getCurrentSum() {
+    'use strict';
     var sum = 0;
     for(var i = 0; i < inputArray.length; i++) {
         sum += inputArray[i];
@@ -111,10 +115,34 @@ function writeToScreen (whatToWrite, element) {
     output.insertBefore(htmlElement, output.firstChild);
 }
 
+function addNameButtonListener() {
+    'use strict';
+    var button = document.querySelector(CONFIRM_NAME_BUTTON);
+    button.addEventListener('click', function(event) {
+        event.preventDefault();
+        console.log('Confirm name clicked!!');
+        var name = document.querySelector(INPUT_NAME_TEXTBOX).value;
+        var sum = getCurrentSum();
+        appendToTable(name, sum);
+    });
+}
+
+function appendToTable(name, sum){
+    'use strict';
+    var table = document.querySelector(OUTPUT_TABLE);
+    var row = table.insertRow(table.rows.length);
+    var cell1 = row.insertCell(0);
+    cell1.innerHTML = name;
+    var cell2 = row.insertCell(1);
+    cell2.innerHTML = sum;
+}
+
 function init() {
+    'use strict';
     addButtonListener();
     addCalculateButtonListener();
     addRandomButtonListener();
+    addNameButtonListener();
 }
 
 init();
