@@ -13,11 +13,15 @@ body {
     margin-bottom: 50px;
 }
 
-.error-message {
+.error-message-number {
     visibility: hidden;
 }
 
-.wrong-input .error-message {
+.error-message-name {
+    visibility: hidden;
+}
+
+.show-error-message {
     visibility: visible;
     color: red;
 }

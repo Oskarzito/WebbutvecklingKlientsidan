@@ -11,10 +11,8 @@
     <header>
         <h1>3.1 Grunderna i JavaScript</h1>
         <p>
-            Programmet är rätt meningslöst. Tanken är att man matar in ett tal i
-            rutan och klickar på addera (kan upprepas). 'Beräkna allt' beräknar och visar
-            totalsumman av samtilga inmatade tal. 'Slumpmässigt tal' adderar ett slumpmässigt
-            tal mellan 0 och totalsumman till själva totalsumman.
+            Programmet är rätt meningslöst. Tanken är att man matar in ett tal i rutan och klickar på addera (kan upprepas). 'Beräkna allt' beräknar och visar totalsumman av samtliga inmatade tal. 'Slumpmässigt tal' adderar ett slumpmässigt tal mellan 0 och totalsumman
+            till själva totalsumman. Mata slutligen in ett namn och bekräfta så sparas namn, totalsumman samt datumet man sparade.
         </p>
         <hr>
     </header>
@@ -25,26 +23,27 @@
         <a class="add-button" data-btn-role="addButton" href="#">Addera!</a>
         <a class="calc-button" data-btn-role="calcButton" href="#">Beräkna allt!</a>
         <a class="random-button" data-btn-role="randomButton" href="#">Slumpmässigt tal!</a>
-        <p class="error-message">INTE VALID INPUT!</p>
+        <p class="error-message-number" data-error-role="numberError">INTE VALID INPUT, SKRIV ETT TAL!</p>
     </div>
 
     <div class="output" data-div-role="output"></div>
 
     <div class="input-content">
-        <p>Mata in ditt namn</p>
+        <p>Mata in ditt namn. Börja med stor bokstav. Namnet får innehålla små och stora bokstäver samt siffror.</p>
         <input type="text" name="name" data-input-role="inputName">
         <a class="name-button" data-btn-role="nameButton" href="#">Bekräfta namn</a>
-        <p class="error-message">INTE VALID INPUT!</p>
+        <p class="error-message-name" data-error-role="nameError">INTE VALID INPUT, SKRIV ETT GILTIGT NAMN!</p>
     </div>
 
     <table class="output-table" data-table-role="outputTable">
         <tr>
             <th>Namn</th>
             <th>Totalsumma</th>
+            <th>Datum</th>
         </tr>
     </table>
 
-    <script src="scripts/main.js" charset="utf-8"></script>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>
