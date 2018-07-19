@@ -1,12 +1,17 @@
 
 /*
-    Kommentarer kommer vara på engelska. En liten sidenote dock:
-    nu använder jag främst querySelector istället för getElementById.
-    I framtida uppgifter kanske jag kör getElementById istället för querySelector.
-    Huvudsakligen kommer jag vara konsekvent samt hålla mig till en
-    i respektive uppgift, och endast mixa om det krävs.
+    Kommentarer kommer vara på engelska eller svenska. Kommentarerna i en uppgift
+    kommer dock vara på samma språk. Men språket kan variera mellan uppgifterna
+    (beroende på storlek, komplexitet osv).
 
-    This JS class gives behaviour to assignment 3.1 Grunderna i JavaScript.
+    Ytterligare en liten sidenote dock:
+    nu använder jag främst querySelector istället för getElementById.
+    I framtida uppgifter kanske jag kör getElementById istället för querySelector (dvs om
+    inte jQuery används). Huvudsakligen kommer jag vara konsekvent samt hålla mig till en
+    i respektive uppgift, och endast mixa om det krävs.
+    Detta JavaScript-program använder följande inbyggda JavaScript-objekt:
+
+    This JS class gives behaviour to assignment '3.1 Grunderna i JavaScript'.
     It makes use of the following JS entities:
     - Array     <
     - Boolean   <
@@ -18,6 +23,7 @@
     - Global    <
 */
 
+//Variables that has references to the HTML
 var ADD_BUTTON = '[data-btn-role="addButton"]';
 var CALCULATE_BUTTON = '[data-btn-role="calcButton"]';
 var RANDOM_BUTTON = '[data-btn-role="randomButton"]';
@@ -29,11 +35,13 @@ var OUTPUT_TABLE = '[data-table-role="outputTable"]';
 var NUMBER_ERROR_PARAGRAPH = '[data-error-role="numberError"]';
 var NAME_ERROR_PARAGRAPH = '[data-error-role="nameError"]';
 var SHOW_ERROR = 'show-error-message';
+
+//An Array object
 var inputArray = [];
 
 /*
     Gives behaviour to the button 'Addera!'. It takes the value in the
-    textbox, checks if it is a valid number
+    textbox and checks if it is a valid number
 */
 function addButtonListener() {
     'use strict';
@@ -42,16 +50,17 @@ function addButtonListener() {
 
     //Add click listener
     button.addEventListener('click', function(event) {
+        //Prevents default anchor tag behaviour
         event.preventDefault();
         console.log('Add was clicked');
 
-        /*References the input textbox's value. By using the Number object, the input
+        /*References the input textbox's value. By using the 'Number' object, the input
         also accepts binary and hexadecimal input when converting from a string to
         a number*/
         var input = new Number(document.querySelector(INPUT_NUMBER_TEXTBOX).value);
 
-        /* Could have been written without Boolean() function, but written with
-        because the assignmen said I should use the JS Boolean object.
+        /*Could have been written without Boolean() function, but written with
+        because the assignment said I should use the JS Boolean object.
         Better safe than sorry :)
         isNaN is a Global function*/
         if(Boolean(isNaN(input) || input === "")){
@@ -103,7 +112,7 @@ function isFloat(number) {
 }
 
 /*
-    Calculates and returns the sum of all numbers currently entered.
+    Calculates and returns the sum of all numbers currently entered
 */
 function getCurrentSum() {
     'use strict';
@@ -114,8 +123,13 @@ function getCurrentSum() {
     return sum;
 }
 
+/*
+    Adds listener to the 'Beräkna allt' button. Just prints the current sum
+    of all previously entered values
+*/
 function addCalculateButtonListener() {
     'use strict';
+    //Button reference
     var button = document.querySelector(CALCULATE_BUTTON);
 
     //Add click listener
@@ -134,7 +148,7 @@ function addCalculateButtonListener() {
 
 /*
     Gives functionality to the 'Slumpmässigt tal!' button. Pressing the button
-    generates a random number and adds it to the total sum (or rather the
+    generates a random number and adds it to the total sum (or rather, adds it to the
     array of all input numbers)
 */
 function addRandomButtonListener() {
@@ -163,7 +177,8 @@ function addRandomButtonListener() {
     });
 }
 
-/*Writes to the output div tag. whatToWrite = what's going to be written.
+/*Writes to the output div tag.
+whatToWrite = what's going to be written.
 element = as what kind of tag the output should be (for this program it's
 always paragraphs)*/
 function writeToScreen (whatToWrite, element) {
@@ -197,11 +212,11 @@ function addNameButtonListener() {
 
     //Add click listener
     button.addEventListener('click', function(event) {
-        //Prevents the anchor tag to reference elsewhere
+        //Prevents default anchor tag behaviour
         event.preventDefault();
         console.log('Confirm name clicked!!');
 
-        //Gets the inputed value in the textbox
+        //Gets the entered value in the textbox
         var name = document.querySelector(INPUT_NAME_TEXTBOX).value;
 
         //Checks name validity
@@ -232,7 +247,7 @@ function isValidName(name) {
     name = name.trim();
 
     /*Regex matching capital first letter followed by any
-    number of capital letters, lower case letters and numbers interchangably,
+    number of capital letters, lower case letters and/or numbers interchangably,
     within a range of 2-12*/
     var regex = /^[A-Z]+[A-z0-9]{2,12}$/;
 
@@ -269,8 +284,20 @@ function appendToTable(name, sum){
 }
 
 /*
-    The 'main' method starting the JS
+    An Immediatley-Invoked Function Expression starting the JavaScript
 */
+(function () {
+    'use strict';
+    addButtonListener();
+    addCalculateButtonListener();
+    addRandomButtonListener();
+    addNameButtonListener();
+})();
+
+/*
+    The IIFE above could also have been written like this:
+*/
+/*
 function init() {
     'use strict';
     addButtonListener();
@@ -279,5 +306,6 @@ function init() {
     addNameButtonListener();
 }
 
-//Starts everything
+//To start everything
 init();
+*/
