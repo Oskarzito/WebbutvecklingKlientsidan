@@ -1,0 +1,15 @@
+
+/*
+ För att få knappen bredvid inputrutan
+*/
+.form-group {
+    display: inline-block;
+}
+
+.checkbox {
+    background-color: red;
+}
+
+.done-list-items {
+    background-color: green;
+}
