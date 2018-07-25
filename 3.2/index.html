@@ -12,23 +12,23 @@
 <body class="container">
     <header>
         <h1>3.2 DOM-objekt och jQuery</h1>
-        <p>Använder mig av Bootstrap för övergripande stilsättning i denna uppgift då fokus ej ligger på CSS utan snarare JavaScript.</p>
+        <p>Använder mig av Bootstrap för övergripande stilsättning i denna uppgift då uppgiftens fokus ej ligger på CSS utan snarare JavaScript.</p>
     </header>
 
     <section>
         <div class="panel panel-default">
-            <div class="panel-body">
+            <div class="panel-body" data-panel-body="panel-body">
                 <form data-list-form="form">
                     <div class="form-group">
                         <label for="listInputId">Saker att göra idag:</label>
-                        <input type="text" name="" id="listInputId">
+                        <input type="text" name="" id="listInputId" autofocus>
                     </div>
                     <button type="submit" class="btn btn-default button-as-inline">Spara!</button>
                 </form>
             </div>
         </div>
         <div class="panel panel-default">
-            <div class="panel-body">
+            <div class="panel-body" data-panel-body="panel-body">
                 <h4>Saker som ska göras:</h4>
                 <div data-list-todo="todo">
 
@@ -36,13 +36,34 @@
             </div>
         </div>
         <div class="panel panel-default">
-            <div class="panel-body">
+            <div class="panel-body" data-panel-body="panel-body">
                 <h4>Saker som har gjorts:</h4>
                 <div data-list-done="done">
                     <ol class="done-list">
 
                     </ol>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <button type="button" class="btn btn-default" data-pointless-button="pointless-button">Klicka för att ta bort mig!</button>
+        <button type="button" class="btn btn-default" data-remove-event="background-off">&lt;-- Men klicka här först så kan man inte ta bort knappen till vänster!</button>
+    </section>
+    <section>
+        <div class="fixed-bottom">
+            <div class="mousecords">
+                <p>Mus klickad: </p>
+                <p>X: <span data-mouse-x="xcord"></span> x</p>
+                <p>Y: <span data-mouse-y="ycord"></span></p>
+            </div>
+            <div class="windowcords">
+                <p>Window: </p>
+                <p>X: <span data-win-x="xcord"></span> x </p>
+                <p>Y: <span data-win-y="ycord"></span></p>
+            </div>
+            <div class="keyspressed">
+                <p>Knapptryck: <span data-keys-pressed="keyspressed">0</span></p>
             </div>
         </div>
     </section>

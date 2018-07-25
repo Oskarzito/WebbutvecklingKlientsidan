@@ -13,3 +13,22 @@
 .done-list-items {
     background-color: green;
 }
+
+.blue-background {
+    background-color: lightblue;
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 120px;
+    border-style: dashed;
+    border-width: 3px;
+    text-align: center;
+}
+
+p {
+    display: inline-block;
+}
