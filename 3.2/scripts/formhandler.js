@@ -7,19 +7,18 @@
 (function (window) {
     'use strict';
 
-    console.log('FH Loaded');
     /*Om window.Application inte har ett värde, tilldela Application ett tomt objekt.
     Annars, tilldela Application värdet av window.Application.
     För förtydligande, se main.js högst upp.
     */
     var Application = window.Application || {};
+    
     /**
         Konstruktor för formulärhanteraren
 
         @param selectedElement Sträng-identifierare för det HTML-element man vill välja ut
     */
     function FormHandler(selectedElement) {
-        console.log('New FormHandler');
 
         //Om inget värde är medskickat, kasta undantag
         if (!selectedElement) {
@@ -40,7 +39,6 @@
         @param func En funktion som skickas med och anropas varje gång en 'submit' sker
     */
     FormHandler.prototype.addSubmitListener = function (func) {
-        console.log('Lyssnare adderad');
         //Lägg lyssnare på 'submit'-händelsen
         this.$element.on('submit', function (event) {
             //Stoppa webbläsaren från att skicka data till en server (stoppa omladdning av sidan)
@@ -56,6 +54,7 @@
         });
 
     };
+
     /*Tilldela FormHandler till namespace:et Application och exportera det
     så det blir åtkomligt på andra ställen via window*/
     Application.FormHandler = FormHandler;

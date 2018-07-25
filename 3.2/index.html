@@ -21,7 +21,7 @@
                 <form data-list-form="form">
                     <div class="form-group">
                         <label for="listInputId">Saker att göra idag:</label>
-                        <input type="text" name="" id="listInputId" autofocus>
+                        <input type="text" id="listInputId" autofocus>
                     </div>
                     <button type="submit" class="btn btn-default button-as-inline">Spara!</button>
                 </form>
@@ -46,31 +46,32 @@
             </div>
         </div>
     </section>
-    <section>
+
+    <div>
         <button type="button" class="btn btn-default" data-pointless-button="pointless-button">Klicka för att ta bort mig!</button>
         <button type="button" class="btn btn-default" data-remove-event="background-off">&lt;-- Men klicka här först så kan man inte ta bort knappen till vänster!</button>
-    </section>
-    <section>
-        <div class="fixed-bottom">
-            <div class="mousecords">
-                <p>Mus klickad: </p>
-                <p>X: <span data-mouse-x="xcord"></span> x</p>
-                <p>Y: <span data-mouse-y="ycord"></span></p>
-            </div>
-            <div class="windowcords">
-                <p>Window: </p>
-                <p>X: <span data-win-x="xcord"></span> x </p>
-                <p>Y: <span data-win-y="ycord"></span></p>
-            </div>
-            <div class="keyspressed">
-                <p>Knapptryck: <span data-keys-pressed="keyspressed">0</span></p>
-            </div>
-        </div>
-    </section>
+    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
-    <script src="scripts/formhandler.js" charset="utf-8"></script>
-    <script src="scripts/listmanager.js" charset="utf-8"></script>
-    <script src="scripts/main.js" charset="utf-8"></script>
+    <div class="fixed-bottom">
+        <div class="mousecords">
+            <p>Musposition: </p>
+            <p>X: <span data-mouse-x="xcord"></span> x</p>
+            <p>Y: <span data-mouse-y="ycord"></span></p>
+        </div>
+        <div class="windowcords">
+            <p>Window: </p>
+            <p>X: <span data-win-x="xcord"></span> x </p>
+            <p>Y: <span data-win-y="ycord"></span></p>
+        </div>
+        <div class="keyspressed">
+            <p>Knapptryck: <span data-keys-pressed="keyspressed">0</span></p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="scripts/formhandler.js"></script>
+    <script src="scripts/listmanager.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
+
 </html>

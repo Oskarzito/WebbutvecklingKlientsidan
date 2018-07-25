@@ -1,31 +1,45 @@
 
 /*
-* Välja ut ett HTML-element                                             <
-- Göra något med ett HTML-element:
-    * Ändra en egenskap för ett HTML-elementet
-    * Lägga till nytt innehåll till ett HTML-elementet
-    * Ta bort ett HTML-element
-    * Utvinna information från ett HTML-element
-    * Lägga till och ta bort ett klass-attribut från ett HTML-element
+    Denna klass representerar main-programmet för uppgift 3.2 DOM-objekt och jQuery.
+    Nedanstående asterisklista är det som gjorts:
 
-    * Formulärhändelser – Submit, reset och focus – (någon av submit, reset, change, focus eller blur)
+    * Välja ut ett HTML-element
+    * Göra något med ett HTML-element:
+        * Ändra en egenskap för ett HTML-elementet
+        * Lägga till nytt innehåll till ett HTML-elementet
+        * Ta bort ett HTML-element
+        * Utvinna information från ett HTML-element
+        * Lägga till och ta bort ett klass-attribut från ett HTML-element
 
-    * Gör även ett program som använder den kombinerade jQuery
-    händelsen hover (= mouseover + mouseout).
+        * Mushändelser – click –
+        (någon av click, dblclick, mousedown, mouseup, mouseover, mouseout eller mousemove)
 
-    * Tangentbordshändelser – keypress – (någon av keypress, keydown eller keyup)
+        * Dokument och fönsterhändelser – resize –
+        (någon av load, resize, scroll eller unload)
 
-    * Använder händelse-objektet event och dess egenskaper pageX och pageY                          <
+        * Formulärhändelser – Submit, reset och focus –
+        (någon av submit, reset, change, focus eller blur)
 
-    * Stoppar en händelses normala beteende med event.preventDefault
-    * Tar bort en händelse (off)
+        * Gör även ett program som använder den kombinerade jQuery
+        händelsen hover (= mouseover + mouseout).
 
+        * Tangentbordshändelser – keypress –
+        (någon av keypress, keydown eller keyup)
+
+        * Använder händelse-objektet event och dess egenskaper pageX och pageY                          <
+
+        * Stoppar en händelses normala beteende med event.preventDefault
+        * Tar bort en händelse (off)
+
+        –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+        Programmet är uppdelat i moduler och har ett namespace som man kommer
+        åt via window.Application. Detta är tänkt att följa Immediately-Invoked
+        Function Expression-designmönstret.
+        –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 */
-
 
 $(document).ready(function () {
     'use strict';
-    console.log('Document ready');
     //Identifierare för HTML-element
     var FORM_SELECTOR = '[data-list-form="form"]';
     var LIST_SELECTOR = '[data-list-todo="todo"]';
@@ -55,17 +69,19 @@ $(document).ready(function () {
         listManager.addItem(text);
     });
 
-    //Ge alla list-element i 'ska göras'-listan en lyssnare
+    //Ge list-element i 'ska göras'-listan en lyssnare
     listManager.addClickListener();
 
     /*
-        Använder den kombinerade jQuery händelsen hover
+        Använder den kombinerade jQuery händelsen hover.
+        Lägger till ett klass-attribut vid enter, och tar
+        bort ett klass-attribut vid exit
     */
     $(PANEL_BODY_SELECTOR).hover(function (){
-        console.log('in');
+        //Enter gör bakgrunden blå
         $(this).addClass('blue-background');
     },function(){
-        console.log('out');
+        //Exit tar bort blå bakgrund och allt blir default-färgat
         $(this).removeClass('blue-background');
     });
 
@@ -74,6 +90,7 @@ $(document).ready(function () {
     */
     $(POINTLESS_BUTTON_SELECTOR).on('click', function (event) {
         $(this).remove();
+        $(REMOVE_EVENT_BUTTON_SELECTOR).remove();
     });
 
     /*
@@ -87,18 +104,31 @@ $(document).ready(function () {
         $(POINTLESS_BUTTON_SELECTOR).off('click');
     });
 
+    /*
+        När fönstrets storlek ändras, uppdatera lilla rutan nere till höger
+        med nya storleken på fönstret
+    */
     $(window).resize(function () {
         $(WINDOW_X_SIZE).text($(window).width());
         $(WINDOW_Y_SIZE).text($(window).height());
     });
 
-    $(window).on('click', function (event) {
+    /*
+        Lägger en muslyssnare på fönstret
+    */
+    $(window).on('mousemove', function (event) {
+        /*Uppdaterar lilla rutan nere till höger med musklickskoordinaterna
+        så de alltid visar musens koordinater i fönstret via event-objektet*/
         $(MOUSE_X).text(event.pageX);
         $(MOUSE_Y).text(event.pageY);
     });
 
-    $(window).keypress(function () {
-
+    /*
+        Lägger en knapplyssnare på fönstret
+    */
+    $(window).on('keypress', function () {
+        /*Inkrementerar räknaren i lilla rutan nere till höger hur
+        många knapptryckningar som skett*/
         $(KEYS_PRESSED_COUNTER).text(keypressCounter += 1);
     });
 

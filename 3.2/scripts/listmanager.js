@@ -6,7 +6,6 @@
 */
 (function (window) {
     'use strict';
-    console.log('LM Loaded');
 
     /*Om window.Application inte har ett värde, tilldela Application ett tomt objekt.
     Annars, tilldela Application värdet av window.Application.
@@ -20,7 +19,6 @@
         @param selectedElement Sträng-identifierare för det HTML-element man vill välja ut
     */
     function ListManager(selectedElement) {
-        console.log('Ny ListManager');
         if (!selectedElement) {
             throw new Error('Inget valt element!');
         }
@@ -41,7 +39,6 @@
         /*'input' är en 'filtering selector' som gör att funktionen endast reagerar
         om man klickade på en 'input' som ligger i checklistan */
         this.$element.on('click', 'input', function (event) {
-            console.log('Klickat på item');
             event.preventDefault();
             //Tar bort elementet genom att identifiera elementets 'value'
             this.removeItem(event.target.value);
@@ -55,7 +52,6 @@
         @param textContent Text användaren matat in i inputrutan
     */
     ListManager.prototype.addItem = function (textContent) {
-        console.log('Add item');
         //Skapa list-elementet och lägger till det (append) till div:en 'todo' ("ska göras").
         var item = new ListItem(textContent);
         this.$element.append(item.$element);
@@ -68,9 +64,7 @@
         @param textContentToRemove Textinnehållet i ett list-element som identifierar elementet
     */
     ListManager.prototype.removeItem = function (textContentToRemove) {
-        console.log(textContentToRemove);
         this.$element.find('[value="' + textContentToRemove + '"]').closest('[data-list-todo="listItem"]').remove();
-        console.log('Remove item');
         $('.done-list').append($('<li></li>', {'class': 'done-list-items'}).text(textContentToRemove));
     };
 
@@ -85,8 +79,6 @@
         var $label = $('<label></label>');
         var $checkbox = $('<input></input>', {type: 'checkbox', value: content});
 
-        console.log(content);
-
         //Bygg upp ett sub-DOM-träd
         $label.append($checkbox);
         $label.append(content);
@@ -100,6 +92,5 @@
     så det blir åtkomligt på andra ställen via window*/
     Application.ListManager = ListManager;
     window.Application = Application;
-
 
 })(window);
