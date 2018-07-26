@@ -36,8 +36,23 @@ $(document).ready(function () {
     $form.on('submit', function (event) {
         event.preventDefault();
         console.log('submit klickat');
-        console.log(this);
+
+        //Vid submit loggas inmatade datan i detta objekt
+        var data = {};
+
+        //serializeArray skapar en array av name-value-objekt för att sedan spara i ett data-objekt
+        $(this).serializeArray().forEach(function (item) {
+            data[item.name] = item.value;
+        });
+
+        /*När man klickar submit öppnas en ny tab och inmatade
+        datan skrivs ut som ett JSON-objekt*/
+        window.open('').document.write(JSON.stringify(data));
+
+        //Töm formuläret från all inmatad data
         this.reset();
+
+        //Sätt fokus på första inputrutan
         this.elements[0].focus();
     });
 });
@@ -45,22 +60,26 @@ $(document).ready(function () {
 
 function initializeForm($form) {
 
-    $(NAME_HINT_SELECTOR).hide();
-    $(EMAIL_HINT_SELECTOR).hide();
+    /*Börja med att gömma alla span-element.
+    Eftersom endast hintmeddelandena är spans och inget annat
+    funkar detta bra här. När inget input har fokus visas ingen hint*/
+    $('span').hide();
 
+    //Reagerar på när en input får fokus
     $('input').focusin(function (event) {
+        //Kollar data-attributet hos inputen och visar rätt hint vid rätt inputruta
         if($(this).data('input') === 'name'){
-            $(NAME_HINT_SELECTOR).show();
+            $(NAME_HINT_SELECTOR).fadeIn(100);
         } else if ($(this).data('input') === 'email') {
-            $(EMAIL_HINT_SELECTOR).show();
+            $(EMAIL_HINT_SELECTOR).fadeIn(100);
         }
     });
 
     $('input').focusout(function (event) {
         if($(this).data('input') === 'name'){
-            $(NAME_HINT_SELECTOR).hide();
+            $(NAME_HINT_SELECTOR).fadeOut(750);
         } else if ($(this).data('input') === 'email') {
-            $(EMAIL_HINT_SELECTOR).hide();
+            $(EMAIL_HINT_SELECTOR).fadeOut(750);
         }
     });
 
