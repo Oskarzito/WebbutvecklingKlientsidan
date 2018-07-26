@@ -1,4 +1,15 @@
 
+/*
+Ett dynamiskt formulär som innehåller flera enrads textboxar, checkboxar, radio-knappar och en submitknapp som reagerar direkt på användarens input:
+    Tydligt markerar och sätter fokus på det första inputfältet som användaren ska fylla i
+    Tydligt markerar det inputfält som användaren för tillfället fyller i
+    Disablar eller gömmer inputfält som användaren inte behöver fylla i (beroende på användarens tidigare val)
+    Enablar eller visar inputfält som användaren behöver fylla i (beroende på användarens tidigare val)
+    Validerar användarens input (att allt obligatoriskt är ifyllt och att det ifyllda stämmer enligt något mönster)
+
+    När submitlnappen trycks ner ska en JavaScript-funktion köras.
+*/
+
 var NAME_INPUT_SELECTOR = '[data-input="name"]';
 var EMAIL_INPUT_SELECTOR = '[data-input="email"]';
 var NAME_HINT_SELECTOR = '[data-name-hint="nameHint"]';
