@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>3.4.5 Formulärhantering</title>
+    <!--Använder mig av Bootstrap för denna uppgift då fokus ej ligger på CSS utan snarare JavaScript-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+</head>
+
+<body class="container">
+    <header>
+        <h1>3.4.5 Formulärhantering</h1>
+        <p>För att lägga mer tid på validering och formulärhantering kommer stilsättning ske med Bootstrap.</p>
+    </header>
+
+    <section>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form data-list-form="form">
+                    <div class="form-group">
+                        <label for="nameInput">Namn:</label>
+                        <span class="hint" data-name-hint="nameHint">Mata in ett namn!</span>
+                        <input data-input="name" class="form-control" name="nameInput" type="text" id="nameInput" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailInput">Email:</label>
+                        <span class="hint" data-email-hint="emailHint">Mata in en mail som slutar på '@su.se'!</span>
+                        <input data-input="email" class="form-control" name="emailAdress" type="email" placeholder="example@su.se" required>
+                    </div>
+                    <div class="form-group">
+
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit!</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="scripts/main.js"></script>
+
+</body>
+</html>

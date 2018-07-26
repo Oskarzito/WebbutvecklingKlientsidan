@@ -1,0 +1,18 @@
+
+
+
+span {
+    display: inline;
+}
+
+form :required {
+    border-width: 4px;
+}
+
+form :focus:required:invalid {
+    border-color: #a94442;
+}
+
+form :required:valid {
+    border-color: green;
+}
