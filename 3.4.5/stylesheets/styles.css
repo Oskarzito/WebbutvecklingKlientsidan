@@ -1,5 +1,7 @@
 
-
+.inputFocus {
+    background-color: pink;
+}
 
 span {
     display: inline;
@@ -15,4 +17,8 @@ form :focus:required:invalid {
 
 form :required:valid {
     border-color: green;
+}
+
+.hidden-input {
+    display: none;
 }
