@@ -1,13 +1,15 @@
 
 /*
-Ett dynamiskt formulär som innehåller flera enrads textboxar(4), checkboxar(2), radio-knappar(3) och en submitknapp(1) som reagerar direkt på användarens input:
+    Programmet implementerar uppgift 3.4.5 Formulärhantering. Samtliga saker nedan är gjorda:
+
+Ett dynamiskt formulär som innehåller flera enrads textboxar(4st), checkboxar(2st), radio-knappar(3st) och en submitknapp(1st) som reagerar direkt på användarens input:
     *Tydligt markerar och sätter fokus på det första inputfältet som användaren ska fylla i
     *Tydligt markerar det inputfält som användaren för tillfället fyller i
     *Disablar eller gömmer inputfält som användaren inte behöver fylla i (beroende på användarens tidigare val)
     *Enablar eller visar inputfält som användaren behöver fylla i (beroende på användarens tidigare val)
     *Validerar användarens input (att allt obligatoriskt är ifyllt och att det ifyllda stämmer enligt något mönster)
 
-    *När submitlnappen trycks ner ska en JavaScript-funktion köras.
+    *När submitknappen trycks ner ska en JavaScript-funktion köras.
 */
 
 /*
@@ -25,9 +27,10 @@ var FORM_SELECTOR = '[data-list-form="form"]';
 var DRINK_RADIO_BUTTON_GROUP = '[data-radio-button-group="drink"]';
 var OTHER_DRINK_INPUT_FIELD_SELECTOR = '[data-input="other"]';
 var OTHER_DRINK_TEXTBOX_SELECTOR = '[data-other-textbox="box"]';
-var MISSING_INPUT_FIELD_SELECTOR = '[data-input="missing"]';
+var MISSING_INPUT_FIELD_SELECTOR = '[data-input="missing"]'; //Div:en
 var ACCEPT_CHECKBOX_SELECTOR = '[data-checkbox="accept"]';
 var MISSING_CHECKBOX_SELECTOR = '[data-checkbox="missingSomething"]';
+var MISSING_INPUT_BOX_SELECTOR = '[data-missing-textbox="box"]'; //Inputboxen
 
 $(document).ready(function () {
 
@@ -82,21 +85,33 @@ $(document).ready(function () {
 
             //Gör fältet ej required
             $(OTHER_DRINK_TEXTBOX_SELECTOR).prop('required',false);
+            //Tömmer eventuellt inmatat värde
+            $(OTHER_DRINK_TEXTBOX_SELECTOR).val('');
         }
     });
 
     //Lyssnare på 'saknas något'-checkboxen
     $(MISSING_CHECKBOX_SELECTOR).on('change', function (event) {
+        //Referens till div:en
         var $missingInput = $(MISSING_INPUT_FIELD_SELECTOR);
         //Om boxen är icheckas, visa inputfält, annars, dölj fältet
         if($(this).is(':checked')){
+            //Visa div:en
             $missingInput.slideToggle('normal');
+            //Gör fältet required
+            $(MISSING_INPUT_BOX_SELECTOR).prop('required',true);
         } else {
+            //Göm div:en
             $missingInput.slideUp();
+            //Gör att det inte är required för input
+            $(MISSING_INPUT_BOX_SELECTOR).prop('required',false);
+            //Tömmer eventuellt inmatat värde
+            $(MISSING_INPUT_BOX_SELECTOR).val('');
         }
     });
 
-    //Lyssnare på submit-händelsen
+    //Lyssnare på submit-händelsen. Kör på 'on()' istället för 'validate()'.
+    //När submitlnappen trycks ner ska en JavaScript-funktion köras.
     $form.on('submit', function (event) {
         //Stoppa default
         event.preventDefault();
@@ -107,7 +122,8 @@ $(document).ready(function () {
             return;
         }
 
-        //Vid submit loggas inmatade datan i detta objekt
+        /*Vid submit loggas inmatade datan i detta objekt. Observera att allt skickas.
+        Detta är bara för att få något att hända vid submit*/
         var data = {};
 
         /*serializeArray skapar en array av name-value-objekt
@@ -125,6 +141,7 @@ $(document).ready(function () {
 
         //Sätt fokus på första inputrutan
         this.elements[0].focus();
+        alert('klart!');
     });
 });
 
@@ -141,7 +158,8 @@ function initializeForm($form) {
     funkar detta bra här. När inget input-element har fokus visas heller ingen hint*/
     $('span').hide();
 
-    //Reagerar på när en input får fokus
+    /*Fokuslyssnarna nedan markerar tydligt det inputfält som användaren för tillfället fyller i
+    Reagerar på när en input får fokus*/
     $('input').focusin(function (event) {
         //Kollar data-attributet hos inputen och visar rätt hint vid rätt inputruta
         if($(this).data('input') === 'name'){
@@ -151,6 +169,7 @@ function initializeForm($form) {
             //Visar mail-hint
             $(EMAIL_HINT_SELECTOR).fadeIn(100);
         }
+        //Lägg till en CSS-klass
         $(this).addClass('inputFocus');
     });
 
@@ -164,10 +183,11 @@ function initializeForm($form) {
             //Gömmer mail-hint
             $(EMAIL_HINT_SELECTOR).fadeOut(750);
         }
+        //Ta bort en CSS-klass
         $(this).removeClass('inputFocus');
     });
 
-    //Sätt fokus på första inputfältet
+    //Tydlig markering, och fokussättning på det första inputfältet som användaren ska fylla i
     $form.find(NAME_INPUT_SELECTOR).focus();
 
     /*Börja med att visa inputfält för 'Annan dryck' eftersom den
@@ -180,6 +200,7 @@ function initializeForm($form) {
 
 /**
     Validerar en email enligt RegEx-mönstret 'Minst ett tecken, sedan avsluta på @su.se'
+    (att det ifyllda stämmer enligt något mönster)
 
     @param email Sträng att matcha mot RegEx-mönstret
 */

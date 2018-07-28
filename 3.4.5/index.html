@@ -13,9 +13,21 @@
     <header>
         <h1>3.4.5 Formulärhantering</h1>
         <p>För att lägga mer tid på validering och formulärhantering kommer stilsättning ske med Bootstrap.</p>
+        <details>
+            <summary>Guide:</summary>
+            <ol>
+                <li>Namn kan vara vad som (ej tomt)</li>
+                <li>Email måste vara minst ett tecken samt sluta på '@su.se'</li>
+                <li>'Annat' måste börja med stor bokstav samt vara minst 3 tecken</li>
+                <li>Man måste klicka i att man accepterar</li>
+                <li>Frivilligt att checka i 'Saknar du något?'. Gör man det gäller samma inputregler som för 'Annat'</li>
+            </ol>
+        </details>
+        <hr>
     </header>
 
     <section>
+        <h4>Drinkmeny!</h4>
         <div class="panel panel-default">
             <div class="panel-body">
                 <form data-list-form="form">
@@ -30,7 +42,7 @@
                     <div class="form-group">
                         <label for="emailInput">Email:</label>
                         <span class="hint" data-email-hint="emailHint">Mata in en mail som slutar på '@su.se'!</span>
-                        <input data-input="email" class="form-control" name="emailAdress" type="email" placeholder="example@su.se" required>
+                        <input data-input="email" class="form-control" name="emailAdress" type="email" placeholder="example@su.se" id="emailInput" required>
                     </div>
 
                     <!--Radio input-->
@@ -50,7 +62,7 @@
                         <!--Other div-->
                         <div class="other-drink-selection hidden-input" data-input="other">
                             <label for="otherInput">Annat:</label>
-                            <input data-other-textbox="box" class="form-control" name="otherRadioChoiceValue" type="text" pattern="^[A-Z]+[A-z0-9]{2,12}$" placeholder="Annan dryck">
+                            <input data-other-textbox="box" class="form-control" name="otherRadioChoiceValue" type="text" pattern="^[A-Z]+[A-z0-9]{2,12}$" id="otherInput" placeholder="Annan dryck">
                         </div>
                     </div>
 
@@ -68,8 +80,8 @@
                         </div>
 
                         <!--Missing div-->
-                        <div class="other-drink-selection hidden-input" data-input="missing">
-                            <input class="form-control" name="missingInput" type="text" pattern="^[A-Z]+[A-z0-9]{2,12}$" placeholder="Vilken dryck saknas?">
+                        <div class="hidden-input" data-input="missing">
+                            <input data-missing-textbox="box" class="form-control" name="missingInput" type="text" pattern="^[A-Z]+[A-z0-9]{2,12}$" placeholder="Vilken dryck saknas?">
                         </div>
                     </div>
 
