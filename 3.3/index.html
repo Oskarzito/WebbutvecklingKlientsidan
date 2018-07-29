@@ -18,11 +18,21 @@
 
     <div class="panel panel-default">
         <div class="panel-body">
-            <p>Lite text</p>
+            <p class="red">Tid nu: <span data-time="now"></span></p>
+            <button type="button" class="btn btn-default" data-button="toggle-time">En knapp för pausa/starta tiden</button>
             <button type="button" class="btn btn-default" data-button="open">En knapp för att öppna ett nytt fönster</button>
+            <button type="button" class="btn btn-default" data-button="close">En knapp för att <span class="red">stänga</span> DETTA fönster</button>
+            <button type="button" class="btn btn-default" data-button="start-interval">En knapp för att börja visa en alert var 4e sekund</button>
+            <button type="button" class="btn btn-default" data-button="stop-interval">En knapp för att stänga av alerts var 4e sekund</button>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h4>Anledning till att öppnaknappen klickats:</h4>
+                <p data-output="reason-for-open">Klicka på öppna!</p>
+            </div>
         </div>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 
