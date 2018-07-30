@@ -38,13 +38,32 @@ $(document).ready(function () {
         Dokumentation:
         https://code.google.com/archive/p/canvasplus/wikis/API_Docs.wiki
     */
-    var canvas1 = 'c1';
-    var context1 = canvasPlus(canvas1);
+
+    //Rita raka linjer och kurvlinjer
+    var canvas1Id = 'c1';
+    var context1 = canvasPlus(canvas1Id);
+    //Rak linje
     context1.drawLine(0, 0, 400, 200);
+    //Kurvlinje (cirkel)
     context1.drawCircle("stroke", 200, 100, 50);
 
-    /*var canvas2 = 'c2';
-    var context2 = canvasPlus(canvas2);
-    context2.draw
+
+    /*
+        För att visa kunskap även med vanliga canvas (utan bibliotek) gör jag
+        det nu istället för CanvasPlus
     */
+
+    //Rita bézier-kurvor och former ifyllda med både färg, mönster och gradienter
+    var canvas2 = document.getElementById('c2');
+
+    var ctxColor = canvas2.getContext('2d');
+    //Röd bezierkurva
+    ctxColor.beginPath();
+    ctxColor.moveTo(30,30);
+    ctxColor.bezierCurveTo(30, 200, 250, 100, 250, 30);
+    ctxColor.closePath();
+    ctxColor.lineWidth = 2;
+    ctxColor.strokeStyle = 'red';
+    ctxColor.stroke();
+
 });
