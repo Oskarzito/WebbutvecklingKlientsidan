@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>3.4.1 Effekter och animationer</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>3.4.1 Effekter och animationer</h1>
+    </header>
+
+    <div class="show-hide-div">
+        <p>Klicka på knapparna för att gömma/visa texten: <span class="showhide-element">detta visas/göms!</span></p>
+        <p>Klicka på knapparna för att gömma/visa texten: <span class="fading-element">detta visas/göms med fade-effekt!</span></p>
+        <button type="button" data-button="hide">Göm</button>
+        <button type="button" data-button="show">Visa</button>
+    </div>
+
+    <div class="toggle-div">
+        <p>Klicka på knappen för att toggla mellan att visa texten: <span class="toggle-element">detta togglas!</span></p>
+        <p>Klicka på knappen för att toggla mellan att visa texten: <span class="fade-toggle-element">detta fade-togglas!</span></p>
+        <button type="button" data-button="toggle">Toggla</button>
+    </div>
+
+    <div class="fadeto-div">
+        <p>Klicka på knappen för att använda 'fadeTo:</p>
+        <div class="rect fade-to"></div>
+        <button type="button" data-button="fade-to">Fade-to</button>
+    </div>
+
+    <hr>
+
+    <div class="animate-div">
+        <div class="rect animating"></div>
+        <button type="button" data-button="animate">Animera</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
