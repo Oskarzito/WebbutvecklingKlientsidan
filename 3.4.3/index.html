@@ -10,27 +10,32 @@
 <body>
     <header>
         <h1>3.4.3 Navigering</h1>
+        <p>Dropdown-meny nedan med automatiskt införande av 'target="_blank"' på länkar</p>
+        <hr>
     </header>
     <nav>
-        <div class="menu-button" data-button="dropdown-menu">Hovra med musen här</div>
-        <ul class="menu-list" data-menu="dropdown-menu">
-            <li>
-                <a href="https://www.su.se/">Stockholms Universitet</a>
-            </li>
-            <li>
-                <a href="https://dsv.su.se/">DSV</a>
-            </li>
-            <li>
-                <a href="https://daisy.dsv.su.se/index.jspa">Daisy</a>
-            </li>
-            <li>
-                <a href="https://people.dsv.su.se/~pierre/courses/i.cgi">Denna kursens hemsida</a>
-            </li>
-        </ul>
+        <div class="menu" data-nav="navigation-menu">
+            <button class="menu-button" data-button="dropdown-menu">Hovra med musen här</button>
+            <ul class="menu-list" data-menu="dropdown-menu">
+                <li>
+                    <a href="https://www.su.se/">Stockholms Universitet</a>
+                </li>
+                <li>
+                    <a href="https://dsv.su.se/">DSV</a>
+                </li>
+                <li>
+                    <a href="https://daisy.dsv.su.se/index.jspa">Daisy</a>
+                </li>
+                <li>
+                    <a href="https://people.dsv.su.se/~pierre/courses/i.cgi">Denna kursens hemsida</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-   <script src="scripts/main.js"></script>
+    <script src="scripts/main.js"></script>
 
 </body>
+
 </html>
