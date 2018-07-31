@@ -18,26 +18,34 @@
     </div>
     <hr>
 
-    <canvas id="c1"></canvas>
-    <p>Canvas 1 - Raka linjer och kurvlinjer</p>
+    <!-- Var osäker på om man skulle skriva width och height här eller i CSS.
+    Enligt: https://stackoverflow.com/questions/2588181/canvas-is-stretched-when-using-css-but-normal-with-width-height-properties
+    samt boken skulle man skriva det i HTML -->
+
+    <canvas id="c1" width="400" height="200"></canvas>
+    <p>Canvas 1 - Raka linjer och kurvlinjer. Den gula linjen har även en skugga</p>
     <hr>
 
-    <canvas id="c2"></canvas>
-    <p>Canvas 2</p>
+    <canvas id="c2" width="400" height="200"></canvas>
+    <p>Canvas 2 - En bezierkurva som har ett mönster skapat av en bild, samt en bezierform ifylld med blå, transparent, färg och har en röd linje</p>
     <hr>
 
-    <canvas id="c3"></canvas>
-    <p>Canvas 3</p>
+    <canvas id="c3" width="400" height="200"></canvas>
+    <p>Canvas 3 - En bezierform ifylld med en radial gradient, samt en triangel ifylld med samma gradient</p>
     <hr>
 
-    <canvas id="c4"></canvas>
-    <p>Canvas 4</p>
+    <canvas id="c4" width="400" height="200"></canvas>
+    <p>Canvas 4 - Text (dagens datum/tid)</p>
     <hr>
 
-    <canvas id="c5"></canvas>
-    <p>Canvas 5</p>
+    <canvas id="c5" width="400" height="200"></canvas>
+    <p>Canvas 5 - En bitmappad bild</p>
     <hr>
 
+    <img id="savedImg" src="#" alt="saved image from canvas">
+    <p>Bild sparad från Canvas 1</p>
+
+    <a id="download-link">Klicka för att ladda ned</a>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="scripts/canvasplus1-1.js"></script>

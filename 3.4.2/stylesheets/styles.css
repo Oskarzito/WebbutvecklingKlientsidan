@@ -1,16 +1,17 @@
 
-.image {
-    width: 100px;
-    height: 100px;
+img {
     border-style: dashed;
     border-color: blue;
     border-radius: 7px;
 }
 
+.image {
+    width: 100px;
+    height: 100px;
+}
+
 canvas {
     display: block;
-    width: 400px;
-    height: 200px;
     border-style: solid;
     border-color: black;
 }
