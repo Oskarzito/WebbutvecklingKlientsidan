@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>3.5.1 Webblagring</title>
+</head>
+
+<body>
+    <header>
+        <h1>3.5.1 Webblagring</h1>
+        <hr>
+    </header>
+
+    <div class="local-storage-div">
+        <form data-form="form">
+            <label for="localInput">Text för localStorage</label>
+            <input type="text" id="localInput" data-input="local">
+            <label for="sessionInput">Text för sessionStorage</label>
+            <input type="text" id="sessionInput" data-input="session">
+            <br>
+            <button type="submit" data-button="submit">Spara till web-storage</button>
+        </form>
+    </div>
+    <button type="button" data-button="delete">RADERA!</button>
+
+    <p>Data som sparades förra submiten</p>
+    <p data-prev-saved="saved-data"></p>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="scripts/savedata.js"></script>
+
+</body>
+
+</html>
