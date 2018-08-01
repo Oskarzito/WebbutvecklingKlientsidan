@@ -1,0 +1,13 @@
+
+a {
+    padding: 20px 30px;
+    margin: 5px;
+    text-align: center;
+    background-color: green;
+    color: white;
+    border-style: dashed;
+}
+
+#fileInput {
+    display: none;
+}
