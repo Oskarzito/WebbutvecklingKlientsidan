@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>3.6.1 Halv-duplex klientinitierad kommunikation inom domän</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body class="container">
+    <header>
+        <h1>3.6.1 Halv-duplex klientinitierad kommunikation inom domän</h1>
+    </header>
+
+    <section>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>Skriv in två tal:</h3>
+                <form data-form="form">
+                    <div class="form-group">
+                        <label for="num1">Nummer 1:</label>
+                        <input class="form-control" type="text" id="num1" data-input="num1">
+                    </div>
+                    <div class="form-group">
+                        <label for="num2">Nummer 2:</label>
+                        <input class="form-control" type="text" id="num2" data-input="num2">
+                    </div>
+                    <button type="submit" class="btn btn-default">Addera!</button>
+                </form>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3 data-response="server-response">...</h3>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="scripts/main.js"></script>
+
+</body>
+
+</html>
