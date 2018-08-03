@@ -8,6 +8,37 @@ a {
     border-style: dashed;
 }
 
-#fileInput {
+.file-image-input {
     display: none;
+}
+
+.out-div {
+    margin-top: 35px;
+}
+
+.file-output {
+    border-style: solid;
+    border-width: 2px;
+    padding: 5px;
+    background-color: lightgoldenrodyellow;
+    width: 50%;
+    height: 100px;
+    overflow-y: auto;
+}
+
+.image-drop {
+    width: 400px;
+    height: 400px;
+    border-style: dashed;
+    border-width: 10px;
+    border-radius: 15px;
+    background-color: lightgoldenrodyellow;
+    background-size: 100%;
+    text-align: center;
+}
+
+.image-drop p {
+    margin-top: 200px;
+    font-size: 45px;
+    opacity: 0.5;
 }

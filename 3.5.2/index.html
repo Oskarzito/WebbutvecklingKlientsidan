@@ -16,21 +16,27 @@
 
     <div class="file-div">
         <h2>Textfilsinnehåll:</h2>
-        <input type="file" id="fileInput" data-input="files-hidden-btn" multiple>
+        <input type="file" class="file-image-input" data-input="files-hidden-btn" multiple>
         <a href="#" data-input="files-real-btn">Läs in fil</a>
-        <div class="file-output" data-output="files"></div>
+        <div class="out-div">
+            <p>Inläst text:</p>
+            <div class="file-output" data-output="files"></div>
+        </div>
     </div>
 
     <hr>
 
     <div class="image-div">
-
+        <h2>Bildinläsning:</h2>
+        <div class="image-drop" data-input="image">
+            <p>Droppa bild här</p>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="scripts/file.js">
-
-    </script>
+    <script src="scripts/file.js"></script>
+    <script src="scripts/image.js"></script>
+    
 </body>
 
 </html>

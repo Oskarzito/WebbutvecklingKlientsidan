@@ -32,7 +32,7 @@ $(document).ready(function () {
             console.log($files[i].name);
 
             //file än nuvarande fil
-            var file = $files[i];
+            var $file = $files[i];
 
             var reader = new FileReader();
 
@@ -41,11 +41,12 @@ $(document).ready(function () {
                 //Skriv ut innehållet i nuvarande fil til $output
                 var $output = $(FILE_OUTPUT);
                 $output.text($output.text() + ' ' + event.target.result);
+                //Ett streck som urskiljer varje fil från varandra i utskriften
+                $output.text($output.text() + ' ________________________________________________________________________________');
             });
 
-            //Skriv ut innehållet i filen
-            reader.readAsText(file);
-
+            //Läs in innehållet i filen
+            reader.readAsText($file);
         }
     });
 });
