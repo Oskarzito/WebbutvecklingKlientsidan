@@ -15,11 +15,14 @@ $(document).ready(function () {
     //Dropzonen (div:element)
     var $dropArea = $(INPUT_AREA);
 
+    /*Bordern runt dropzonen ändrar färg för lite MDI osv. Därav ändras dessa
+    stilattribut i lyssnarna*/
+
     //Lyssnare för dragenter
     $dropArea.on('dragenter', function (event) {
         //Stoppa defaulthändelser
         preventEvent(event);
-        //Fin effekt för borderfärgen
+        //Fin effekt som ändrar borderfärgen
         $(this).css('border-color', 'blue');
     });
 
@@ -33,7 +36,7 @@ $(document).ready(function () {
     $dropArea.on('dragleave', function (event) {
         //Stoppa defaulthändelser
         preventEvent(event);
-        //Fin effekt för borderfärgen
+        //Fin effekt som ändrar borderfärgen
         $(this).css('border-color', 'black');
     });
 
@@ -41,8 +44,9 @@ $(document).ready(function () {
     $dropArea.on('drop', function (event) {
         //Stoppa defaulthändelser
         preventEvent(event);
-        //Fin effekt för borderfärgen
+        //Fin effekt som ändrar borderns bredd och färg
         $(this).css('border-color', 'black');
+        $(this).css('border-width', '5px');
 
         /*Eftersom event.dataTransfer inte är detsamma som för det event jQuery
         skickar vill man komma åt det "riktiga" originaleventet för att sedan
