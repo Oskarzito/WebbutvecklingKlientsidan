@@ -1,0 +1,25 @@
+
+.display-weather {
+    margin: auto;
+    border-radius: 15px;
+    background-color: lightgoldenrodyellow;
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    text-align: center;
+}
+
+#temp {
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+#description {
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+#city {
+    font-size: 15px;
+    padding-top: 10px;
+}
