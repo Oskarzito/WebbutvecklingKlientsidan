@@ -1,0 +1,93 @@
+
+
+body {
+    border: solid pink;
+    margin: 0;
+    font-family: 'Inconsolata', 'monospace', 'Times New Roman', 'Arial';
+}
+
+header {
+    background-color: red;
+    padding-bottom: 100px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+h1 {
+    background-color: blue;
+    color: white;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #7a7a52;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding-top: 5px;
+}
+
+.menu-link {
+    padding: 10px 35px;
+    margin: 5px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.menu-link:hover {
+    background-color: #d6d6c2;
+}
+
+.parallax-effect {
+    min-height: 350px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#first-parallax {
+    border: solid black;
+    background-image: url('https://placekitten.com/1400/600');
+}
+
+
+#second-parallax {
+    border: dashed green;
+    background-image: url('https://placekitten.com/1400/400');
+}
+
+#third-parallax {
+    border: dotted blue;
+    background-image: url('https://placekitten.com/1400/500');
+}
+
+/*Boxes between parallax images*/
+.box-between {
+    /*background-color: #e6e6e6;*/
+    height: 350px;
+
+    text-align: center;
+    color: #999999;
+}
+
+section {
+    background-color: #e6e6e6;
+}
+
+@media only screen and (max-width: 800px) {
+    .parallax-effect {
+        background-attachment: scroll;
+    }
+
+    nav {
+        flex-direction: column;
+        position: static;
+    }
+
+    .menu-link {
+        text-align: center;
+    }
+}
