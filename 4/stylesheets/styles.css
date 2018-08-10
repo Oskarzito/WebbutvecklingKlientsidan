@@ -7,22 +7,36 @@ body {
 }
 
 header {
-    background-color: red;
-    padding-bottom: 100px;
+    background-color: red; /* fallback for old browsers */
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Chrome 10-25, Safari 5.1-6 */
+    padding-bottom: 45px;
     padding-top: 20px;
     text-align: center;
+    position: relative;
 }
 
-h1 {
-    background-color: blue;
+.head-content {
+    border-top: dashed;
     color: white;
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    border-bottom: dashed;
+}
+
+.author-header {
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 22px;
+    color: white;
+    position: absolute;
+    right: 10px;
+    bottom: 0;
 }
 
 nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: #7a7a52;
+    background-color: #332d2d;
     width: 100%;
     position: sticky;
     top: 0;
@@ -49,18 +63,18 @@ nav {
 }
 
 #first-parallax {
-    border: solid black;
+    /*border: solid black;*/
     background-image: url('https://placekitten.com/1400/600');
 }
 
 
 #second-parallax {
-    border: dashed green;
+    /*border: dashed green;*/
     background-image: url('https://placekitten.com/1400/400');
 }
 
 #third-parallax {
-    border: dotted blue;
+    /*border: dotted blue;*/
     background-image: url('https://placekitten.com/1400/500');
 }
 
@@ -68,7 +82,6 @@ nav {
 .box-between {
     /*background-color: #e6e6e6;*/
     height: 350px;
-
     text-align: center;
     color: #999999;
 }
@@ -77,6 +90,49 @@ section {
     background-color: #e6e6e6;
 }
 
+.second-box {
+    padding-top: 10px;
+    height: 100%;
+    width: 100%;
+    background-color: #363a35;
+    color: white;
+}
+
+.shadowed-text {
+    font-size: 70px;
+    font-style: italic;
+    color: #fff;
+    text-shadow: -7px 7px 0px #000000;
+    margin: 0;
+}
+
+.rounded-button {
+    border-radius: 10px;
+    box-shadow: 5px;
+}
+/*
+.street:before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 50%;
+    top: 80px;
+    left: 20%;
+    background: #ed2121;
+    box-shadow: -8px 13px #ed2121;
+}
+
+.street:after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 50%;
+    top: 110px;
+    left: 13%;
+    background: #ed2121;
+    box-shadow: -4px 13px #ed2121;
+}
+*/
 @media only screen and (max-width: 800px) {
     .parallax-effect {
         background-attachment: scroll;
