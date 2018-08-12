@@ -17,25 +17,25 @@ $(document).ready(function () {
 
     //Lägger till en lyssnare på när markören flyttas
     google.maps.event.addListener(marker, 'dragend', function () {
+        //Hämtar positionen för markören
         var position = marker.getPosition();
         console.log(position.lat() + ' - ' + position.lng());
         var lat = 'lat=' + position.lat();
         var lng = 'lon=' + position.lng();
-
+        //Bygger URL:en för API-anrop och skickar till getData utan callback
         var url = WEATHER_API_PATH + lat + '&' + lng + WEATHER_API_KEY;
         getData(url, function (data) {
-            var place = data.name;
-            var temperature = Math.round(data.main.temp);
-            console.log(place + ' ' + temperature);
             updateOutput(data);
         });
     });
 
+    //Lyssnare som hanterar formulärsubmits
     var $placeForm = $('[data-form="place-form"]');
     $placeForm.on('submit', function (event) {
         event.preventDefault();
-        console.log('subbbbbmit');
         var input = $('[data-input="place"]').val();
+
+        //Bygg upp en URL av indatan och anropa getData
         var url = WEATHER_API_PATH + 'q=' + input + WEATHER_API_KEY;
         getData(url, function (data) {
             updateOutput(data, function (data) {
@@ -45,6 +45,7 @@ $(document).ready(function () {
                 var lng = data.coord.lon;
                 var coordinate = new google.maps.LatLng(lat, lng);
                 marker.setPosition(coordinate);
+                //Flyttar kartan
                 map.panTo(coordinate);
             });
         });
@@ -52,21 +53,37 @@ $(document).ready(function () {
 
 });
 
+/**
+    Uppdaterar textelement på skärmen gällande plats och temperatur
+
+    @param data Ett JSON-objekt från openweathermaps innhållande temperatur
+                och plats (med mera)
+    @param callback Eventuell callbackfunktion för som tar JSON-dataobjektet
+                    som argument
+*/
 function updateOutput(data, callback) {
     var $placeOutput = $('[data-output="place"]');
     var $tempOutput = $('[data-output="temp"]');
+    //Om responskoden är lyckad, uppdatera textelement med relevant JSON-data
     if(data.cod === 200) {
         $placeOutput.text(data.name);
         $tempOutput.text(Math.round(data.main.temp) + ' grader');
 
+        //Om en callback skickats med, anropa med dataobjektet
         if(callback) {
             callback(data);
         }
     } else {
+        //Något är fel och meddelas på skärmen
         $placeOutput.text('Obefintlig plats! Testa en annan!');
     }
 }
 
+/**
+    Initierar en Google Maps-karta
+
+    @return En Google Maps-karta
+*/
 function initMap() {
     //Källhänvisar denna kodsnutt till Google Maps API-tutorial
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -82,6 +99,7 @@ function initMap() {
 /**
     Initierar en Google Maps-markör på en karta
     @param map Kartan som kommer få en markök på sig
+    @return En Google Maps-markör
 */
 function initMarker(map) {
     var marker = new google.maps.Marker({
@@ -96,7 +114,9 @@ function initMarker(map) {
 }
 
 /**
-    API-anrop till specificerad URL
+    API-anrop till specificerad URL. Vid lyckat anrop kallas en callbackfunktion.
+    Vid misslyckat anrop skrivs det ut en text på skärmen.
+
     @param apiCallUrl  Sträng som representerar URL:en man vill anropa
     @param callback    Callback-funktion som anropas efter ett API-anrop
 */
