@@ -9,8 +9,31 @@
 </head>
 
 <body>
-    
-    <div class="google-map" id="map" data-map="google-map"></div>
+    <header>
+        <h1>Externa tjänster</h1>
+    </header>
+    <section class="map-container">
+        <div class="column">
+            <div class="google-map" id="map" data-map="google-map"></div>
+        </div>
+
+        <div class="column form-map-input">
+            <h2>Testa släppa markören eller fyll i formuläret</h2>
+            <form data-form="place-form">
+                <label for="city-country-input"> Stad eller land:</label>
+                <input type="text" value="stockholm" id="city-country-input" data-input="place">
+                <!-- Knappen göms och klickas via JS -->
+                <button type="submit" data-button="form-map-submit">Hämta väderlek!</button>
+            </form>
+
+            <div class="weather-response-div">
+                <h2 data-output="place">&nbsp</h2> <!--plats &nbsp -->
+                <h3><span data-output="temp">&nbsp</span></h3> <!--plats-->
+            </div>
+        </div>
+    </section>
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPDsmzeA823yxURWPTkBmGTgq31DfDEIc"></script>
