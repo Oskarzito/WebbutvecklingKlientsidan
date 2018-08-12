@@ -1,7 +1,6 @@
 
 
 body {
-    border: solid pink;
     margin: 0;
     font-family: 'Inconsolata', 'monospace', 'Times New Roman', 'Arial';
 }
@@ -94,6 +93,10 @@ nav {
     background-image: url('https://placekitten.com/1400/500');
 }
 
+#fourth-parallax{
+    background-image: url('https://placebear.com/1000/400');
+}
+
 /*Boxes between parallax images*/
 .box-between {
     /*background-color: #e6e6e6;*/
@@ -169,5 +172,9 @@ section {
 
     .menu-link {
         text-align: center;
+    }
+
+    footer {
+        padding-bottom: 10px;
     }
 }
