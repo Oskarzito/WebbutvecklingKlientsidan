@@ -2,6 +2,7 @@
 body {
     margin: 0;
     font-family: 'Inconsolata', 'monospace', 'Times New Roman', 'Arial';
+    background-color: #00bcd4;
 }
 
 header {

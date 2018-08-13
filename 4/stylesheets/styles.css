@@ -102,7 +102,10 @@ nav {
     /*background-color: #e6e6e6;*/
     height: 350px;
     text-align: center;
-    color: #999999;
+    color: #50555b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 section {
@@ -117,6 +120,11 @@ section {
     color: white;
 }
 
+.second-box-content iframe {
+    float: right;
+    margin-right: 50px;
+}
+
 .shadowed-text {
     font-size: 70px;
     font-style: italic;
@@ -125,33 +133,69 @@ section {
     margin: 0;
 }
 
-.rounded-button {
-    border-radius: 10px;
-    box-shadow: 5px;
-}
-/*
-.street:before {
-    content: '';
-    position: absolute;
-    height: 4px;
-    width: 50%;
-    top: 80px;
-    left: 20%;
-    background: #ed2121;
-    box-shadow: -8px 13px #ed2121;
+/* Animation för att slide:a in när man scrollar.
+Hjälp tagen från W3 schools. Källa:
+https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp */
+.slide-in-animation {
+    visibility: hidden;
 }
 
-.street:after {
-    content: '';
-    position: absolute;
-    height: 4px;
-    width: 50%;
-    top: 110px;
-    left: 13%;
-    background: #ed2121;
-    box-shadow: -4px 13px #ed2121;
+.slide-in {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
 }
-*/
+
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+/* Slide in animation slut */
+
+.column-text {
+    column-count: 2;
+}
+
+.book-link-ref {
+    display: block;
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #384354;
+    color: white;
+    margin: 25px auto;
+}
+
+.book-link-ref:hover {
+    background-color: #99a2af;
+}
+
+.book-link-ref:active {
+    background-color: #7a94ba;
+}
+
 @media only screen and (max-width: 800px) {
     .parallax-effect {
         background-attachment: scroll;
@@ -172,6 +216,14 @@ section {
 
     .menu-link {
         text-align: center;
+    }
+
+    .second-box-content iframe {
+        display: block;
+        float: none;
+        margin: auto;
+        width: 60%;
+        height: auto;
     }
 
     footer {

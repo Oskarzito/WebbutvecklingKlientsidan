@@ -43,7 +43,18 @@ $(document).ready(function () {
         //Ändra färg till så mycket man scrollat i procent
         $(PROGRESSBAR_SELECTOR).css('width', scrollDistance + '%');
 
+        /*Slide in-animation. När man scrollar fram till en viss punkt
+        kommer respektive element med med klassen slide-in-animation
+        visas om man kommer till elementet vid scrollning.
+        OBS! Jag använder INTE data-attribut som selektor här då
+        jag tyckte detta var tydligare*/
+        $('.slide-in-animation').each(function () {
+            var position = $(this).offset().top;
+            if(position < top + 500) {
+                $(this).addClass('slide-in');
+            }
+        });
     });
-
+    //______________________________________________________________________
 
 });
