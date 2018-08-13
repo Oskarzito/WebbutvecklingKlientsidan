@@ -25,6 +25,10 @@ header {
     color: white;
 }
 
+.drawer-menu-button:hover {
+    color: #d6d6c2;
+}
+
 .drawer-menu {
     position: fixed;
     top: 0;
