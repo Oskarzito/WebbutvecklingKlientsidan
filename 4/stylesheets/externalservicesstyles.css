@@ -1,6 +1,7 @@
 
 body {
     margin: 0;
+    font-family: 'Inconsolata', 'monospace', 'Times New Roman', 'Arial';
 }
 
 header {
@@ -11,6 +12,67 @@ header {
     padding-bottom: 45px;
     padding-top: 20px;
     text-align: center;
+    color: white;
+}
+
+.drawer-menu-button {
+    font-size: 30px;
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    top: 5px;
+    left: 10px;
+    color: white;
+}
+
+.drawer-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding-top: 45px;
+    transition: 1s;
+    background-color: rgba(109, 106, 99, 0.9);
+    text-align: center;
+    width: 0;
+    height: 100%;
+    /*VIKITGT ATTRIBUT!!! Utan detta göms ej innehållet!*/
+    overflow: hidden;
+}
+
+.close-drawer-button {
+    color: white;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 40px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.close-drawer-button:hover {
+    background-color: #d6d6c2;
+}
+
+.drawer-menu a {
+    display: block;
+    padding: 5px;
+    margin-top: 20px;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.drawer-menu a:hover {
+    background-color: #d6d6c2;
+}
+
+nav {
+    background-color: #332d2d;
+    width: 100%;
+    padding-top: 5px;
 }
 
 .map-container {

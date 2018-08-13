@@ -51,6 +51,8 @@ $(document).ready(function () {
         });
     });
 
+    //Lägg lyssnare på lådmenyn
+    setUpDrawerMenu();
 });
 
 /**
@@ -134,4 +136,33 @@ function getData(apiCallUrl, callback) {
             $tempOutput.text('');
         }
     });
+}
+
+/**
+    Adderar lyssnare på lådmenyn uppe till vänster samt en knapplyssnare
+    till hela dokumentet. När man klickar på ESC-knappen stängs lådmenyn
+    (om den är öppen såklart. Annars händer inget)
+*/
+function setUpDrawerMenu() {
+    const ESC_KEY = 27;
+    const DRAWER_MENU_BUTTON_SELECTOR = '[data-button="drawer-menu-btn"]';
+    const DRAWER_MENU_SELECTOR = '[data-menu="drawer-menu"]';
+    const CLOSE_DRAWER_SELECTOR = '[data-button="close-drawer"]';
+
+    $(DRAWER_MENU_BUTTON_SELECTOR).on('click', function (event) {
+        $(DRAWER_MENU_SELECTOR).css('width', '200px');
+    });
+
+    $(CLOSE_DRAWER_SELECTOR).on('click', function (event) {
+        event.preventDefault();
+        $(DRAWER_MENU_SELECTOR).css('width', '0');
+    });
+
+    $(document.body).on('keyup', function (event) {
+        event.preventDefault();
+        if(event.keyCode === ESC_KEY) {
+            $(DRAWER_MENU_SELECTOR).css('width', '0');
+        }
+    });
+
 }
