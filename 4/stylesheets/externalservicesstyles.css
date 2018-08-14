@@ -133,14 +133,27 @@ label {
     cursor: pointer;
 }
 
+td a {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 800px) {
     .map-container {
         flex-direction: column;
         padding-bottom: 75px;
+        margin-bottom: 5px;
+        height: 550px;
     }
 
     .column {
         height: 50%;
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .map-container {
+        height: 650px;
     }
 }

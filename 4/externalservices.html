@@ -8,6 +8,9 @@
     <!--Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
     <!---->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!---->
     <link rel="stylesheet" href="stylesheets/externalservicesstyles.css">
 </head>
 
@@ -47,10 +50,27 @@
             </form>
 
             <div class="weather-response-div">
-                <h2 data-output="place">&nbsp</h2> <!--plats &nbsp -->
-                <h3><span data-output="temp">&nbsp</span></h3> <!--plats-->
+                <h2 data-output="place">&nbsp</h2>
+                <h3><span data-output="temp">&nbsp</span></h3>
             </div>
         </div>
+    </section>
+
+    <section class="container">
+        <h2>Intressanta saker inärheten</h2>
+        <p>Klicka på namnet om du vill veta mer om platsen:</p>
+        <table class="table table-hover panel panel-default">
+            <thead>
+                <tr>
+                    <th>Namn</th>
+                    <th>Avstånd (meter)</th>
+                </tr>
+            </thead>
+            <tbody data-output="table-body-result">
+                <!-- Här adderas tabellrader dynamisk vid flyttande av markören
+                     på Google Maps-kartan -->
+            </tbody>
+        </table>
     </section>
 
 
