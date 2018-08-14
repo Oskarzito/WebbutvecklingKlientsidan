@@ -11,9 +11,11 @@ $(document).ready(function () {
     var map = initMap();
     var marker = initMarker(map);
 
-    const WEATHER_API_PATH = 'http://api.openweathermap.org/data/2.5/weather?units=metric&'
+    const WEATHER_API_PATH = 'https://api.openweathermap.org/data/2.5/weather?units=metric&'
     //var latlng = 'lat=59.334591&lon=18.063240'
     const WEATHER_API_KEY = '&APPID=f8a48d1a886d5c83eaf7ea5d8c0c6685'
+
+    const WEATHER_FORM_INPUT_SELECTOR = '[data-input="place"]';
 
     //Lägger till en lyssnare på när markören flyttas
     google.maps.event.addListener(marker, 'dragend', function () {
@@ -26,6 +28,8 @@ $(document).ready(function () {
         var url = WEATHER_API_PATH + lat + '&' + lng + WEATHER_API_KEY;
         getData(url, function (data) {
             updateOutput(data);
+            //Sätt formulär-input-texten till platsens namn
+            $(WEATHER_FORM_INPUT_SELECTOR).val(data.name);
         });
     });
 
@@ -33,7 +37,7 @@ $(document).ready(function () {
     var $placeForm = $('[data-form="place-form"]');
     $placeForm.on('submit', function (event) {
         event.preventDefault();
-        var input = $('[data-input="place"]').val();
+        var input = $(WEATHER_FORM_INPUT_SELECTOR).val();
 
         //Bygg upp en URL av indatan och anropa getData
         var url = WEATHER_API_PATH + 'q=' + input + WEATHER_API_KEY;

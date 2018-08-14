@@ -33,6 +33,7 @@ header {
 
 .nav-menu {
     position: sticky;
+    -webkit-position: sticky;
     top: 0;
 }
 
