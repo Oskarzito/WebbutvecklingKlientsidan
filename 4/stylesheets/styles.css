@@ -78,23 +78,26 @@ nav {
 }
 
 #first-parallax {
-    /*border: solid black;*/
-    background-image: url('https://placekitten.com/1400/600');
+    /*border: solid black;
+    background-image: url('https://placekitten.com/1400/600');*/
+    background-image: url('https://loremflickr.com/cache/resized/4543_37614203175_c4e184798a_h_1280_457_nofilter.jpg');
 }
 
 
 #second-parallax {
-    /*border: dashed green;*/
-    background-image: url('https://placekitten.com/1400/400');
+    /*border: dashed green;
+    background-image: url('https://placekitten.com/1400/400');*/
+    background-image: url('https://loremflickr.com/cache/resized/911_28141336828_9bff1c9f6a_h_1280_457_g.jpg');
 }
 
 #third-parallax {
-    /*border: dotted blue;*/
-    background-image: url('https://placekitten.com/1400/500');
+    /*border: dotted blue;
+    background-image: url('https://placekitten.com/1400/500');*/
+    background-image: url('https://loremflickr.com/cache/resized/1822_28091293007_9d5c351bdb_h_1280_457_g.jpg');
 }
 
 #fourth-parallax{
-    background-image: url('https://placebear.com/1000/400');
+    background-image: url('https://loremflickr.com/cache/resized/1773_42044613870_8c7e0e5d69_h_1280_480_g.jpg');
 }
 
 /*Boxes between parallax images*/
@@ -125,6 +128,10 @@ section {
     margin-right: 50px;
 }
 
+.print-note-iframe {
+    display: none;
+}
+
 .shadowed-text {
     font-size: 70px;
     font-style: italic;
@@ -147,7 +154,6 @@ https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp */
     -webkit-animation-duration: 1s;
     visibility: visible;
 }
-
 
 @keyframes slide {
     0% {
@@ -196,6 +202,29 @@ https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp */
     background-color: #7a94ba;
 }
 
+footer {
+    height: 150px;
+    background-color: #332d2d;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-column {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    color: white;
+}
+
+.footer-column a {
+    color: #3869aa;
+}
+
+.footer-column + .footer-column {
+    border-left: solid #696c70 1px;
+
+}
+
 @media only screen and (max-width: 800px) {
     .parallax-effect {
         background-attachment: scroll;
@@ -226,7 +255,47 @@ https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp */
         height: auto;
     }
 
+    .third-box-content {
+        position: relative;
+        height: 100%;
+    }
+
+    .book-link-ref {
+        display: inline;
+        position: absolute;
+        width: 50%;
+        height: 40px;
+        right: 2px;
+        bottom: 5px;
+        padding: 2px;
+    }
+
     footer {
-        padding-bottom: 10px;
+        padding-bottom: 45px;
+    }
+}
+
+/* Denna del ser inte jättebra ut men det visar en annan sida än normalt */
+@media print {
+
+    html, body {
+        font-family: 'Times New Roman', 'Arial';
+        color: black !important;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .parallax-effect {
+        display: none !important;
+    }
+
+    .box-between {
+        border: solid black;
+    }
+
+    .print-note-iframe {
+        display: block;
     }
 }
