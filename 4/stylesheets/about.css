@@ -1,0 +1,17 @@
+
+body {
+    margin: 0;
+    font-family: 'Inconsolata', 'monospace', 'Times New Roman', 'Arial';
+    background-color: #f2f4f7;
+}
+
+header {
+    height: 100px;
+    /* fallback för gamla webbläsare */
+    background-color: red;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    padding-bottom: 45px;
+    padding-top: 20px;
+    text-align: center;
+    color: white;
+}
