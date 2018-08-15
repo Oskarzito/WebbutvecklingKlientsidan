@@ -30,7 +30,7 @@ $(document).ready(function () {
             updateOutput(data);
             //Sätt formulär-input-texten till platsens namn
             $(WEATHER_FORM_INPUT_SELECTOR).val(data.name);
-            
+
             //Ta bort eventuella tabellrader innan nya skrivs ut
             var $outputTableBody = $('[data-output="table-body-result"]');
             $outputTableBody.empty();
@@ -46,6 +46,10 @@ $(document).ready(function () {
     var $placeForm = $('[data-form="place-form"]');
     $placeForm.on('submit', function (event) {
         event.preventDefault();
+        //Ta bort eventuella tabellrader
+        var $outputTableBody = $('[data-output="table-body-result"]');
+        $outputTableBody.empty();
+
         var input = $(WEATHER_FORM_INPUT_SELECTOR).val();
 
         //Bygg upp en URL av indatan och anropa getData med callback
@@ -60,12 +64,15 @@ $(document).ready(function () {
                 marker.setPosition(coordinate);
                 //Flyttar kartan
                 map.panTo(coordinate);
+
+                /*Anropar Wikipedias API via koordinaten markören står på.
+                 Resultatet blir information om närliggande platser som
+                 skrivs ut som tabellrader på skärmen*/
+                queryWikipediaByGeo(lat, lng);
             });
         });
     });
 
-    //Lägg lyssnare på lådmenyn
-    setUpDrawerMenu();
 });
 
 /**
@@ -147,35 +154,6 @@ function getData(apiCallUrl, callback) {
             $placeOutput.text('Obefintlig plats! Testa en annan!');
             var $tempOutput = $('[data-output="temp"]');
             $tempOutput.text('');
-        }
-    });
-}
-
-/**
-    Adderar lyssnarfunktionalitet på lådmenyn uppe till vänster.
-*/
-function setUpDrawerMenu() {
-    const ESC_KEY = 27;
-    const DRAWER_MENU_BUTTON_SELECTOR = '[data-button="drawer-menu-btn"]';
-    const DRAWER_MENU_SELECTOR = '[data-menu="drawer-menu"]';
-    const CLOSE_DRAWER_SELECTOR = '[data-button="close-drawer"]';
-
-    //Klicklyssnare på knappen som öppnar menyn
-    $(DRAWER_MENU_BUTTON_SELECTOR).on('click', function (event) {
-        $(DRAWER_MENU_SELECTOR).css('width', '200px');
-    });
-
-    //Klicklyssare på pil-ikonen som stänger menyn
-    $(CLOSE_DRAWER_SELECTOR).on('click', function (event) {
-        event.preventDefault();
-        $(DRAWER_MENU_SELECTOR).css('width', '0');
-    });
-
-    //När man klickar på ESC-knappen stängs lådmenyn(om den är öppen såklart. Annars händer inget)
-    $(document.body).on('keyup', function (event) {
-        event.preventDefault();
-        if(event.keyCode === ESC_KEY) {
-            $(DRAWER_MENU_SELECTOR).css('width', '0');
         }
     });
 }

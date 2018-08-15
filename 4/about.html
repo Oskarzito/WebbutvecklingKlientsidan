@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!---->
     <link rel="stylesheet" href="stylesheets/about.css">
+    <link rel="stylesheet" href="stylesheets/drawermenu.css">
+    <link rel="shortcut icon" type="image/png" href="https://placekitten.com/16/16" />
 </head>
 
 <body>
@@ -18,6 +20,16 @@
     <header>
         <h1>Om denna sida</h1>
     </header>
+
+    <!-- Lådmenyn uppe till vänster -->
+    <div class="drawer-menu-button" data-button="drawer-menu-btn">&#9776; Meny</div>
+    <div class="drawer-menu" data-menu="drawer-menu">
+        <div class="close-drawer-button" data-button="close-drawer">&larr;</div>
+        <a href="index.html">Startsida</a>
+        <a href="externalservices.html">Externa geografiska tjänster</a>
+        <a href="#">Om</a>
+    </div>
+    <!---->
 
     <div class="container">
         <h2>Diverse information</h2>
@@ -27,17 +39,16 @@
 
         <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#exam">Gesällprov</a></li>
-            <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+            <li><a data-toggle="tab" href="#comments">Kommentarer</a></li>
             <li><a data-toggle="tab" href="#opinion">Berätta vad du tycker!</a></li>
-            <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
         </ul>
 
         <div class="tab-content">
             <div id="exam" class="tab-pane fade in active">
                 <h3>Gesällprovet</h3>
                 <p>
-                    Kreativiteten under projektet gällande layout och API-integrering har varit någorlunda stor. Däremot har jag haft lite svårare att bestämma vad för textuellt innehåll sidan ska presentera. Därav tänkte jag här nämna några (större/mer omfattande) tekniker detta gesällprov implementerat
-                    (sådana som tagits upp under kursens tidigare inlämningsuppgifter).
+                    Kreativiteten under projektet gällande layout och API-integrering har varit någorlunda stor. Däremot har jag haft lite svårare att bestämma vad för textuellt innehåll sidan ska presentera. Därav tänkte jag här nämna några (större/mer omfattande) tekniker
+                    detta gesällprov implementerat (sådana som tagits upp under kursens tidigare inlämningsuppgifter).
                 </p>
 
                 <table class="table">
@@ -51,41 +62,118 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Tabbade paneler</td>
+                            <td>Utvidgbara gränssnitt (tabbar)</td>
                             <td>Här :)</td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>Halv-dupelx utom domän</td>
-                            <td>Under Externa geografiska tjänster</td>
+                            <td>Halv-dupelx klientinitierad kommunikation utom domän</td>
+                            <td>Under <a href="externalservices.html"> externa geografiska tjänster</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>DOM-objekt och jQuery</td>
+                            <td>I JavaScript-filerna</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Webbläsar-objekt</td>
+                            <td>I animationerna på <a href="index.html">Startsidan</a></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Formulärhantering</td>
+                            <td>Här samt i <a href="externalservices.html"> externa geografiska tjänster</a></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Geolokalisering</td>
+                            <td>Under <a href="externalservices.html"> externa geografiska tjänster</a></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Övergångar</td>
+                            <td>Se lådmenyn upp till vänster</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Nedladdade (externa) fonter</td>
+                            <td>Se fonterna <code>Inconsolata</code> (denna sidas font) samt <code>Nothing You Could Do</code></td>
                         </tr>
                     </tbody>
                 </table>
 
                 <p>
-                    Till min hjälp på några ställen har jag använt <a href="https://getbootstrap.com/docs/3.3/">Bootstrap</a>.
+                    Till min hjälp på några ställen har jag använt <a target="_blank" href="https://getbootstrap.com/docs/3.3/">Bootstrap</a>. <br> Kan med största sannolikhet rabbla upp fler saker i tabellen ovan men tycker dessa var de mest omfattande för tillfället :)
                 </p>
             </div>
 
-            <div id="menu1" class="tab-pane fade">
-                <h3>Menu 1</h3>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div id="comments" class="tab-pane fade">
+                <h3>Egna kommentarer</h3>
+                <p>
+                    Detta gesällprov har jag främst velat jobba med API:er och JSON-objekt. Jag har lyckats få fram data från, samt kedja ihop, främst tre API:er:
+                </p>
+                <ol>
+                    <li>Google Maps</li>
+                    <li>OpenWeatherMaps</li>
+                    <li>Wikipedia</li>
+                </ol>
+                <p>
+                    Mest tid har gått åt, under detta projekt, till att sätta sig in i dokumentation samt få fram rätt data. Vidare har rätt mycket tid även gått åt till detaljer i design. Jag använder endast Bootstrap i hög utsträckning på denna sida, och litegrann för
+                    en stilig tabell på <a href="externalservices.html">externa geografiska tjänster</a>. Eftersom mest tid lagts åt dessa nämnda saker kan det eventuellt finnas små detaljerade buggar, men inga större fatala problem
+                    iallafall. <br> Jag hoppas nu att detta räcker för att klara av gesällprovet för kursen :)
+                </p>
             </div>
             <div id="opinion" class="tab-pane fade">
                 <h3>Fyll i formuläret!</h3>
                 <p><mark>Obs!</mark> För att skicka krävs en mailklient installerad på datorn.</p>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-            </div>
-            <div id="menu3" class="tab-pane fade">
-                <h3>Menu 3</h3>
-                <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                <form data-form="opinion">
+                    <div class="form-group">
+                        <label for="nameInput">Namn:</label>
+                        <input data-input="name" class="form-control" name="nameInput" type="text" id="nameInput" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="formControlRange">Hur bra var denna hemsida? <span data-output="slider">5</span></label>
+                        <input type="range" min="1" max="10" value="5" class="form-control-range" id="formControlRange" data-input="range-slider">
+                    </div>
+                    <div class="form-gropu">
+                        <label for="commentSection">Vad tycker du?</label>
+                        <textarea data-input="comment" class="form-control" rows="5" id="commentSection"></textarea>
+                    </div>
+                    <a href="#"></a>
+                    <p>Jag vill öppna min mailklient och skicka?</p>
+                    <button type="submit" class="btn btn-default">Ja</button>
+                    <p>Jag vill återställa det jag gjort?</p>
+                    <button type="reset" class="btn btn-default">Återställ</button>
+                </form>
+                <!-- Modalboxen -->
+                <button type="button" class="hide-this-bootstrap-element" data-toggle="modal" data-target="#confirmCancelModal"></button>
+                <div id="confirmCancelModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Observera!</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>Är du säker på att du vill öppna en mailklient på din dator?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" data-link="open-mail-client" class="btn btn-default">Ja!</a>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Nej</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!--<script src="scripts/about.js"></script>-->
+    <script src="scripts/about.js"></script>
+    <script src="scripts/drawermenu.js"></script>
 </body>
 
 </html>
