@@ -1,7 +1,7 @@
 
 
 /**
-    Adderar lyssnarfunktionalitet på lådmenyn uppe till vänster.
+    JS-filen adderar lyssnarfunktionalitet på lådmenyn uppe till vänster.
 
     Alla HTML-filer som länkar in drawermenu.css samt drawermenu.js
     får en fungerande lådmeny uppe till vänser (dvs om HTML-koden också
@@ -24,7 +24,7 @@ $(document).ready(function () {
         $(DRAWER_MENU_SELECTOR).css('width', '0');
     });
 
-    //När man klickar på ESC-knappen stängs lådmenyn(om den är öppen såklart. Annars händer inget)
+    //När man klickar på ESC-knappen stängs lådmenyn (om den är öppen såklart. Annars händer inget)
     $(document.body).on('keyup', function (event) {
         event.preventDefault();
         if(event.keyCode === ESC_KEY) {

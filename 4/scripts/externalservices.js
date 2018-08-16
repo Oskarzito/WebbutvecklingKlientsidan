@@ -6,9 +6,12 @@
     när man droppar markören på en plats. Sedan får man lite
     diverse information om platsen via API-anrop till openweathermaps
     samt Wikipedia.
+
+    Filen hanterar indata och utdata för externalservices.html
 */
 
 $(document).ready(function () {
+    //Initierar Google Maps-karten samt sätter ut en markör den
     var map = initMap();
     var marker = initMarker(map);
 
@@ -19,7 +22,7 @@ $(document).ready(function () {
 
     //Lägger till en lyssnare på när markören flyttas
     google.maps.event.addListener(marker, 'dragend', function () {
-        //Hämtar positionen för markören
+        //Hämtar markörens position
         var position = marker.getPosition();
         var lat = 'lat=' + position.lat();
         var lng = 'lon=' + position.lng();
@@ -50,6 +53,7 @@ $(document).ready(function () {
         var $outputTableBody = $('[data-output="table-body-result"]');
         $outputTableBody.empty();
 
+        //Indata från textfältet
         var input = $(WEATHER_FORM_INPUT_SELECTOR).val();
 
         //Bygg upp en URL av indatan och anropa getData med callback
@@ -78,8 +82,8 @@ $(document).ready(function () {
 /**
     Uppdaterar textelement på skärmen gällande plats och temperatur
 
-    @param data Ett JSON-objekt från openweathermaps innhållande temperatur
-                och plats (med mera)
+    @param data     Ett JSON-objekt från openweathermaps innhållande temperatur
+                    och plats (med mera)
     @param callback Eventuell callbackfunktion för som tar JSON-dataobjektet
                     som argument
 */
@@ -120,8 +124,9 @@ function initMap() {
 
 /**
     Initierar en Google Maps-markör på en karta
-    @param map Kartan som kommer få en markök på sig
-    @return En Google Maps-markör
+
+    @param map  Kartan som kommer få en markök på sig
+    @return     En Google Maps-markör
 */
 function initMarker(map) {
     var marker = new google.maps.Marker({
@@ -162,7 +167,8 @@ function getData(apiCallUrl, callback) {
     Skickar ett API-anrop till Wikipedia med en koordinat som argument.
     Responsen för anropen blir ett JSON-objekt innehållandes information
     om närliggande geografiska platser till koordinaten
-    @param latitude Latitud-värdet för Google-Maps-markören
+
+    @param latitude  Latitud-värdet för Google-Maps-markören
     @param longitude Longitud-värdet för Google-Maps-markören
 */
 function queryWikipediaByGeo(latitude, longitude) {
@@ -183,6 +189,7 @@ function queryWikipediaByGeo(latitude, longitude) {
 
 /**
     Hanterar JSON-responsen från ett anrop till wikipeda
+
     @param data JSON-objekt innehållandes data om närliggande platser till en koordinat
 */
 function handleWikipediaGeoResponse(data) {
@@ -199,8 +206,9 @@ function handleWikipediaGeoResponse(data) {
 }
 
 /**
-    Tar ett wikipedia pageID och skapar en url till sidan
-    @param id PageID för en wikipedia-sida
+    Tar ett wikipedia-pageID och skapar en url till ID:ts Wikipedia-sida
+
+    @param id   PageID för en wikipedia-sida
     @param name Namnet på närliggande platsen
     @param dist Avståndet i meter till platsen från där markören släpptes på kartan
 */
@@ -222,7 +230,6 @@ function createWikipediaUrlFromPageIdAndPrintToScreen(id, name, dist) {
             console.log('Something went wrong when generating URL from pageID');
         }
     });
-
 }
 
 /**

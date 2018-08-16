@@ -1,7 +1,12 @@
 
+/*
+    JS-filen implementerar funktionalitet till sidan about.html.
+    Det som hanteras här är formulärvalidering för "åsiktsformuläret"
+    en besökare på hemsidan kan fylla i
+*/
 
 $(document).ready(function () {
-
+    //Selektorvariabler
     const RANGE_SLIDER_SELECTOR = '[data-input="range-slider"]';
     const FORM_SELECTOR = '[data-form="opinion"]';
     const NAME_INPUT_SELECTOR = '[data-input="name"]';
@@ -24,6 +29,7 @@ $(document).ready(function () {
         if(isValidName(name)) {
             event.target.setCustomValidity('');
         } else {
+            //Visar felmeddelande vid input-rutan
             var message = name + ' är inte ett giltigt namn. Får bara vara bokstäver (minst en)!';
             event.target.setCustomValidity(message);
         }
@@ -43,17 +49,17 @@ $(document).ready(function () {
             comment = 'Ingen kommentar? :\'(';
         }
 
-        //Skapa mail-bodyn
+        //Skapa mail-bodyn (innehållet i mailet som inte är rubrik)
         var message = 'Namn: ' + name + '%0D%0A%0D%0ABetyg: ' + grade +'%0D%0A%0D%0AKommentar: ' + comment;
 
-        //Skapa mailto-länken (och mailet) och sätt länken att href:a till mailto
+        //Skapar mailto-länken och sätter länken att href:a till mailto-länken
         var href = 'mailto:osem6498@student.su.se?subject=Åsikt_På_Ditt_Gesällprov&body=' + message;
         var $mailToLink = $('[data-link="open-mail-client"]');
         $mailToLink.prop('href', href);
 
         //När man klickar ja för att skicka, stäng modalboxen och återställ formuläret
         $mailToLink.on('click', function () {
-            $('[data-dismiss="modal"]').click();
+            $('[data-dismiss="modal"]').click(); //Stänger boxen
             this.reset();
         }.bind(this));
 
@@ -65,6 +71,7 @@ $(document).ready(function () {
 /**
     Validerar en sträng mot mönstret: 'minst en bokstav'
     @param email Sträng att matcha mot RegEx-mönstret
+    @return      Boolean om parametern matchade mönstret eller ej
 */
 function isValidName(name) {
     var regx = /^[a-zA-Z]+$/;

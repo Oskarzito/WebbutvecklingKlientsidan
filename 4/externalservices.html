@@ -16,7 +16,7 @@
     <!---->
     <link rel="stylesheet" href="stylesheets/externalservicesstyles.css">
     <link rel="stylesheet" href="stylesheets/drawermenu.css">
-    <link rel="shortcut icon" type="image/png" href="https://placekitten.com/16/16"/>
+    <link rel="shortcut icon" type="image/png" href="https://placekitten.com/16/16" />
 </head>
 
 <body>
@@ -34,18 +34,18 @@
     </div>
     <!---->
 
-    <nav>
-
-    </nav>
+    <div class="header-complement"></div>
 
     <section class="page-description">
+        <h3>Information</h3>
         <p>
-            Här kan du nyttja geografiska tjänster som erbjuds av bland annat Google Maps, OpenWeatherMaps samt Wikipedia. Släpp markören eller skriv in en geografisk plats i rutan så får du
-            väderinformation om platsen. Vidare får du några länkar där du kan läsa lite om närliggande platser.
+            Här kan du nyttja geografiska tjänster som erbjuds av bland annat Google Maps, OpenWeatherMaps samt Wikipedia. Släpp markören eller skriv in en geografisk plats i rutan så får du väderinformation om platsen. Vidare får du några länkar där du kan läsa
+            lite om närliggande platser.
         </p>
     </section>
 
     <section class="map-container">
+
         <div class="column">
             <div class="google-map" id="map" data-map="google-map"></div>
         </div>
@@ -56,12 +56,12 @@
                 <label for="city-country-input"> Stad eller land:</label>
                 <input type="text" value="stockholm" id="city-country-input" data-input="place">
                 <!-- Knappen göms och klickas via JS -->
-                <button type="submit" data-button="form-map-submit">Hämta väderlek!</button>
+                <button type="submit" data-button="form-map-submit">Hämta information!</button>
             </form>
 
             <div class="weather-response-div">
-                <h2 data-output="place">&nbsp</h2>
-                <h3><span data-output="temp">&nbsp</span></h3>
+                <h2 data-output="place">&nbsp;</h2>
+                <h3><span data-output="temp">&nbsp;</span></h3>
             </div>
         </div>
     </section>

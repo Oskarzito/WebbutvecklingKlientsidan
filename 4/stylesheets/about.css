@@ -16,6 +16,13 @@ header {
     color: white;
 }
 
+.header-complement {
+    background-color: #332d2d;
+    width: 100%;
+    padding-top: 5px;
+    min-height: 30px;
+}
+
 label span {
     font-size: 20px;
     color: blue;

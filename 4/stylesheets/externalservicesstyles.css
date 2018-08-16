@@ -2,7 +2,8 @@
 body {
     margin: 0;
     font-family: 'Inconsolata', 'monospace', 'Times New Roman', 'Arial';
-    background-color: #00bcd4;
+    /*background-color: #00bcd4;*/
+    background-color: #a7ad9c;
 }
 
 header {
@@ -16,7 +17,7 @@ header {
     color: white;
 }
 
-nav {
+.header-complement {
     background-color: #332d2d;
     width: 100%;
     padding-top: 5px;
@@ -24,7 +25,12 @@ nav {
 }
 
 .page-description {
-    
+    margin: 5px 20px;
+    padding: 5px;
+    border: solid black;
+    border-radius: 20px;
+    cursor: help;
+    background-color: #c6c6c0;
 }
 
 .map-container {

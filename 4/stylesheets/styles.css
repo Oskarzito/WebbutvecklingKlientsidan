@@ -78,26 +78,24 @@ nav {
 }
 
 #first-parallax {
-    /*border: solid black;
-    background-image: url('https://placekitten.com/1400/600');*/
-    background-image: url('https://loremflickr.com/1400/500/stockholm');
+    /*background-image: url('https://loremflickr.com/1400/500/stockholm');*/
+    background-image: url('../images/green.jpg');
 }
 
 
 #second-parallax {
-    /*border: dashed green;
-    background-image: url('https://placekitten.com/1400/400');*/
-    background-image: url('https://loremflickr.com/1400/500/paris');
+    /*background-image: url('https://loremflickr.com/1400/500/paris');*/
+    background-image: url('../images/grass.jpg');
 }
 
 #third-parallax {
-    /*border: dotted blue;
-    background-image: url('https://placekitten.com/1400/500');*/
-    background-image: url('https://loremflickr.com/1400/500/nature');
+    /*background-image: url('https://loremflickr.com/1400/500/nature');*/
+    background-image: url('../images/flower.jpg');
 }
 
 #fourth-parallax{
-    background-image: url('https://loremflickr.com/1400/500/woods');
+    /*background-image: url('https://loremflickr.com/1400/500/woods');*/
+    background-image: url('../images/green.jpg');
 }
 
 /*Boxes between parallax images*/
@@ -126,6 +124,9 @@ section {
 .second-box-content iframe {
     float: right;
     margin-right: 50px;
+    width: 360px;
+    height: 215px;
+    border: none;
 }
 
 .print-note-iframe {

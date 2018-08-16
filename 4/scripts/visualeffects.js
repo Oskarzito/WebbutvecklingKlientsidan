@@ -4,10 +4,8 @@
     Jag har separerat funktionerna med '//____________'-kommentarer
     för läsbarhet om vad som är vad. Därav är variabeldeklarationer
     gjorda precis innan de används istället för högst upp (vilket brukar
-    vara snyggare kodstil).
+    vara snyggare kodstil)
 */
-
-
 
 $(document).ready(function () {
     //____________ TypeWriter-animation när man laddar in sidan ____________
@@ -23,7 +21,6 @@ $(document).ready(function () {
         } else {
             clearInterval(interval);
         }
-        console.log('varv');
     }, 70);
     //______________________________________________________________________
 
@@ -34,13 +31,13 @@ $(document).ready(function () {
     //Lyssnare på när webbsidan scrollas. Detta målar om scroll-progress-indikatorn
     $(window).on('scroll', function (event) {
         /*Har tagit hjälp från diverse YouTube-videor samt W3Schools för att
-        lyckas räkna ut de rätta värdena som krävs för denna effekt*/
+        lyckas räkna ut just de rätta värdena som krävs för denna effekt*/
         var top = $(window).scrollTop();
         var documentHeight = $(document).height();
         var windowHeight = $(window).height();
         var scrollDistance = (top / (documentHeight - windowHeight)) * 100;
 
-        //Ändra färg till så mycket man scrollat i procent
+        //Ändra bredd på färgindikatorn till så mycket man scrollat i procent
         $(PROGRESSBAR_SELECTOR).css('width', scrollDistance + '%');
 
         /*Slide in-animation. När man scrollar fram till en viss punkt
@@ -55,6 +52,4 @@ $(document).ready(function () {
             }
         });
     });
-    //______________________________________________________________________
-
 });
