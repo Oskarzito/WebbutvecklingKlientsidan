@@ -9,6 +9,15 @@
     I nuläget gör iaf programmet det som ska göras, dvs sända och ta emot
     information från en server via en socket.
 
+    Denna fil är uppgiften. Server.js är min egna lilla webbserver som jag antar
+    inte hör till uppgiften (tror jag iallafall?).
+    ____________________________________________________________________________
+    Eftersom inga verktygsgenererade filer ska lämnas in så har dessa i denna katalog
+    tagits bort. De verktygsgenererade filerna som inte finns kvar i katalogen är:
+    - node_modules (och alla dess underkataloger)
+    - package.json
+    - package-lock.json
+
     Jag lyckades få ihop en egen server (server.js). Denna funkar faktiskt (om man
     nu lyckas få igång den ... hehe ...). Kort sagt så gör min egna server som så
     att den tar emot meddelanden och sedan skickar dessa till alla anslutna klienter
