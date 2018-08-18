@@ -77,6 +77,10 @@ nav {
     background-size: cover;
 }
 
+/*
+    Utkommenterade bakgrundsbilderna är kvar med mening för att kunna
+    testa ifall mina bilder är för stora eller blir fel av någon anledning
+*/
 #first-parallax {
     /*background-image: url('https://loremflickr.com/1400/500/stockholm');*/
     background-image: url('../images/green.jpg');
@@ -103,9 +107,8 @@ nav {
     background-image: url('../images/grass.jpg');
 }
 
-/*Boxes between parallax images*/
+/*Boxar mellan parallax-bilderna*/
 .box-between {
-    /*background-color: #e6e6e6;*/
     height: 350px;
     text-align: center;
     color: #50555b;
@@ -310,7 +313,10 @@ footer {
     }
 }
 
-/* Denna del ser inte jättebra ut men det visar en annan sida än normalt */
+/*
+    Denna del ser inte jättebra ut men det visar iallafall en annan sida än
+    normalt. Print var ej prioriterat så att säga (men ej heller bortglömt)
+*/
 @media print {
 
     html, body {

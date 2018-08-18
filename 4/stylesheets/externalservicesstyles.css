@@ -2,7 +2,6 @@
 body {
     margin: 0;
     font-family: 'Inconsolata', 'monospace', 'Times New Roman', 'Arial';
-    /*background-color: #00bcd4;*/
     background-color: #a7ad9c;
 }
 
@@ -48,8 +47,11 @@ header {
     width: 50%;
 }
 
-/* Always set the map height explicitly to define the size of the div
-   element that contains the map. */
+/*
+    Kom ihåg (Google Maps-API):
+    Always set the map height explicitly to define the size of the div
+    element that contains the map.
+*/
 #map {
     height: 100%;
     width: 100%;
