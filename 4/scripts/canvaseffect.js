@@ -39,7 +39,7 @@ $(document).ready(function () {
 
     //Vänster ben
     context.beginPath();
-    context.moveTo(86, 262);
+    context.moveTo(85, 262);
     context.lineTo(52, 325);
     context.stroke();
     context.closePath();
