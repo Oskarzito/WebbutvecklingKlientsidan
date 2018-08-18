@@ -98,6 +98,11 @@ nav {
     background-image: url('../images/green.jpg');
 }
 
+#fifth-parallax {
+    /*background-image: url('https://loremflickr.com/1400/500/paris');*/
+    background-image: url('../images/grass.jpg');
+}
+
 /*Boxes between parallax images*/
 .box-between {
     /*background-color: #e6e6e6;*/
@@ -107,6 +112,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 section {
@@ -139,6 +145,16 @@ section {
     color: #fff;
     text-shadow: -7px 7px 0px #000000;
     margin: 0;
+}
+
+#canvas-stickman {
+    width: 100%;
+    height: 100%;
+    cursor: help;
+}
+
+.mobile-link {
+    display: none;
 }
 
 /* Animation för att slide:a in när man scrollar.
@@ -260,6 +276,19 @@ footer {
         height: 100%;
     }
 
+    #canvas-stickman {
+        display: none;
+    }
+
+    .mobile-link {
+        display: block;
+        width: 80%;
+        margin: auto;
+        font-size: 22px;
+        -webkit-transform: rotate(-6deg);
+        transform: rotate(-6deg);
+    }
+
     .book-link-ref {
         display: inline;
         position: absolute;
@@ -271,7 +300,7 @@ footer {
     }
 
     footer {
-        padding-bottom: 45px;
+        padding-bottom: 55px;
         flex-direction: column;
     }
 
