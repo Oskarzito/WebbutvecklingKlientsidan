@@ -12,3 +12,5 @@ Frivilliga uppgifter gjorda:
 6. 3.6.2 (Frivillig)
 7. 3.6.3 (Frivillig)
 8. 3.6.4 (Frivillig)
+
+Egenskapat projekt i katalog 4.
